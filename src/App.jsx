@@ -237,8 +237,7 @@ export default function App({ initialRoute, initialDoc }) {
       <header className="site-header">
         <div className="shell header-row">
           <a className="wordmark" href="/">
-            <img src="/assets/cf-mark.png" alt="" width="21" height="30" />
-            Citizens Foundation
+            <img src="/assets/citizens-logo.png" alt="citizens.is — Citizens Foundation" />
           </a>
           <nav className="site-nav">
             {NAV.map((item) => (

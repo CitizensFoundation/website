@@ -8,13 +8,23 @@ import {
 
 // ---------- shared building blocks ----------
 
-function PageHero({ eyebrow, title, lede, ctas, children }) {
+function PageHero({ eyebrow, title, lede, ctas, logo, logoHeight = 90, logoOnly = false, children }) {
   return (
     <section className="hero hero-compact">
       <HeroCanvas />
       <div className="shell hero-inner">
         <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
+        {logoOnly ? (
+          // The logo carries the page title; alt keeps the h1 accessible.
+          <h1 className="hero-logo-h1">
+            <img className="hero-logo" src={logo} alt={title} style={{ height: logoHeight }} />
+          </h1>
+        ) : (
+          <>
+            {logo && <img className="hero-logo" src={logo} alt="" style={{ height: logoHeight }} />}
+            <h1>{title}</h1>
+          </>
+        )}
         <p className="lede">{lede}</p>
         {ctas && <div className="cta-row">{ctas}</div>}
         {children}
@@ -62,6 +72,9 @@ export function YourPrioritiesPage() {
     <>
       <PageHero
         eyebrow="Our flagship platform — since 2008"
+        logo="/assets/yp-logo.png"
+        logoHeight={180}
+        logoOnly
         title="Your Priorities"
         lede="An open-source idea generation, deliberation and decision-making
           platform connecting governments and citizens — in thousands of
@@ -227,6 +240,8 @@ export function PolicySynthPage() {
     <>
       <PageHero
         eyebrow="Collective intelligence × artificial intelligence"
+        logo="/assets/policy-synth-logo.png"
+        logoHeight={96}
         title="Policy Synth"
         lede="An open-source framework for orchestrating teams of AI agents that
           research problems, evolve solutions and answer with evidence — while
@@ -380,6 +395,9 @@ export function AllOurIdeasPage() {
     <>
       <PageHero
         eyebrow="Wiki surveys"
+        logo="/assets/allourideas-logo.png"
+        logoHeight={64}
+        logoOnly
         title="All Our Ideas"
         lede="Show people two ideas. They pick one. Every vote sharpens a
           crowd-ranked list of what matters most — and anyone can add ideas of
