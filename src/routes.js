@@ -9,11 +9,13 @@ export const SITE = "https://citizens.is";
 
 // "home" maps to "/"; everything else maps to "/<id>/".
 export const PLATFORM_IDS = ["your-priorities", "policy-synth", "all-our-ideas", "open-source"];
+export const COMPANY_IDS = ["about", "contact", "in-the-news", "work-with-us"];
 export const ROUTE_IDS = [
   "home",
   "blog",
   "impact",
   ...PLATFORM_IDS,
+  ...COMPANY_IDS,
   ...CONTENT_INDEX.map((e) => e.route),
 ];
 
@@ -69,6 +71,26 @@ export const META = {
     title: "Open Source — Citizens Foundation",
     description:
       "All Citizens Foundation software is free, open source and MIT-licensed — the npm packages and GitHub repositories behind our democracy platforms.",
+  },
+  about: {
+    title: "About — Citizens Foundation",
+    description:
+      "A non-profit in Reykjavík, Iceland, founded in 2008 — bringing people together to debate and prioritize ideas that improve their communities.",
+  },
+  contact: {
+    title: "Contact — Citizens Foundation",
+    description:
+      "Get in touch with Citizens Foundation in Reykjavík — citizens@citizens.is — for projects, partnerships, press or open-source questions.",
+  },
+  "in-the-news": {
+    title: "In the News — Citizens Foundation",
+    description:
+      "Coverage of Citizens Foundation and Better Reykjavík in the Financial Times, The Guardian, The Washington Post, Fast Company and more.",
+  },
+  "work-with-us": {
+    title: "Work with us — Citizens Foundation",
+    description:
+      "Participation consultancy, hosted engagement platforms and custom AI agent development from the team behind Your Priorities and Policy Synth.",
   },
   ...Object.fromEntries(
     CONTENT_INDEX.map((e) => [

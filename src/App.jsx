@@ -3,6 +3,7 @@ import HeroCanvas from "./HeroCanvas.jsx";
 import { CONTENT_INDEX } from "virtual:content-index";
 import { BlogIndex, ImpactIndex, ArticlePage, formatDate, formatMonthYear } from "./pages.jsx";
 import { YourPrioritiesPage, PolicySynthPage, AllOurIdeasPage, OpenSourcePage } from "./platforms.jsx";
+import { AboutPage, ContactPage, NewsPage, WorkWithUsPage } from "./company.jsx";
 import { IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
 
 const SOCIALS = [
@@ -16,7 +17,15 @@ const NAV = [
   { label: "Platforms", href: "/#platforms" },
   { label: "Impact", href: "/impact/" },
   { label: "Blog", href: "/blog/" },
+  { label: "About", href: "/about/" },
+];
+
+const FOOTER_NAV = [
+  { label: "About", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
+  { label: "In the News", href: "/in-the-news/" },
   { label: "Open Source", href: "/open-source/" },
+  { label: "Work with us", href: "/work-with-us/" },
 ];
 
 const PLATFORMS = [
@@ -30,7 +39,7 @@ const PLATFORMS = [
     name: "Policy Synth",
     href: "/policy-synth/",
     blurb:
-      "Teams of AI agents that research problems and evolve policy solutions — with human votes always in the loop. Used from New Jersey to the EU.",
+      "Teams of AI agents that research problems and evolve policy solutions — standalone or built right into Your Priorities, with human votes always in the loop.",
   },
   {
     name: "All Our Ideas",
@@ -102,6 +111,14 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <a className="press-strip reveal" href="/in-the-news/">
+        <span className="press-strip-label">As featured in</span>
+        <span className="press-strip-names">
+          Financial Times · The Guardian · The Washington Post · Fast Company ·
+          Scientific American · GovTech
+        </span>
+      </a>
 
       <section className="stats reveal">
         <div className="shell stats-row">
@@ -207,6 +224,10 @@ export default function App({ initialRoute, initialDoc }) {
   else if (initialRoute === "policy-synth") page = <PolicySynthPage />;
   else if (initialRoute === "all-our-ideas") page = <AllOurIdeasPage />;
   else if (initialRoute === "open-source") page = <OpenSourcePage />;
+  else if (initialRoute === "about") page = <AboutPage />;
+  else if (initialRoute === "contact") page = <ContactPage />;
+  else if (initialRoute === "in-the-news") page = <NewsPage />;
+  else if (initialRoute === "work-with-us") page = <WorkWithUsPage />;
   else if (initialRoute.startsWith("blog/") || initialRoute.startsWith("impact/")) {
     page = <ArticlePage doc={initialDoc} />;
   } else page = <HomePage />;
@@ -223,6 +244,7 @@ export default function App({ initialRoute, initialDoc }) {
             {NAV.map((item) => (
               <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
             ))}
+            <a className="btn btn-primary btn-small" href="/work-with-us/">Work with us</a>
           </nav>
         </div>
       </header>
@@ -236,7 +258,7 @@ export default function App({ initialRoute, initialDoc }) {
             © 2026 Citizens Foundation
           </span>
           <span className="footer-links">
-            {NAV.map((item) => (
+            {FOOTER_NAV.map((item) => (
               <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
             ))}
           </span>

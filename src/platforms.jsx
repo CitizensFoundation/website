@@ -1,4 +1,5 @@
 import HeroCanvas from "./HeroCanvas.jsx";
+import { VideoCard } from "./company.jsx";
 import {
   IconBulb, IconScales, IconBallot, IconChecklist, IconCoins, IconShield,
   IconTranslate, IconSparkles, IconImage, IconChart, IconBot, IconCode,
@@ -133,10 +134,11 @@ export function YourPrioritiesPage() {
               Generate beautiful images for ideas and projects with built-in AI
               image creation — no design skills needed.
             </Feature>
-            <Feature icon={IconBot} title="Policy Synth agents">
-              Our open-source <a className="aurora-link" href="/policy-synth/">Policy Synth</a> framework
-              orchestrates teams of AI agents that research, draft and evolve
-              policy solutions — with human votes always in the loop.
+            <Feature icon={IconBot} title="Built-in agent workflow engine">
+              Design, run and monitor teams of{" "}
+              <a className="aurora-link" href="/policy-synth/">Policy Synth</a> AI
+              agents right inside Your Priorities — research, drafting and
+              evolving solutions, with human votes always in the loop.
             </Feature>
             <Feature icon={IconChart} title="AI analytics">
               Automatic clustering of ideas, topic analysis and rich dashboards
@@ -188,6 +190,19 @@ export function YourPrioritiesPage() {
             Ratings · Top-ranked in the 2022 Digital Democracy Report · Listed in
             the OECD Guidelines for Citizen Participation Processes
           </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <p className="eyebrow">Learn the platform</p>
+          <h2 className="section-title">Video tutorials</h2>
+          <div className="video-grid">
+            <VideoCard src="https://www.youtube.com/embed/ilAerJfvMUY" title="Your Priorities tutorial" />
+            <VideoCard src="https://www.youtube.com/embed/DIA-IKkaQN4" title="Creating communities & groups" />
+            <VideoCard src="https://www.youtube.com/embed/_i5Hs-KcwTI" title="Community and group settings" />
+            <VideoCard src="https://www.youtube.com/embed/Z3uCaRONuN8" title="Using Google Analytics with Your Priorities" />
+          </div>
         </div>
       </section>
 
@@ -273,9 +288,10 @@ export function PolicySynthPage() {
           <h2 className="section-title">One framework, many kinds of agents</h2>
           <div className="card-grid">
             <Feature icon={IconBot} title="Multi-agent workflows">
-              Visual operations for connecting research, analysis, review and
-              notification agents — from Google Docs in, to Google Sheets and
-              Discord out, with full audit logs and cost tracking.
+              Connect research, analysis, review and notification agents — from
+              Google Docs in, to Google Sheets and Discord out — through Your
+              Priorities’ built-in visual workflow engine, with full audit logs
+              and cost tracking.
             </Feature>
             <Feature icon={IconSparkles} title="Evolving solutions">
               Genetic algorithms breed and refine solution populations across
@@ -300,6 +316,13 @@ export function PolicySynthPage() {
               afterthought.
             </Feature>
           </div>
+          <p className="ribbon">
+            Use it two ways: <strong>standalone</strong> via the{" "}
+            <code>@policysynth/agents</code> TypeScript library, or through the
+            visual agent workflow engine <strong>built into{" "}
+            <a className="aurora-link" href="/your-priorities/">Your Priorities</a></strong>{" "}
+            — the interface you see in our case studies.
+          </p>
         </div>
       </section>
 
@@ -448,7 +471,7 @@ const PACKAGES = [
   {
     name: "@policysynth/agents",
     install: "npm install @policysynth/agents",
-    desc: "The core of the Policy Synth ecosystem — multi-scale agent orchestration with queues, genetic algorithms, deep research and Elo pairwise ranking.",
+    desc: "The core of the Policy Synth ecosystem — multi-scale agent orchestration with queues, genetic algorithms, deep research and Elo pairwise ranking. Use it standalone, or through the agent workflow engine built into Your Priorities.",
     href: "https://www.npmjs.com/package/@policysynth/agents",
   },
   {
