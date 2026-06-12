@@ -2,31 +2,41 @@ import { useEffect, useRef } from "react";
 import HeroCanvas from "./HeroCanvas.jsx";
 import { CONTENT_INDEX } from "virtual:content-index";
 import { BlogIndex, ImpactIndex, ArticlePage, formatDate, formatMonthYear } from "./pages.jsx";
+import { YourPrioritiesPage, PolicySynthPage, AllOurIdeasPage, OpenSourcePage } from "./platforms.jsx";
+import { IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
 
-const NAV = [
-  { label: "Platforms", href: "#" },
-  { label: "Impact", href: "/impact/" },
-  { label: "Blog", href: "/blog/" },
-  { label: "About", href: "#" },
+const SOCIALS = [
+  { label: "GitHub", href: "https://github.com/CitizensFoundation", Icon: IconGitHub },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/citizens-foundation-global/", Icon: IconLinkedIn },
+  { label: "Facebook", href: "https://www.facebook.com/Citizens.is/", Icon: IconFacebook },
+  { label: "X (Twitter)", href: "https://twitter.com/CitizensFNDN", Icon: IconX },
 ];
 
-// Homepage copy is still placeholder; the teasers below pull real migrated
-// content from the index.
+const NAV = [
+  { label: "Platforms", href: "/#platforms" },
+  { label: "Impact", href: "/impact/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Open Source", href: "/open-source/" },
+];
+
 const PLATFORMS = [
   {
     name: "Your Priorities",
+    href: "/your-priorities/",
     blurb:
-      "Placeholder — a two-line description of the platform lives here, what it does and who it is for.",
+      "Our flagship engagement platform: idea generation, civil debate, voting, surveys and participatory budgeting — trusted by cities and parliaments since 2008.",
   },
   {
     name: "Policy Synth",
+    href: "/policy-synth/",
     blurb:
-      "Placeholder — a two-line description of the platform lives here, what it does and who it is for.",
+      "Teams of AI agents that research problems and evolve policy solutions — with human votes always in the loop. Used from New Jersey to the EU.",
   },
   {
     name: "All Our Ideas",
+    href: "/all-our-ideas/",
     blurb:
-      "Placeholder — a two-line description of the platform lives here, what it does and who it is for.",
+      "Wiki surveys: show people two ideas, let them pick one. Created at Princeton, now maintained by us and built into Your Priorities.",
   },
 ];
 
@@ -83,12 +93,12 @@ function HomePage() {
             Forging better communities with democratic innovation&nbsp;&amp;&nbsp;AI
           </h1>
           <p className="lede">
-            Placeholder subtitle — one calm sentence about open-source platforms,
-            citizens and governments will live here.
+            Open-source platforms and AI tools that connect citizens and
+            governments — in thousands of projects across 45 countries.
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href="/impact/">Explore our work</a>
-            <a className="btn btn-ghost" href="#">Your Priorities →</a>
+            <a className="btn btn-ghost" href="/your-priorities/">Your Priorities →</a>
           </div>
         </div>
       </section>
@@ -102,7 +112,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section reveal">
+      <section className="section reveal" id="platforms">
         <div className="shell">
           <h2 className="section-title">Platforms</h2>
           <div className="card-grid">
@@ -110,10 +120,17 @@ function HomePage() {
               <article key={p.name} className="card">
                 <h3>{p.name}</h3>
                 <p>{p.blurb}</p>
-                <a className="aurora-link card-link" href="#">Learn more →</a>
+                <a className="aurora-link card-link" href={p.href}>Learn more →</a>
               </article>
             ))}
           </div>
+          <a className="os-strip" href="/open-source/">
+            <span>
+              <strong>100% open source.</strong> Every platform above is free,
+              MIT-licensed and published on npm — inspect the code that counts the votes.
+            </span>
+            <span className="aurora-link">Explore the packages →</span>
+          </a>
         </div>
       </section>
 
@@ -186,6 +203,10 @@ export default function App({ initialRoute, initialDoc }) {
   let page;
   if (initialRoute === "blog") page = <BlogIndex />;
   else if (initialRoute === "impact") page = <ImpactIndex />;
+  else if (initialRoute === "your-priorities") page = <YourPrioritiesPage />;
+  else if (initialRoute === "policy-synth") page = <PolicySynthPage />;
+  else if (initialRoute === "all-our-ideas") page = <AllOurIdeasPage />;
+  else if (initialRoute === "open-source") page = <OpenSourcePage />;
   else if (initialRoute.startsWith("blog/") || initialRoute.startsWith("impact/")) {
     page = <ArticlePage doc={initialDoc} />;
   } else page = <HomePage />;
@@ -202,7 +223,6 @@ export default function App({ initialRoute, initialDoc }) {
             {NAV.map((item) => (
               <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
             ))}
-            <a className="btn btn-primary btn-small" href="#">Donate</a>
           </nav>
         </div>
       </header>
@@ -218,6 +238,13 @@ export default function App({ initialRoute, initialDoc }) {
           <span className="footer-links">
             {NAV.map((item) => (
               <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
+            ))}
+          </span>
+          <span className="footer-social">
+            {SOCIALS.map(({ label, href, Icon }) => (
+              <a key={label} href={href} aria-label={label} title={label}>
+                <Icon />
+              </a>
             ))}
           </span>
         </div>
