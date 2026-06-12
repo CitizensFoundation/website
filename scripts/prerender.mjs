@@ -52,7 +52,7 @@ for (const path of ROUTES) {
   });
 
   // Inject the app HTML.
-  const app = render(path);
+  const app = await render(path);
   html = html.replace('<div id="root"></div>', `<div id="root">${app}</div>`);
 
   const outDir = id === "home" ? distDir : join(distDir, id);
