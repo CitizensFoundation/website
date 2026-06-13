@@ -2,7 +2,7 @@
 title: "New Jersey AI Task Force: Understanding the Impact of Generative AI"
 slug: "new-jersey-ai-taskforce"
 date: "2024-11-01"
-hero: "/uploads/2026/06/nj-ai-taskforce-hero.png"
+hero: "/uploads/2026/06/new-jersey-ai-taskforce-cover-chatgpt.png"
 excerpt: "New Jersey's AI Task Force used All Our Ideas and Policy Synth to turn worker concerns about generative AI into policy proposals."
 categories: ["Policy Synth","All Our Ideas","Smarter Crowdsourcing"]
 link: "https://innovation.nj.gov/projects/ai-task-force/"

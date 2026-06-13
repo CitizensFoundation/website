@@ -10,7 +10,7 @@ gallery: ["/uploads/2026/06/skills-first-agent-config.png","/uploads/2026/06/ski
 
 The last story in this series showed how Policy Synth can help turn public input into policy proposals. This one shows the next step: using AI to help governments implement change inside the rules, job descriptions, and legal language that shape real decisions.
 
-Together with Northeastern University's [Burnes Center for Social Change](https://burnes.northeastern.edu/), Citizens Foundation has been a partner in the skills-first hiring project from the start, helping co-fund and develop the Policy Synth work behind it. The goal is practical: help states find and remove unnecessary degree requirements that block qualified workers from public-sector jobs.
+The skills-first hiring project is led by Northeastern University's [Burnes Center for Social Change](https://burnes.northeastern.edu/). Citizens Foundation has partnered with the Burnes Center from the start, helping co-fund and develop the Policy Synth work behind it. The goal is practical: help states find and remove unnecessary degree requirements that block qualified workers from public-sector jobs.
 
 The project is led by [Seth Harris](https://burnes.northeastern.edu/people/seth-harris/), Distinguished Professor of Practice at Northeastern University and Senior Fellow at the Burnes Center. Harris brings deep labor and workforce policy experience, including service as Acting U.S. Secretary of Labor and Deputy U.S. Secretary of Labor. Under his leadership, the project focuses on a concrete problem: many government hiring barriers are not only in policy statements. They are hidden across thousands of job descriptions, civil-service rules, statutes, regulations, and licensing requirements.
 

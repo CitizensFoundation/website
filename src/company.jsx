@@ -39,16 +39,16 @@ const TEAM = [
     bio: "Róbert is an entrepreneur who introduced the Web to Iceland in 1993 and to Denmark in 1995. Before co-founding Citizens Foundation in 2008 he worked in the videogame industry, where his teams received many industry awards — including two BAFTAs.",
   },
   {
-    name: "Gunnar Grímsson",
-    role: "Co-founder",
-    photo: "/uploads/2019/06/GunnarCF-Ambassador-sharper-1-1.jpg",
-    bio: "Gunnar has been at the heart of Citizens Foundation since its start. He is an experienced process and interface designer with a strong background in multiple fields, and has worked on citizen engagement projects all over the world.",
-  },
-  {
     name: "Maren Valsdóttir",
     role: "Designer & board member",
     photo: "/uploads/2014/07/marenFinal.jpg",
     bio: "Maren is a multimedia artist and designer — a force of creative energy at Citizens Foundation. She has shaped the design of our apps and websites since 2012, contributes to overall strategy and sits on the board of directors.",
+  },
+  {
+    name: "Gunnar Grímsson",
+    role: "CO-FOUNDER & AMBASSADOR",
+    photo: "/uploads/2019/06/GunnarCF-Ambassador-sharper-1-1.jpg",
+    bio: "Gunnar has been at the heart of Citizens Foundation since its start. He is an experienced process and interface designer with a strong background in multiple fields, and has worked on citizen engagement projects all over the world.",
   },
 ];
 
@@ -59,11 +59,11 @@ const FILMS = [
   },
   {
     src: "https://www.youtube.com/embed/2r444-7kVs0",
-    title: "Introduction to Citizens Foundation",
+    title: "Introduction to Citizens Foundation (2019)",
   },
   {
     src: "https://www.youtube.com/embed/OqzAp4WMHOY",
-    title: "Citizens Foundation — CODE Europe Iceland study visit",
+    title: "Citizens Foundation — CODE Europe Iceland study visit (2021)",
   },
 ];
 

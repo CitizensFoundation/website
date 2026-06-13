@@ -1073,6 +1073,86 @@ button.pkg-install .tprompt { color: var(--brand); }
 .notfound .lede { margin: 0 auto 30px; }
 .notfound .cta-row { justify-content: center; }
 
+/* From-our-partners band (live Reboot Democracy "News That Caught Our Eye") */
+.partners {
+  border-top: 1px solid var(--hairline);
+  background: var(--surface);
+  padding: 64px 0 70px;
+}
+.partners-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.partners-sub {
+  color: var(--muted);
+  margin: 8px 0 0;
+  max-width: 48ch;
+}
+.partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-top: 8px;
+  opacity: 0.82;
+  transition: opacity 0.2s ease;
+}
+.partner-logos:hover { opacity: 1; }
+.partner-logos img { height: 30px; width: auto; }
+
+.partner-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 44px;
+}
+.partner-list li { border-top: 1px solid var(--hairline); }
+.partner-list a {
+  display: block;
+  padding: 16px 2px;
+  transition: padding-left 0.2s ease;
+}
+.partner-list a:hover { padding-left: 8px; }
+.partner-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 5px;
+}
+.partner-title {
+  display: block;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.partner-list a:hover .partner-title {
+  text-decoration: underline;
+  text-decoration-color: rgba(41, 167, 208, 0.5);
+  text-underline-offset: 3px;
+}
+.partner-meta {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.partners-more {
+  display: inline-block;
+  margin-top: 26px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
 /* Scroll reveals — applied by JS only, SSR output stays visible. */
 .reveal-init {
   opacity: 0;
@@ -1104,4 +1184,6 @@ button.pkg-install .tprompt { color: var(--brand); }
   .why-band { flex-direction: column; align-items: flex-start; gap: 18px; padding: 28px 24px; }
   .os-banner { grid-template-columns: 1fr; gap: 26px; padding: 38px 26px; }
   .os-banner-visual { display: none; }
+  .partner-list { grid-template-columns: 1fr; }
+  .partners-head { flex-direction: column; gap: 18px; }
 }

@@ -6,6 +6,10 @@ import { YourPrioritiesPage, PolicySynthPage, AllOurIdeasPage, OpenSourcePage } 
 import { AboutPage, ContactPage, NewsPage, WorkWithUsPage } from "./company.jsx";
 import { IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
 import { PLAUSIBLE_EVENTS, plausibleClass, trackPlausible } from "./plausible.js";
+// Partner "News That Caught Our Eye" widget — parked until Reboot Democracy
+// exposes the current weekly collection for public read. To re-enable: restore
+// this import and the <PartnerNews /> mount before the footer.
+// import PartnerNews from "./PartnerNews.jsx";
 
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/CitizensFoundation", Icon: IconGitHub },
@@ -400,6 +404,8 @@ export default function App({ initialRoute, initialDoc }) {
       </header>
 
       <main>{page}</main>
+
+      {/* <PartnerNews /> — parked (see import note above) */}
 
       <footer className="site-footer">
         <div className="shell footer-row">

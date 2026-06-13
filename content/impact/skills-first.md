@@ -1,8 +1,8 @@
 ---
 title: "Skills-First Hiring: Opening State Jobs with AI"
-slug: "skills-first-new-jersey"
+slug: "skills-first"
 date: "2026-05-01"
-hero: "/uploads/2026/06/skills-first-hero.png"
+hero: "/uploads/2026/06/skills-first-cover-chatgpt.png"
 excerpt: "Policy Synth helps New Jersey review public job descriptions and remove unnecessary degree requirements, with expansion to more states underway."
 categories: ["Policy Synth"]
 link: "https://burnes.northeastern.edu/skills-first-workforce-hiring-creating-more-equitable-and-inclusive-state-employment-opportunities-using-ai/"

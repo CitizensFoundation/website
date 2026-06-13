@@ -377,7 +377,7 @@ export function PolicySynthPage() {
               Scanning Icelandic law against EU directives, article by article —
               52 unjustified additions found in the telecoms pilot alone.
             </CaseCard>
-            <CaseCard href="/impact/skills-first-new-jersey/" place="Skills-First Hiring">
+            <CaseCard href="/impact/skills-first/" place="Skills-First Hiring">
               Thousands of state job descriptions analyzed and rewritten to
               remove unnecessary degree requirements.
             </CaseCard>
