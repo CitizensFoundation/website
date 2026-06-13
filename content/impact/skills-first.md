@@ -11,7 +11,7 @@ gallery: ["/uploads/2026/06/skills-first-agent-config.png","/uploads/2026/06/ski
 
 Most state government job postings still ask for a college degree — even where the actual work doesn't require one. Skills-first hiring policies aim to change that, opening public-sector careers to everyone with the right skills. But the barriers hide in thousands of job descriptions and in the laws and regulations behind them, far more than any team could review by hand.
 
-Together with the [Burnes Center for Social Change](https://burnes.northeastern.edu/) at Northeastern University, Citizens Foundation built a Policy Synth agent system that does the review automatically — starting with the State of New Jersey.
+The project is led by the [Burnes Center for Social Change](https://burnes.northeastern.edu/) at Northeastern University. Citizens Foundation has partnered with the Burnes Center from the start, building the Policy Synth agent system that does the review automatically — starting with the State of New Jersey.
 
 The next phase is about scale. After an initial GitLab Foundation award helped launch the work, a second $500,000 GitLab Foundation grant in 2026 is supporting Citizens Foundation's continued development of the system as the Burnes Center expands the model from New Jersey into three to five new states. The goal is to make skills-first hiring reform practical for states that want to remove unnecessary degree barriers but need a faster way to inspect the job descriptions, classification rules, laws, and regulations that shape public hiring.
 

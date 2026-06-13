@@ -533,6 +533,7 @@ a { color: inherit; text-decoration: none; }
 
 .case-card { display: block; }
 .case-card h3 { font-size: 21px; }
+.case-stack { display: grid; gap: 18px; }
 
 .ribbon {
   margin: 38px 0 0;

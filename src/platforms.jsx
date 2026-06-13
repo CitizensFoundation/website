@@ -482,7 +482,11 @@ export function AllOurIdeasPage() {
               and analytics underneath.
             </p>
           </div>
-          <div>
+          <div className="case-stack">
+            <CaseCard href="/impact/ai-risk-prioritization-openai/" place="OpenAI Alignment Assembly">
+              1,000 representative Americans used All Our Ideas to rank and
+              submit concerns about making large language models safe for the public.
+            </CaseCard>
             <CaseCard href="/impact/new-jersey-ai-taskforce/" place="“AI and You” — New Jersey">
               More than 2,200 workers voted on pairs of statements about
               generative AI, producing a rank-ordered list of 96 concerns that
