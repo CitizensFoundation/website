@@ -3,7 +3,7 @@ title: "From 2,200 Worker Voices to AI Policy: The New Jersey Model"
 slug: "from-2200-worker-voices-to-ai-policy-new-jersey-model"
 date: "2025-05-22"
 hero: "/uploads/2025/05/new-jersey-worker-voices-ai-policy-cover.png"
-excerpt: "New Jersey's AI Task Force asked workers to rank their concerns about generative AI, then used Policy Synth to turn the top public priorities into evidence-based policy proposals."
+excerpt: "New Jersey workers ranked concerns about generative AI, then Policy Synth helped turn top priorities into evidence-based proposals."
 categories: ["Artificial Intelligence", "Policy Synth", "Collective Intelligence"]
 gallery: ["/uploads/2026/06/nj-ai-taskforce-voting.png","/uploads/2026/06/nj-ai-taskforce-results.png","/uploads/2026/06/nj-ai-taskforce-agents.png","/uploads/2026/06/nj-ai-taskforce-subproblems.png"]
 ---

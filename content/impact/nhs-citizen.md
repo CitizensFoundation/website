@@ -3,7 +3,7 @@ title: "UK Healthcare - NHS Citizen"
 slug: "nhs-citizen"
 date: "2014-03-01"
 hero: "/uploads/2017/11/nhsl.png"
-excerpt: "NHS Citizen The National Health Service (NHS) in the United Kingdom used Your Priorities (pilot 2014-2015) to engage with citizens and to help people identify..."
+excerpt: "NHS Citizen used Your Priorities to help people identify and discuss issues for NHS England board assemblies."
 categories: ["Active Citizen","Policy Crowdsourcing","Your Priorities"]
 link: "https://nhs-citizen.yrpri.org/community/54"
 gallery: ["/uploads/2017/11/nhs-e1511648533784.png","/uploads/2017/11/nhs.PNG2_-e1511648488289.png","/uploads/2017/11/nhs.PNG2_.PNG3_-e1511648471462.png"]

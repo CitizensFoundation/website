@@ -3,7 +3,7 @@ title: "My Neighbourhood"
 slug: "my-neighbourhood"
 date: "2011-12-15"
 hero: "/uploads/2017/11/bh23.png"
-excerpt: "My Neighbourhood My Neighbourhood (previously Better Neighbourhoods) is the annual participatory budgeting in Reykjavík that has been ongoing since 2011. 450m..."
+excerpt: "My Neighbourhood is Reykjavik's annual participatory budgeting process, where residents propose and vote on neighborhood improvements."
 categories: ["Active Citizen","Open Active Voting","Participatory Budgeting","Your Priorities"]
 link: "https://hverfid-mitt-2017.betrireykjavik.is/community/607"
 gallery: ["/uploads/2017/11/Utileiksvaedi1-1.jpg","/uploads/2017/11/troppur_vid_eidisgranda_2-wide.jpg","/uploads/2017/11/leiksvaedi_landakotstun_2-wide.jpg","/uploads/2017/11/klambri4-wide.jpg","/uploads/2017/11/blakvollur.jpg","/uploads/2017/11/hverfi4-e1511712081812.png","/uploads/2017/11/hverfi3-e1511712098344.png","/uploads/2017/11/ka1-e1511823550873.png","/uploads/2017/11/ka3-e1511823566344.png","/uploads/2017/11/ka2-e1511823584920.png"]

@@ -3,7 +3,7 @@ title: "Finding \"Gold-Plating\" in Iceland's Implementation of EU Law"
 slug: "gold-plating-iceland"
 date: "2024-08-20"
 hero: "/uploads/2026/06/gold-plating-hero.jpg"
-excerpt: "For Iceland's Ministry of Higher Education, Industry and Innovation, our Policy Synth Gold-plating Research Agent scans Icelandic laws and regulations against the EU directives they implement — finding where Iceland has gone further than required, article by article, with justifications reviewed by humans."
+excerpt: "Policy Synth helps Icelandic ministries compare national law with EU directives to find possible gold-plating in implementation."
 categories: ["Policy Synth"]
 link: "https://www.visir.is/g/20242610183d"
 gallery: ["/uploads/2026/06/gold-plating-visir.png","/uploads/2026/06/gold-plating-agents.png","/uploads/2026/06/gold-plating-results.png"]

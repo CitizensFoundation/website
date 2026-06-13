@@ -3,7 +3,7 @@ title: "People Decide: How AI Can Help Governments Use Public Input"
 slug: "people-decide-ai-public-input"
 date: "2024-12-31"
 hero: "/uploads/2025/05/people-decide-ai-public-input-cover.png"
-excerpt: "From Better Reykjavík to Policy Synth, Citizens Foundation has spent years building open-source tools that help communities turn public input into better decisions."
+excerpt: "Citizens Foundation shows how Better Reykjavik and Policy Synth help governments turn public input into better decisions."
 categories: ["Artificial Intelligence", "Collective Intelligence", "Digital Democracy"]
 gallery: ["/uploads/2026/06/nj-ai-taskforce-results.png","/uploads/2026/06/nj-ai-taskforce-agents.png"]
 ---

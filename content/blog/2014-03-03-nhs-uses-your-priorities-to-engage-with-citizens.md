@@ -3,7 +3,7 @@ title: "NHS uses Your Priorities to engage with citizens"
 slug: "nhs-uses-your-priorities-to-engage-with-citizens"
 date: "2014-03-03"
 hero: "/uploads/2017/11/nhs-e1511828291984.jpeg"
-excerpt: "The National Health Service (NHS) in the UK is using Your Priorities to help people identify and discuss the issues that the NHS should be talking"
+excerpt: "NHS Citizen used Your Priorities to help people identify and discuss issues for NHS England board assemblies."
 ---
 
 The National Health Service (NHS) in the UK is using Your Priorities to help people identify and discuss the issues that the NHS should be talking about.

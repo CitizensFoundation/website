@@ -3,7 +3,7 @@ title: "Engage @ Scottish Parliament"
 slug: "engage-scottish-parliament"
 date: "2026-06-01"
 hero: "/uploads/2020/01/zi-retina.png"
-excerpt: "Since 2019 the Scottish Parliament has run its Engage platform on Your Priorities. What began with three consultations has grown into 24 active communities where committees hear citizens on everything from fireworks laws to ADHD and autism support — lived experience that has shaped legislation and reports demanding national action."
+excerpt: "The Scottish Parliament uses Engage on Your Priorities to gather lived experience for committee work and public policy."
 categories: ["Policy Crowdsourcing","Your Priorities"]
 link: "https://engage.parliament.scot/"
 gallery: ["/uploads/2026/06/engage-adhd-asd-pathways.png","/uploads/2026/06/engage-a9-petition.png","/uploads/2020/01/1653516483363.png","/uploads/2020/01/1653516506752.png","/uploads/2020/01/1653516557635.png","/uploads/2020/01/1653516586126.png","/uploads/2020/01/1653516604162.png","/uploads/2020/01/1653516657496.png","/uploads/2020/01/1653516676704.png","/uploads/2020/01/1653516735111.png","/uploads/2020/01/1653516777829.png","/uploads/2020/01/1653516804318.png"]

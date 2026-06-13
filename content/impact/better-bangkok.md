@@ -3,7 +3,7 @@ title: "Better Bangkok"
 slug: "better-bangkok"
 date: "2022-05-26"
 hero: "/uploads/2022/05/3dd89b02-74a8-438b-adc0-2ae2f2b7184d-retina.png"
-excerpt: "Citizens Foundation began its relationship with the Thai Public Broadcasting system in March 2019, with an interview for their program “Life Explorer,”"
+excerpt: "Thai PBS and Citizens Foundation explored Better Bangkok as a way for residents to share ideas and improve public life in the city."
 categories: ["Policy Crowdsourcing","Your Priorities"]
 link: "https://better-bangkok.yrpri.org/"
 gallery: ["/uploads/2022/05/1653580992069.png","/uploads/2022/05/1653581014516.png","/uploads/2022/05/1653581031320.png","/uploads/2022/05/1653581047433.png","/uploads/2022/05/1653581065843.png","/uploads/2022/05/1653581108270.png","/uploads/2022/05/1653581151957.png","/uploads/2022/05/1653581165189.png","/uploads/2022/05/1653581219461.png","/uploads/2022/05/1653581233697.png"]

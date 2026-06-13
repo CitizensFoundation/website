@@ -4,9 +4,10 @@
 // string, splices it into the built dist/index.html template, rewrites the
 // per-route <head> metadata, and writes dist/<route>/index.html.
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import sharp from "sharp";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -73,6 +74,39 @@ const esc = (s) =>
 const replaceContent = (html, matcher, value) =>
   html.replace(matcher, (m, p1, p2) => p1 + esc(value) + p2);
 
+const imageMetaCache = new Map();
+
+async function imageMetadata(pathname) {
+  if (!pathname) return null;
+  const key = pathname.split("?")[0];
+  if (imageMetaCache.has(key)) return imageMetaCache.get(key);
+
+  const rel = decodeURIComponent(key).replace(/^\/+/, "");
+  const file = join(distDir, rel);
+  if (!existsSync(file)) {
+    imageMetaCache.set(key, null);
+    return null;
+  }
+
+  const meta = await sharp(file).metadata();
+  if (!meta.width || !meta.height || !meta.format) {
+    imageMetaCache.set(key, null);
+    return null;
+  }
+
+  const contentType =
+    meta.format === "jpg" || meta.format === "jpeg"
+      ? "image/jpeg"
+      : meta.format === "png"
+        ? "image/png"
+        : meta.format === "webp"
+          ? "image/webp"
+          : null;
+  const result = { width: meta.width, height: meta.height, contentType };
+  imageMetaCache.set(key, result);
+  return result;
+}
+
 function applyMeta(html, { title, description, canonical, ogTitle }) {
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`);
   html = replaceContent(html, /(<meta name="description" content=")[^"]*("\s*\/>)/, description);
@@ -108,8 +142,20 @@ for (const path of ROUTES) {
       html = replaceContent(html, /(<meta property="og:image" content=")[^"]*("\s*\/>)/, heroUrl);
       html = replaceContent(html, /(<meta name="twitter:image" content=")[^"]*("\s*\/>)/, heroUrl);
       html = replaceContent(html, /(<meta property="og:image:alt" content=")[^"]*("\s*\/>)/, entry.title);
-      // Hero sizes vary, so drop the fixed 1200x630/png hints from the template.
-      html = html.replace(/\s*<meta property="og:image:(?:width|height|type)"[^>]*\/>/g, "");
+      html = replaceContent(html, /(<meta name="twitter:image:alt" content=")[^"]*("\s*\/>)/, entry.title);
+
+      const imageMeta = await imageMetadata(entry.hero);
+      if (imageMeta) {
+        html = replaceContent(html, /(<meta property="og:image:width" content=")[^"]*("\s*\/>)/, imageMeta.width);
+        html = replaceContent(html, /(<meta property="og:image:height" content=")[^"]*("\s*\/>)/, imageMeta.height);
+        if (imageMeta.contentType) {
+          html = replaceContent(html, /(<meta property="og:image:type" content=")[^"]*("\s*\/>)/, imageMeta.contentType);
+        } else {
+          html = html.replace(/\s*<meta property="og:image:type"[^>]*\/>/g, "");
+        }
+      } else {
+        html = html.replace(/\s*<meta property="og:image:(?:width|height|type)"[^>]*\/>/g, "");
+      }
     }
     html = html.replace(
       "</head>",

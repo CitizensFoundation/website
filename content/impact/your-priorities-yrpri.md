@@ -3,7 +3,7 @@ title: "Your Priorities - YRPRI"
 slug: "your-priorities-yrpri"
 date: "2008-11-01"
 hero: "/uploads/2017/11/YRPRI-e1533725927296.png"
-excerpt: "Your Priorities – yrpri.org Your Priorities is an online participatory social network, launched in 2008. Your Priorities has been in continual development..."
+excerpt: "Your Priorities is Citizens Foundation's long-running participatory platform for idea generation, debate, prioritization, and public decision-making."
 categories: ["Active Citizen","Participatory Budgeting","Policy Crowdsourcing","Your Priorities","320"]
 link: "https://www.yrpri.org"
 gallery: ["/uploads/2017/11/ypri-1-e1511544956875.png","/uploads/2017/11/ypri-2.png"]

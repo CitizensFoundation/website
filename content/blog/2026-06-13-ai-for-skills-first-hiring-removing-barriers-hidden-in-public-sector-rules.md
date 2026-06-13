@@ -3,7 +3,7 @@ title: "AI for Skills-First Hiring: Removing Barriers Hidden in Public-Sector Ru
 slug: "ai-for-skills-first-hiring-removing-barriers-hidden-in-public-sector-rules"
 date: "2026-06-13"
 hero: "/uploads/2026/06/skills-first-hiring-cover.png"
-excerpt: "With Northeastern University's Burnes Center, Citizens Foundation is using Policy Synth to help states find and remove degree requirements hidden in job descriptions, laws, and public-sector rules."
+excerpt: "With Northeastern University's Burnes Center, Citizens Foundation uses Policy Synth to help states remove hidden degree requirements."
 categories: ["Artificial Intelligence", "Policy Synth", "Economic Opportunity"]
 gallery: ["/uploads/2026/06/skills-first-agent-config.png","/uploads/2026/06/skills-first-eval.png"]
 ---

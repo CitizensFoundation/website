@@ -3,7 +3,7 @@ title: "Digital Commons for Open Government"
 slug: "digital-commons-for-open-government"
 date: "2015-11-19"
 hero: "/uploads/2017/11/shutterstock_213674950.jpg"
-excerpt: "Digital Commons for Open Government open source marketplace for government tools We propose creating a Digital Commons for Open Government and invite you"
+excerpt: "Citizens Foundation proposed a Digital Commons for Open Government: an open-source marketplace for public-sector civic technology."
 ---
 
 ## Digital Commons for Open Government

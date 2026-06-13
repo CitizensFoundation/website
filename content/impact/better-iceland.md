@@ -3,7 +3,7 @@ title: "Better Iceland"
 slug: "better-iceland"
 date: "2011-11-11"
 hero: "/uploads/2017/11/Betra-%C3%8Dsland-.png"
-excerpt: "Better Iceland Better Iceland is an online participatory social network where citizens can present their ideas on local or national issues. Before..."
+excerpt: "Better Iceland lets citizens present and debate local or national ideas, building on the Your Priorities platform launched after Iceland's financial crisis."
 categories: ["Active Citizen","Policy Crowdsourcing","Your Priorities"]
 link: "https://betraisland.is"
 gallery: ["/uploads/2017/11/betraIsland-e1511711543725.png","/uploads/2017/11/betraIsland-screee-e1511396645271.png","/uploads/2017/11/betraIsland2-e1511711567673.png"]

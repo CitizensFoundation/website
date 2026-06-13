@@ -3,7 +3,7 @@ title: "Your Ellp Ideas"
 slug: "your-ellp-ideas"
 date: "2017-08-05"
 hero: "/uploads/2017/11/lplogo.png"
-excerpt: "Your Ellp Ideas Ellp is small tech company in Malta. They use Your Priorities to crowdsource improvements to their product. Here..."
+excerpt: "Ellp used Your Priorities to crowdsource product improvements from users, showing how the platform can support companies as well as governments."
 categories: ["Your Priorities"]
 gallery: ["/uploads/2017/11/ellp1.png","/uploads/2017/11/ellp4.png","/uploads/2017/11/ellp5.png"]
 ---

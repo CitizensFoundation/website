@@ -3,7 +3,7 @@ title: "Argyll & Bute - Scotland"
 slug: "councils-in-scotland"
 date: "2016-12-14"
 hero: "/uploads/2017/11/aglogo.png"
-excerpt: "Argyll & Bute – Scotland Argyll & Bute started late 2016 by collecting ideas for Growing Gaelic in a small pilot project..."
+excerpt: "Argyll and Bute used Your Priorities to collect ideas for Growing Gaelic, starting with a pilot project in late 2016."
 categories: ["Active Citizen","Open Active Voting","Participatory Budgeting","Your Priorities"]
 gallery: ["/uploads/2017/11/ag1.png","/uploads/2017/11/ag2.png","/uploads/2017/11/ag4.png","/uploads/2017/11/Ag5.png","/uploads/2017/11/ag6.png","/uploads/2017/11/ag7.png"]
 ---

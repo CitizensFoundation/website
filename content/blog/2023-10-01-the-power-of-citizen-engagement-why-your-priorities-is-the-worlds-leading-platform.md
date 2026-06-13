@@ -3,7 +3,7 @@ title: "The Power of Citizen Engagement: Why “Your Priorities” is the World�
 slug: "the-power-of-citizen-engagement-why-your-priorities-is-the-worlds-leading-platform"
 date: "2023-10-01"
 hero: "/uploads/2022/06/shutterstock_506137132small2.jpg"
-excerpt: "Since 2008, Citizens Foundation has been at the forefront of digital democracy, tirelessly refining our flagship platform, “Your Priorities.”"
+excerpt: "Since 2008, Citizens Foundation has refined Your Priorities into a leading open-source platform for digital democracy."
 categories: ["Digital Democracy"]
 ---
 

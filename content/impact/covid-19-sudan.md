@@ -3,7 +3,7 @@ title: "Sudan - Back to school"
 slug: "covid-19-sudan"
 date: "2022-05-26"
 hero: "/uploads/2022/05/837c8cd6-28ab-474c-94a1-377d0d263c4a-retina.png"
-excerpt: "We had the privilege of aiding the British Council and a local nonprofit, Al Ayam in Sudan, forging solutions to overcome challenges to their continuing efforts to provide education opportunities to the disadvantaged, in the midst of a global pandemic."
+excerpt: "British Council and Al Ayam used Citizens Foundation tools to gather ideas for keeping education accessible in Sudan during Covid-19."
 categories: ["Policy Crowdsourcing","Your Priorities"]
 link: "https://sudan-covid-19-community.yrpri.org/"
 gallery: ["/uploads/2022/05/1653575400882.png","/uploads/2022/05/1653575417784.png","/uploads/2022/05/1653575434450.png","/uploads/2022/05/1653575452473.png","/uploads/2022/05/1653575466902.png","/uploads/2022/05/1653575480927.png","/uploads/2022/05/1653575499941.png","/uploads/2022/05/1653575513655.png","/uploads/2022/05/1653575552345.png","/uploads/2022/05/1653575595581.png"]

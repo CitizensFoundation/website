@@ -3,7 +3,7 @@ title: "Citizens Foundation participated in Level Up conference in Tunisia"
 slug: "citizens-foundation-participated-in-level-up-conference-in-tunisia"
 date: "2014-03-25"
 hero: "/uploads/2017/11/CF_Logo_2017-f-wide.png"
-excerpt: "The Level Up conference took place from 21st to 23rd of March, 2014, at Hotel Riu Palace Oceana Hammamet and the Citizens Foundation"
+excerpt: "Citizens Foundation participated in the Level Up conference in Tunisia, sharing experience from open-source civic engagement platforms."
 ---
 
 The Level Up conference took place from 21st  to 23rd of March, 2014, at Hotel Riu Palace Oceana Hammamet and the Citizens Foundation was among the variety of experienced international speakers.

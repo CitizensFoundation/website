@@ -3,7 +3,7 @@ title: "Online Citizens Participation in Iceland and Worldwide, POINT conference
 slug: "online-citizens-participation-in-iceland-and-worldwide-point-conference"
 date: "2013-05-28"
 hero: "/uploads/2013/05/Robert-Bjarnason-i-Gunnar-Grimsson-300x199.jpg"
-excerpt: "This year at the POINT conference (Political Accountability and New Technologies) there were also speakers from the Citizens Foundation,"
+excerpt: "Citizens Foundation presented Icelandic and international citizen participation work at the POINT conference on political accountability and new technologies."
 ---
 
 This year at the POINT conference (Political Accountability and New Technologies) there were also speakers from the Citizens Foundation, Iceland, giving a presentation “Online Citizens Participation in Iceland and Worldwide.” The conference took place from 23rd to 26th of May, 2013, in Sarajevo, Bosnia and Herzegovina.

@@ -3,7 +3,7 @@ title: "Skills-First Hiring: Opening State Jobs with AI"
 slug: "skills-first-new-jersey"
 date: "2026-05-01"
 hero: "/uploads/2026/06/skills-first-hero.png"
-excerpt: "With Northeastern University's Burnes Center, our Policy Synth agents analyze thousands of state job descriptions and the laws behind them — finding and rewriting unnecessary degree requirements that block qualified candidates without college diplomas. Live in New Jersey, now scaling toward 3-5 more states with GitLab Foundation support."
+excerpt: "Policy Synth helps New Jersey review public job descriptions and remove unnecessary degree requirements, with expansion to more states underway."
 categories: ["Policy Synth"]
 link: "https://burnes.northeastern.edu/skills-first-workforce-hiring-creating-more-equitable-and-inclusive-state-employment-opportunities-using-ai/"
 gallery: ["/uploads/2026/06/skills-first-agent-config.png","/uploads/2026/06/skills-first-eval.png"]

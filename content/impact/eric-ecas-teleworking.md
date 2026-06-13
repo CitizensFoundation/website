@@ -3,7 +3,7 @@ title: "ERIC: An AI Rights Assistant for European Citizens"
 slug: "eric-ecas-teleworking"
 date: "2025-06-24"
 hero: "/uploads/2026/06/eric-ecas-hero.png"
-excerpt: "We built ERIC, the European Citizen Action Service's AI-powered Rights Information Centre, on the Policy Synth stack — starting with cross-border teleworking rights, grounded strictly in official EU and national legislation."
+excerpt: "ERIC uses Policy Synth to answer European citizens' rights questions with evidence from official EU and national sources."
 categories: ["Policy Synth"]
 link: "https://ecas-eric.eu/telework"
 ---

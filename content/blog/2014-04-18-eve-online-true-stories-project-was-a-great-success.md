@@ -3,7 +3,7 @@ title: "EVE Online True Stories Project was a great success"
 slug: "eve-online-true-stories-project-was-a-great-success"
 date: "2014-04-18"
 hero: "/uploads/2017/11/EVE.png"
-excerpt: "Over 100.000 people have visited the True Stories website, approximately 10.000 people have either submitted a story, commented or voted and 767 stories"
+excerpt: "The EVE Online True Stories project drew more than 100,000 visitors and thousands of player submissions through Your Priorities."
 ---
 
 Over 100.000 people have visited the True Stories website, approximately 10.000 people have either submitted a story, commented or voted and 767 stories were submitted by EvE Online.

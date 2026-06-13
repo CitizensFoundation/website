@@ -3,7 +3,7 @@ title: "Citizens Foundation Case File: Your Constitution, The Game"
 slug: "citizens-foundation-case-file-constitution-game"
 date: "2021-12-07"
 hero: "/uploads/2021/12/yourconstiarticleshareimage3.png"
-excerpt: "Citizens Foundation America’s Executive Director Josh Lanthier-Welch discusses how he came to pro-democracy, civil society innovation as a calling, through a game about"
+excerpt: "Josh Lanthier-Welch explains how a constitutional game became part of Citizens Foundation America's pro-democracy civic work."
 categories: ["Democracy Games"]
 ---
 

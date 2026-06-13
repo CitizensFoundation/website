@@ -3,7 +3,7 @@ title: "CCP Games collect True Stories with Your Priorities"
 slug: "ccp-games-collect-true-stories-with-your-priorities"
 date: "2013-04-04"
 hero: "/uploads/2017/11/EVE.png"
-excerpt: "Your Priorities can be used in many different ways."
+excerpt: "CCP Games used Your Priorities to collect and prioritize player stories for EVE Online, showing how open participation can support large online communities."
 ---
 
 Your Priorities can be used in many different ways. EVE Online is a virtual life for its participants and they create their own world. [CCP Games](http://www.ccpgames.com/en/home) wanted to find the best stories from the first decade of the EVE Universe directly from the players themselves to use in spin-off products such as comic books, TV shows, books and movies. They decided to use Your Priorities for this purpose.

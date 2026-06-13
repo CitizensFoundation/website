@@ -3,7 +3,7 @@ title: "CODE Europe - 10 Cities tackle Air Pollution"
 slug: "code-europe-10-cities-in-europe-tackle-air-pollution-issues"
 date: "2022-05-25"
 hero: "/uploads/2022/05/089a88b8-27a6-42ea-aa73-bd40c43d00a1-retina.png"
-excerpt: "From Berlin, Brussels and Amsterdam in the West, to Athens and Lisbon down South, to Riga, Tallinn, Burgas, Budapest and Podgorica in the East – Citizens of Europe grapple with what to do about air pollution that drifts amongst them all."
+excerpt: "Ten European cities used Your Priorities to gather public ideas on air pollution and cross-border environmental action."
 categories: ["Policy Crowdsourcing","Your Priorities"]
 link: "https://code-europe-phase-2.yrpri.org/community/4315"
 gallery: ["/uploads/2022/05/1653506248612.png","/uploads/2022/05/1653506265028.png","/uploads/2022/05/1653506286940.png","/uploads/2022/05/1653506311949.png","/uploads/2022/05/1653506325334.png","/uploads/2022/05/1653506350878.png","/uploads/2022/05/1653506369206.png","/uploads/2022/05/1653506384942.png","/uploads/2022/05/1653506406585.png","/uploads/2022/05/1653506418178.png"]

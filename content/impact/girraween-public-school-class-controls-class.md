@@ -3,7 +3,7 @@ title: "Girraween Public School – Australia"
 slug: "girraween-public-school-class-controls-class"
 date: "2015-01-08"
 hero: "/uploads/2017/11/classandteacher_812wide.jpg"
-excerpt: "How can we improve democracy in a primary school? Rathy Srikanthan, teacher at Girraween Public School in Australia, started to use Your..."
+excerpt: "Girraween Public School in Australia used Your Priorities to help primary-school students practice democracy and improve their school community."
 categories: ["Your Priorities"]
 gallery: ["/uploads/2017/11/aishaniandcasey_812.jpg","/uploads/2017/11/classandteacher_812.jpg"]
 ---

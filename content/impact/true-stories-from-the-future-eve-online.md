@@ -3,7 +3,7 @@ title: "True Stories from the future – EVE Online"
 slug: "true-stories-from-the-future-eve-online"
 date: "2017-12-01"
 hero: "/uploads/2017/11/Eve_Skjamynd-w.png"
-excerpt: "True Stories from the future – EVE Online Over 100 000 people visited the website Over 10 000 added content Almost 800 stories..."
+excerpt: "The EVE Online True Stories project attracted over 100,000 visitors and thousands of player contributions through Your Priorities."
 categories: ["Your Priorities"]
 gallery: ["/uploads/2017/11/Eve_Skjamynd.png","/uploads/2017/11/Tru-Stories-comic-book-all-covers-combined.jpg"]
 ---

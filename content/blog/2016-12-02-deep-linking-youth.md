@@ -3,7 +3,7 @@ title: "DEEP-Linking Youth"
 slug: "deep-linking-youth"
 date: "2016-12-02"
 hero: "/uploads/2017/11/depplink.png"
-excerpt: "DEEP-Linking Youth The aim of the Digital Ecosystem for E-Participation Linking Youth (DEEP-Linking Youth) project is to use e-participation as an instrument to foster young"
+excerpt: "DEEP-Linking Youth explored how e-participation tools can help young people influence democratic decisions across Europe."
 ---
 
 ## DEEP-Linking Youth

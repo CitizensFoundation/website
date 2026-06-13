@@ -3,7 +3,7 @@ title: "Rahvakogu - People’s Assembly in Estonia"
 slug: "rahvakogu"
 date: "2013-01-01"
 hero: "/uploads/2017/11/666-1.jpg"
-excerpt: "After political scandals in Estonia in 2012, president Toomas Hendrik Ilves asked grassroots organisations to come up with ideas to improve the democratic framework in the country. They decided to crowd-source this reflection process using Your Priorities system."
+excerpt: "Estonia's Rahvakogu used Your Priorities to crowdsource democratic reforms after political scandals in 2012."
 categories: ["Policy Crowdsourcing","Your Priorities"]
 link: "https://docs.google.com/document/d/1lhoyZfRsgfhQkcSppu3L78_Uz_IugUkzMycN2xg3MPo/edit"
 gallery: ["/uploads/2017/11/koosolek53.jpg","/uploads/2017/11/rava-e1511549489865.png"]

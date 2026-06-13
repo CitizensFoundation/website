@@ -3,7 +3,7 @@ title: "Better Neighborhoods PB for the 4th time"
 slug: "better-neighborhoods-pb-for-the-4th-time"
 date: "2014-11-26"
 hero: "/uploads/2017/11/troppur_vid_eidisgranda_2-1-e1512059009721.jpg"
-excerpt: "On the 8th of October 2014 we started collecting ideas for our annual Participatory budgeting project for the City of Reykjavik, capital of"
+excerpt: "Reykjavik opened its fourth Better Neighborhoods participatory budgeting process, inviting residents to propose and prioritize local improvements."
 ---
 
 On the 8th of October 2014 we started collecting ideas for our annual Participatory budgeting project for the City of Reykjavik, capital of Iceland. When the submission period ended on 7th of November almost 700 ideas had been submitted which is a new record. They are now being evaluated and costed by city officials in preparation for a binding vote of the citizens in February 2015. We hope that the quality of the ideas will match the quantity 🙂

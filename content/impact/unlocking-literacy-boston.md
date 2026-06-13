@@ -3,7 +3,7 @@ title: "Unlocking Literacy: How Can AI Help Close the Reading Gap?"
 slug: "unlocking-literacy-boston"
 date: "2024-09-01"
 hero: "/uploads/2026/06/unlocking-literacy-hero.png"
-excerpt: "With Northeastern University's AI for Impact program, the Museum of Science and Boston Public Schools, we used Your Priorities and Policy Synth to engage the communities most affected by the reading gap and evolve evidence-based solutions for early literacy."
+excerpt: "Northeastern, the Museum of Science, Boston Public Schools, and Citizens Foundation used AI-assisted participation to address early literacy."
 categories: ["Policy Synth","Your Priorities"]
 link: "https://burnes.northeastern.edu/news/ai-for-impact-trip-to-the-museum-of-science-boston/"
 gallery: ["/uploads/2026/06/unlocking-literacy-subproblems.png","/uploads/2026/06/unlocking-literacy-solutions.png"]

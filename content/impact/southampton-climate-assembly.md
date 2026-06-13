@@ -3,7 +3,7 @@ title: "Southampton Citizens' Climate Assembly"
 slug: "southampton-climate-assembly"
 date: "2024-03-07"
 hero: "/uploads/2026/06/southampton-climate-assembly.png"
-excerpt: "For its first ever citizens' assembly, Southampton City Council used Your Priorities to give a face-to-face panel an online presence — letting many more residents feed into the assembly's recommendations on the future of transport and climate in the city."
+excerpt: "Southampton used Your Priorities to extend its citizens' climate assembly online and gather wider public input."
 categories: ["Your Priorities","Climate"]
 link: "https://www.southampton.gov.uk/our-green-city/how-you-can-help/southampton-citizens-climate-assembly/"
 ---

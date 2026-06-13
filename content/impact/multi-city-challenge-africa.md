@@ -3,7 +3,7 @@ title: "Multi City Challenge Africa"
 slug: "multi-city-challenge-africa"
 date: "2022-05-25"
 hero: "/uploads/2022/05/7a7154cf-539f-4d0a-9e62-187dc1768da5-retina.png"
-excerpt: "GovLab partnered with Citizens Foundation to help 5 major cities across Africa respond in real time to their constituents’ needs and concerns at the height of the Covid-19 pandemic."
+excerpt: "GovLab and Citizens Foundation helped five African cities gather real-time public input during the Covid-19 pandemic."
 categories: ["Policy Crowdsourcing","Your Priorities"]
 link: "https://yp.multicitychallenge.org/"
 gallery: ["/uploads/2022/05/1653504151139.png","/uploads/2022/05/1653504170832.png","/uploads/2022/05/1653504186307.png","/uploads/2022/05/1653504206153.png","/uploads/2022/05/1653504227255.png","/uploads/2022/05/1653504243199.png","/uploads/2022/05/1653504273328.png","/uploads/2022/05/1653504293364.png","/uploads/2022/05/1653504318291.png","/uploads/2022/05/1653504377613.png"]

@@ -3,7 +3,7 @@ title: "Better Reykjavik"
 slug: "better_reykjavik"
 date: "2010-05-06"
 hero: "/uploads/2017/11/Betra-%C3%8Dsland-2.png"
-excerpt: "Better Reykjavik is the most successful example of the use of Your Priorities platform. It enables citizens to voice, debate and prioritize ideas to improve their city, creating open discourse between community members and city council and also giving the voters a direct influence on decision making"
+excerpt: "Better Reykjavik lets residents propose, debate, and prioritize ideas for the city, giving voters direct influence on local decision-making."
 categories: ["Active Citizen","Open Active Voting","Participatory Budgeting","Policy Crowdsourcing","Your Priorities"]
 link: "https://betrireykjavik.is"
 gallery: ["/uploads/2017/10/Betrireykjavik-e1511544145413.png","/uploads/2017/10/Betrireykjavik-2-e1511544232163.png","/uploads/2017/10/Betrireykjavik-1-e1511544311855.png"]

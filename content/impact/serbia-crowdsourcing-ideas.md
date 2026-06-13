@@ -3,7 +3,7 @@ title: "Crowdsourcing a better business environment"
 slug: "serbia-crowdsourcing-ideas"
 date: "2016-10-01"
 hero: "/uploads/2017/11/Serbia.png"
-excerpt: "Crowdsourcing a better business environment The Serbian state in collaboration with the United Nations Development Program are crowdsourcing ideas from the citizens..."
+excerpt: "Serbia and the UN Development Programme used Your Priorities to crowdsource ideas for improving the country's business environment."
 categories: ["Active Citizen","Policy Crowdsourcing","Your Priorities"]
 link: "https://adminhack.yrpri.org"
 gallery: ["/uploads/2017/11/serb1-e1511632238721.png","/uploads/2017/11/Serbia.png","/uploads/2017/11/serb2-e1511632517169.png"]

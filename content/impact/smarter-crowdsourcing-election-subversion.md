@@ -3,7 +3,7 @@ title: "Smarter Crowdsourcing: Countering Election Subversion"
 slug: "smarter-crowdsourcing-election-subversion"
 date: "2024-06-03"
 hero: "/uploads/2026/06/smarter-crowdsourcing-hero.jpg"
-excerpt: "With Democracy Fund and The GovLab, we used Policy Synth AI agents alongside expert deliberation to develop concrete strategies against election subversion and election-related violence in the United States — and published the method as a peer-reviewed paper."
+excerpt: "Democracy Fund, The GovLab, and Citizens Foundation used Policy Synth to develop strategies against election subversion."
 categories: ["Policy Synth","Smarter Crowdsourcing"]
 link: "https://election-subversion.smartercrowdsourcing.org/"
 gallery: ["/uploads/2026/06/smarter-crowdsourcing-fastcompany.png","/uploads/2026/06/smarter-crowdsourcing-arxiv.png"]
