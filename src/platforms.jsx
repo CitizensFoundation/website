@@ -551,6 +551,33 @@ const REPOS = [
   },
 ];
 
+const LEGACY_PROJECTS = [
+  {
+    name: "Open Active Voting",
+    status: "Legacy voting platform",
+    desc:
+      "A secure electronic voting app for participatory budgeting, designed to let residents allocate a fixed public budget while seeing project costs and budget limits.",
+    repo: "https://github.com/CitizensFoundation/open-active-voting",
+    demo: "https://ktest2.betrireykjavik.is/?locale=en",
+    impact: "/impact/my-neighbourhood/",
+    archive: "https://betrireykjavik.is/community/6176",
+    note:
+      "Used with Your Priorities in Reykjavík's My Neighbourhood process. The 2022-2023 archive is still online, and the model may restart using Open Active Voting if the city brings the process back.",
+  },
+  {
+    name: "Open Active Policy",
+    status: "Legacy policy game engine",
+    desc:
+      "A deep policy-making gamification platform created for civic education and constitutional design experiments.",
+    repo: "https://github.com/CitizensFoundation/open-active-policy",
+    demo: "https://demo-make-your-constitution.yrpri.org/",
+    impact: "/impact/make-constitution-game/",
+    archive: "/blog/citizens-foundation-case-file-constitution-game/",
+    note:
+      "The engine powered Make Your Constitution, an educational game connected to Iceland's constitution crowdsourcing work and documented by Josh Lanthier-Welch.",
+  },
+];
+
 export function OpenSourcePage() {
   return (
     <>
@@ -644,6 +671,35 @@ export function OpenSourcePage() {
             since 2014 — machine translation, toxicity detection, speech-to-text,
             and agent workflows long before they were fashionable
           </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell panel">
+          <p className="eyebrow">Legacy platforms</p>
+          <h2 className="section-title">Earlier open-source experiments we still stand behind</h2>
+          <p className="section-sub">
+            These platforms are not our current product focus, but they are part
+            of the Citizens Foundation DNA: open civic infrastructure, built in
+            public, tested in real democratic processes, and kept available for
+            learning, reuse and revival.
+          </p>
+          <div className="legacy-grid">
+            {LEGACY_PROJECTS.map((project) => (
+              <article className="card legacy-card" key={project.name}>
+                <span className="story-place">{project.status}</span>
+                <h3>{project.name}</h3>
+                <p>{project.desc}</p>
+                <p>{project.note}</p>
+                <div className="legacy-actions">
+                  <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href={project.repo}>Source</a>
+                  <a className="aurora-link" href={project.demo}>Live demo</a>
+                  <a className="aurora-link" href={project.impact}>Impact story</a>
+                  <a className="aurora-link" href={project.archive}>Archive</a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

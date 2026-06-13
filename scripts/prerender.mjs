@@ -19,7 +19,11 @@ const { render, ROUTES, META, SITE, routeFromPath, CONTENT_INDEX } = server;
 // Look up an article (blog/impact) by its route id, e.g. "blog/slug".
 const byRoute = new Map(CONTENT_INDEX.map((e) => [e.route, e]));
 
-const template = readFileSync(join(distDir, "index.html"), "utf8");
+// The template hard-codes the production origin in absolute URLs (og:image,
+// twitter:image, etc.). Swap it to the build's configured SITE so a staging
+// deploy serves matching absolute URLs. No-op when SITE is the default.
+let template = readFileSync(join(distDir, "index.html"), "utf8");
+if (SITE !== "https://citizens.is") template = template.split("https://citizens.is").join(SITE);
 
 const SOCIALS = [
   "https://github.com/CitizensFoundation",

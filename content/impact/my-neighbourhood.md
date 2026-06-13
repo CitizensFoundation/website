@@ -1,21 +1,23 @@
 ---
 title: "My Neighbourhood"
 slug: "my-neighbourhood"
-date: "2011-12-15"
+date: "2025-04-02"
 hero: "/uploads/2017/11/bh23.png"
-excerpt: "My Neighbourhood is Reykjavik's annual participatory budgeting process, where residents propose and vote on neighborhood improvements."
+excerpt: "My Neighbourhood was Reykjavik's participatory budgeting process from 2011 to 2023, where residents proposed and voted on neighborhood improvements."
 categories: ["Active Citizen","Open Active Voting","Participatory Budgeting","Your Priorities"]
-link: "https://hverfid-mitt-2017.betrireykjavik.is/community/607"
+link: "https://betrireykjavik.is/community/6176"
 gallery: ["/uploads/2017/11/Utileiksvaedi1-1.jpg","/uploads/2017/11/troppur_vid_eidisgranda_2-wide.jpg","/uploads/2017/11/leiksvaedi_landakotstun_2-wide.jpg","/uploads/2017/11/klambri4-wide.jpg","/uploads/2017/11/blakvollur.jpg","/uploads/2017/11/hverfi4-e1511712081812.png","/uploads/2017/11/hverfi3-e1511712098344.png","/uploads/2017/11/ka1-e1511823550873.png","/uploads/2017/11/ka3-e1511823566344.png","/uploads/2017/11/ka2-e1511823584920.png"]
 ---
 
-My Neighbourhood (previously Better Neighbourhoods) is the annual participatory budgeting in Reykjavík that has been ongoing since 2011.
+My Neighbourhood (previously Better Neighbourhoods) was Reykjavík's annual participatory budgeting process from 2011 to 2023.
 
-450m ISK (+3m EUR) is allocated by citizens each year to implement crowdsourced ideas from the citizens to improve the various neighbourhoods of Reykjavík. To date, 608 ideas have been approved (2012-2017) with thousands of citizens having had a real influence on their surroundings through the project.
+At its peak, 450m ISK (+3m EUR) was allocated by citizens each year to implement crowdsourced ideas from residents and improve the various neighbourhoods of Reykjavík. By 2017, 608 ideas had already been approved, with thousands of citizens having had a real influence on their surroundings through the project.
 
 All the neighbourhoods of Reykjavík have been visibly improved through the My Neighbourhood participatory budgeting project, with citizens using Your Priorities to submit and debate ideas, and then Open Active Voting to allocate the budget.
 
-The My Neighbourhood project is the flagship of Citizens Foundation participatory budgeting projects, having been successfully executed since 2011 when formal collaboration with the City of Reykjavík began. The project has been written about in various international media and garnered a great deal of attention worldwide, winning numerous awards, including the [Nordic Best Practice Challenge](http://international.stockholm.se/globalassets/nordic-best-practice-challenge_final.pdf) in 2015.
+The My Neighbourhood project is the flagship of Citizens Foundation participatory budgeting projects, having been successfully executed from the start of formal collaboration with the City of Reykjavík in 2011 through the 2022-2023 round. The project has been written about in various international media and garnered a great deal of attention worldwide, winning numerous awards, including the [Nordic Best Practice Challenge](http://international.stockholm.se/globalassets/nordic-best-practice-challenge_final.pdf) in 2015.
+
+The latest public archive is [Hverfið mitt 2022-2023](https://betrireykjavik.is/community/6176). Voting took place outside that idea archive, and the process may restart in the future using Open Active Voting again.
 
 ### The process of voting
 
@@ -47,4 +49,4 @@ You can vote as often as you like, with the last vote counting.
 
 [Hacking Democracy](https://www.forbes.com/sites/jaymcgregor/2017/01/23/hacking-democracy-how-tech-will-help-the-left-win-again/#363db6057bd6) – Forbes
 
-[Visit site](https://betrireykjavik.is/community/607).
+[Visit the 2022-2023 archive](https://betrireykjavik.is/community/6176).

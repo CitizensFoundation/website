@@ -63,6 +63,26 @@ export function ImpactIndex() {
       <div className="shell">
         <p className="eyebrow">Citizen engagement in over 50 countries since 2008</p>
         <h1 className="page-title">Impact</h1>
+        <a
+          className="impact-award"
+          href="https://www.solonian-institute.com/post/2022-sdi-digital-democracy-awards"
+        >
+          <img
+            src="/uploads/2022/09/sdi-digital-democracy-impact-award-2022.jpg"
+            alt="Citizens Foundation receiving the 2022 SDI Digital Democracy Impact Award"
+          />
+          <span className="impact-award-copy">
+            <span className="story-place">Award</span>
+            <strong>2022 SDI Digital Democracy Impact Award</strong>
+            <span>
+              The Solonian Democracy Institute recognized Citizens Foundation for
+              pioneering bottom-up e-democracy projects across 45+ countries,
+              from ideation and deliberation to public consultation,
+              decision-making and participatory budgeting.
+            </span>
+            <span className="aurora-link card-link">Read the award note →</span>
+          </span>
+        </a>
         <div className="card-grid">
           {stories.map((s) => (
             <a key={s.slug} className="card story-card" href={`/impact/${s.slug}/`}>

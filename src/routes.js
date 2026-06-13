@@ -5,7 +5,11 @@
 
 import { CONTENT_INDEX } from "virtual:content-index";
 
-export const SITE = "https://citizens.is";
+// Production origin. Override per-deploy with VITE_SITE_ORIGIN (e.g. set it to
+// https://new.citizens.is on the staging deploy) so canonical, og:url, og:image
+// and the sitemap all point at the domain actually serving the build.
+export const SITE =
+  (import.meta.env && import.meta.env.VITE_SITE_ORIGIN) || "https://citizens.is";
 
 // "home" maps to "/"; everything else maps to "/<id>/".
 export const PLATFORM_IDS = ["your-priorities", "policy-synth", "all-our-ideas", "open-source"];

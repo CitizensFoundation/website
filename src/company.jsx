@@ -67,6 +67,25 @@ const FILMS = [
   },
 ];
 
+const CLOUD_SERVICES = [
+  {
+    tier: "Free",
+    description:
+      "If you don't have the budget, for any reason, you don't pay. Unlimited projects and users with free email support.",
+    price: "$0",
+  },
+  {
+    tier: "Small",
+    description: "For small and medium sized organizations.",
+    price: "$425",
+  },
+  {
+    tier: "Medium",
+    description: "For larger organizations.",
+    price: "$2,800",
+  },
+];
+
 export function AboutPage() {
   return (
     <>
@@ -136,6 +155,51 @@ export function AboutPage() {
               <VideoCard key={f.src} {...f} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell panel services-panel">
+          <p className="eyebrow">Cloud services</p>
+          <h2 className="section-title">Hosted platforms where you own the data</h2>
+          <p className="section-sub">
+            Our nonprofit partly funds itself operating cloud services. Here are
+            monthly prices for service level agreements where you and your
+            citizens own the data.
+          </p>
+          <div className="service-price-list" aria-label="Cloud services monthly prices">
+            {CLOUD_SERVICES.map((service) => (
+              <div className="service-price-row" key={service.tier}>
+                <div>
+                  <h3>{service.tier}</h3>
+                  <p>{service.description}</p>
+                </div>
+                <strong className="service-price">{service.price}</strong>
+              </div>
+            ))}
+          </div>
+          <p className="service-docs-note">
+            <em>
+              For more information, download PDFs about{" "}
+              <a
+                className="aurora-link"
+                href="https://docs.google.com/document/d/1T7oK_xoozsyCp_LZrspyjQviZsof0mIT0cmD17F80Ec/export?format=pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Service Level Agreements
+              </a>{" "}
+              and{" "}
+              <a
+                className="aurora-link"
+                href="https://docs.google.com/document/d/1lJM_L57WB1gwjUzvHIuxn2HGN2pSoIb-cCZu3ZiAPv0/export?format=pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Startup Packages
+              </a>.
+            </em>
+          </p>
         </div>
       </section>
 
