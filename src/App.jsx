@@ -30,6 +30,16 @@ const FOOTER_NAV = [
   { label: "Work with us", href: "/work-with-us/" },
 ];
 
+// Is this nav link the current section? Platform pages light up "Platforms";
+// article routes (blog/<slug>, impact/<slug>) light up their section.
+function isNavActive(href, route) {
+  if (href === "/#platforms") {
+    return ["your-priorities", "policy-synth", "all-our-ideas"].includes(route);
+  }
+  const id = href.replace(/^\/+|\/+$/g, "").split("#")[0];
+  return !!id && (route === id || route.startsWith(id + "/"));
+}
+
 const PLATFORMS = [
   {
     name: "Your Priorities",
@@ -343,9 +353,17 @@ export default function App({ initialRoute, initialDoc }) {
             <img src="/assets/citizens-logo.png" alt="citizens.is — Citizens Foundation" />
           </a>
           <nav className="site-nav">
-            {NAV.map((item) => (
-              <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
-            ))}
+            {NAV.map((item) => {
+              const active = isNavActive(item.href, initialRoute);
+              return (
+                <a
+                  key={item.label}
+                  className={`aurora-link${active ? " is-active" : ""}`}
+                  aria-current={active ? "page" : undefined}
+                  href={item.href}
+                >{item.label}</a>
+              );
+            })}
             <a className={`btn btn-primary btn-small ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Work with us</a>
           </nav>
           <button
@@ -360,11 +378,20 @@ export default function App({ initialRoute, initialDoc }) {
         </div>
         {menuOpen && (
           <nav className="mobile-nav">
-            {NAV.map((item) => (
-              <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </a>
-            ))}
+            {NAV.map((item) => {
+              const active = isNavActive(item.href, initialRoute);
+              return (
+                <a
+                  key={item.label}
+                  className={active ? "is-active" : undefined}
+                  aria-current={active ? "page" : undefined}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
             <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/" onClick={() => setMenuOpen(false)}>
               Work with us
             </a>
@@ -381,9 +408,17 @@ export default function App({ initialRoute, initialDoc }) {
             © 2026 Citizens Foundation
           </span>
           <span className="footer-links">
-            {FOOTER_NAV.map((item) => (
-              <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
-            ))}
+            {FOOTER_NAV.map((item) => {
+              const active = isNavActive(item.href, initialRoute);
+              return (
+                <a
+                  key={item.label}
+                  className={`aurora-link${active ? " is-active" : ""}`}
+                  aria-current={active ? "page" : undefined}
+                  href={item.href}
+                >{item.label}</a>
+              );
+            })}
           </span>
           <span className="footer-social">
             {SOCIALS.map(({ label, href, Icon }) => (
