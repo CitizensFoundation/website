@@ -277,6 +277,13 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="home-logo-strip reveal" aria-label="Citizens Foundation">
+        <img
+          src="/uploads/2022/03/Citizens-FoundationWideNoText-transparent.png"
+          alt="Citizens Foundation"
+        />
+      </section>
     </>
   );
 }

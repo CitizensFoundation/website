@@ -2,13 +2,23 @@ import HeroCanvas from "./HeroCanvas.jsx";
 import { IconUsers, IconGlobe, IconCode, IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
 import { PLAUSIBLE_EVENTS, plausibleClass } from "./plausible.js";
 
-function PageHero({ eyebrow, title, lede, ctas }) {
+function PageHero({ eyebrow, title, lede, ctas, logo, logoHeight = 150, logoOnly = false }) {
   return (
     <section className="hero hero-compact">
       <HeroCanvas />
       <div className="shell hero-inner">
         <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
+        {logoOnly ? (
+          <h1 className="hero-logo-h1">
+            <img className="hero-logo" src={logo} alt="" style={{ height: logoHeight }} />
+            <span className="sr-only">{title}</span>
+          </h1>
+        ) : (
+          <>
+            {logo && <img className="hero-logo" src={logo} alt="" style={{ height: logoHeight }} />}
+            <h1>{title}</h1>
+          </>
+        )}
         <p className="lede">{lede}</p>
         {ctas && <div className="cta-row">{ctas}</div>}
       </div>
@@ -113,6 +123,9 @@ export function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="Citizens Foundation"
+        logo="/uploads/2022/03/Citizens-FoundationWideNoText-transparent.png"
+        logoHeight={170}
+        logoOnly
         lede="A non-profit in Reykjavík, Iceland, founded in 2008 — bringing
           people together to debate and prioritize ideas that improve their
           communities."
