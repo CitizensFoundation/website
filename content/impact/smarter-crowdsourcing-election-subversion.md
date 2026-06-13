@@ -17,6 +17,17 @@ What made this engagement different was Policy Synth, our open-source toolkit fo
 
 The election subversion project became the first major real-world case study of Smarter Crowdsourcing augmented with AI agents. The recommendations were delivered to Democracy Fund to support its grantmaking against election subversion ahead of the 2024 US elections.
 
-We described the method and results in a peer-reviewed paper, [Using Artificial Intelligence to Accelerate Collective Intelligence: Policy Synth and Smarter Crowdsourcing](https://arxiv.org/abs/2407.13960), by Róbert Bjarnason, Dane Gambrell and Joshua Lanthier-Welch, written for the ACM Collective Intelligence Conference 2024. Beth Simone Noveck and Róbert Bjarnason also wrote about the project in Fast Company: [How AI could restore our faith in democracy](https://www.fastcompany.com/91001497/ai-faith-in-democracy).
+We described the method and results in a peer-reviewed paper, [Using Artificial Intelligence to Accelerate Collective Intelligence: Policy Synth and Smarter Crowdsourcing](https://arxiv.org/abs/2407.13960), by Róbert Bjarnason, Dane Gambrell and Joshua Lanthier-Welch, written for the ACM Collective Intelligence Conference 2024.
+
+<div class="paper-download">
+  <div>
+    <p class="paper-download-label">Research paper</p>
+    <h3>Policy Synth and Smarter Crowdsourcing</h3>
+    <p>Download the full 51-page ACM Collective Intelligence Conference paper documenting the method and real-world election subversion case study.</p>
+  </div>
+  <a class="btn btn-primary" href="https://arxiv.org/pdf/2407.13960" target="_blank" rel="noopener">Download PDF →</a>
+</div>
+
+Beth Simone Noveck also wrote about the project in Fast Company, drawing on an interview with Róbert Bjarnason: [How AI could restore our faith in democracy](https://www.fastcompany.com/91001497/ai-faith-in-democracy).
 
 Our position throughout: AI is a tool to enhance human intelligence and creativity, not replace it. Policy Synth keeps people in control of every judgment that matters, while AI removes the drudgery between them.

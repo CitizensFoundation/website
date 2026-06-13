@@ -10,6 +10,14 @@ We have launched our first e-democracy crowdfunding campaign on Goteo.org websit
 
 The democratic innovation “Your Idea – Our Priority” was created in cooperation with the Local Democracy Centre LDA, in Knjazevac, Serbia. It aims to improve communication and consultation between different sections of local society by giving citizens a stronger voice in their local communities with Your Priorities eDemocracy platform. The project is a part of our eDemocracy Startup Network.
 
+### Balkan eDemocracy Startup Project
+
+The campaign video explains how the project would use Your Priorities to support local e-democracy work in Serbia.
+
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/tJfAysjZ1RY" title="Your Priorities: Balkan eDemocracy Startup Project" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 Now we are looking for support to get this project started and we would be very grateful for any kind of support. You can donate money and also your time to help us promote the campaign.
 
 [See the project](https://goteo.org/project/your-idea-our-priority-edemocracy)

@@ -1,5 +1,5 @@
 import HeroCanvas from "./HeroCanvas.jsx";
-import { IconUsers, IconGlobe, IconCode, IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
+import { IconUsers, IconGlobe, IconCode, IconPackage, IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
 import { PLAUSIBLE_EVENTS, plausibleClass } from "./plausible.js";
 
 function PageHero({ eyebrow, title, lede, ctas, logo, logoHeight = 150, logoOnly = false }) {
@@ -546,6 +546,55 @@ export function WorkWithUsPage() {
               </a>.
             </em>
           </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell panel deploy-open-source-panel">
+          <p className="eyebrow">Deploy open source</p>
+          <h2 className="section-title">Run the software on your own infrastructure</h2>
+          <p className="section-sub">
+            The same software we operate is free and open source. Technical
+            teams can install Your Priorities with Docker, keep all data on
+            their own infrastructure, and adapt the code to local needs.
+          </p>
+          <div className="deploy-grid">
+            <article className="deploy-item">
+              <span className="icon-chip"><IconPackage /></span>
+              <h3>Docker-based install</h3>
+              <p>
+                Start from the open-source repository and run the platform with
+                Docker for a repeatable local or cloud deployment.
+              </p>
+            </article>
+            <article className="deploy-item">
+              <span className="icon-chip"><IconCode /></span>
+              <h3>No license cost</h3>
+              <p>
+                The core stack is open source, so there are no platform license
+                fees and no vendor lock-in.
+              </p>
+            </article>
+            <article className="deploy-item">
+              <span className="icon-chip"><IconGlobe /></span>
+              <h3>Support when useful</h3>
+              <p>
+                We can help with setup, upgrades, custom domains, authentication,
+                integrations and project-specific changes.
+              </p>
+            </article>
+          </div>
+          <div className="cta-row deploy-actions">
+            <a className="btn btn-primary" href="/open-source/">Open source overview →</a>
+            <a
+              className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`}
+              href="https://github.com/CitizensFoundation/your-priorities-app"
+              target="_blank"
+              rel="noopener"
+            >
+              View on GitHub
+            </a>
+          </div>
         </div>
       </section>
 

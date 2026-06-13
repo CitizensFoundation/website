@@ -10,15 +10,13 @@ gallery: ["/uploads/2017/10/Betrireykjavik-e1511544145413.png","/uploads/2017/10
 videos: ["https://www.youtube.com/embed/aL3MctnzSjU"]
 ---
 
-###   
-**Timeframe:  
-**25\. May 2010 – Present
+**Timeframe:** 25 May 2010 – Present
 
-**Project Description:**Better Reykjavik is an online platform for the crowdsourcing of solutions to urban challenges launched in May 2010. Better Reykjavik is a co-creation project of the Citizens Foundation, Reykjavik City, and its citizens that connects them and improves trust and policy. Innovations include a unique debating system, crowd-sourcing of content and prioritization, submission of multimedia content, and extensive use of AI to improve the user experience as well as content submitted. 
+**Project Description:** Better Reykjavik is an online platform for the crowdsourcing of solutions to urban challenges launched in May 2010. Better Reykjavik is a co-creation project of the Citizens Foundation, Reykjavik City, and its citizens that connects them and improves trust and policy. Innovations include a unique debating system, crowd-sourcing of content and prioritization, submission of multimedia content, and extensive use of AI to improve the user experience as well as content submitted. 
 
 It’s a platform for crowdsourcing solutions to urban challenges and has multiple democratic functions: Agenda setting, Participatory budgeting, and Policymaking. It opened a week before the 2010 elections in Reykjavik, just as the Best Party,  a movement meant as a sarcastic critique of local politics, won the city elections; the new government saw the potential for crowdsourcing their platform immediately. After the elections, Better Reykjavik became an official policy and agenda-setting platform for the city.
 
-**Participatory budgeting**In 2011 a Participatory budgeting started within Better Reykjavik using the name Better Neighborhoods (later My Neighborhood). In this project, Reykjavik residents and the city administration maintain an ongoing collaboration to determine capital allocation for construction and maintenance projects within the ten main neighborhoods of the city.
+**Participatory budgeting:** In 2011 a Participatory budgeting started within Better Reykjavik using the name Better Neighborhoods (later My Neighborhood). In this project, Reykjavik residents and the city administration maintain an ongoing collaboration to determine capital allocation for construction and maintenance projects within the ten main neighborhoods of the city.
 
 Participation has increased steadily with new records reached almost every year. This 450 million ISK (4.2 million USD, 3.6 million EUR) participatory budgeting initiative enables the public to spend approximately 4% of the city’s capital investment budget.
 

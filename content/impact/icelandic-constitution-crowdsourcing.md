@@ -9,8 +9,6 @@ link: "https://stjornarskra-2019.betraisland.is/?locale=en&startAutoTranslate=1"
 gallery: ["/uploads/2020/01/Screenshot-from-2020-01-27-18-21-37.png","/uploads/2020/01/Screenshot-from-2020-01-27-18-21-53.png","/uploads/2020/01/Screenshot-from-2020-01-27-18-22-03.png","/uploads/2020/01/Screenshot-from-2020-01-27-18-22-12.png","/uploads/2020/01/Screenshot-from-2020-01-27-18-22-28.png"]
 ---
 
-![](/uploads/2020/01/logoAdal.png)
-
 An attempt to change the Icelandic constitution in the 2018-2021 election period was made, in collaboration with all parties in the Icelandic Parliament. The University of Iceland & the Citizens Foundation created a connection to the government where the public can influence the proposed constitutional amendments. No actual changes have been made yet to the constitution, this is an ongoing process.
 
 Over 39.000 people visited the website and learned about constitution-making.  Exactly 1.092 citizens logged in and created ideas and debate points – Iceland is tiny and if the same % would have participated in the US that would be over 1 million citizens and a comparable % rate in the UK would be over 200.000 people.

@@ -212,6 +212,73 @@ function HomePage() {
 
       <section className="section reveal">
         <div className="shell">
+          <p className="eyebrow">In the spotlight</p>
+          <h2 className="section-title">Human + AI policymaking — the paper and the article</h2>
+          <div className="spotlight">
+            <a
+              className="spotlight-feature"
+              href="/impact/smarter-crowdsourcing-election-subversion/"
+            >
+              <span
+                className="spotlight-cover"
+                style={{ backgroundImage: "url(/uploads/2026/06/smarter-crowdsourcing-election-subversion-cover-chatgpt.png)" }}
+                aria-hidden="true"
+              />
+              <span className="spotlight-feature-copy">
+                <span className="story-place">Impact study</span>
+                <h3>Smarter Crowdsourcing: Countering Election Subversion</h3>
+                <p>
+                  With Democracy Fund and The GovLab — the first real-world case
+                  study of Smarter Crowdsourcing accelerated by Policy Synth AI
+                  agents, delivered ahead of the 2024 US elections.
+                </p>
+                <span className="aurora-link card-link">Read the case study →</span>
+              </span>
+            </a>
+            <div className="spotlight-refs">
+              <a
+                className="spotlight-ref"
+                href="https://arxiv.org/abs/2407.13960"
+                target="_blank"
+                rel="noopener"
+              >
+                <span
+                  className="spotlight-ref-thumb"
+                  style={{ backgroundImage: "url(/uploads/2026/06/smarter-crowdsourcing-arxiv.png)" }}
+                  aria-hidden="true"
+                />
+                <span className="spotlight-ref-copy">
+                  <span className="story-place">Research paper · ACM CI 2024</span>
+                  <strong>Using Artificial Intelligence to Accelerate Collective Intelligence</strong>
+                  <span className="spotlight-ref-meta">Róbert Bjarnason, Dane Gambrell &amp; Joshua Lanthier-Welch</span>
+                  <span className="aurora-link card-link">Read on arXiv ↗</span>
+                </span>
+              </a>
+              <a
+                className="spotlight-ref"
+                href="https://www.fastcompany.com/91001497/ai-faith-in-democracy"
+                target="_blank"
+                rel="noopener"
+              >
+                <span
+                  className="spotlight-ref-thumb"
+                  style={{ backgroundImage: "url(/uploads/2026/06/smarter-crowdsourcing-fastcompany.png)" }}
+                  aria-hidden="true"
+                />
+                <span className="spotlight-ref-copy">
+                  <span className="story-place">Fast Company</span>
+                  <strong>How AI could restore our faith in democracy</strong>
+                  <span className="spotlight-ref-meta">By Beth Simone Noveck</span>
+                  <span className="aurora-link card-link">Read the article ↗</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section reveal">
+        <div className="shell">
           <h2 className="section-title">100% open source</h2>
           <a className="os-banner" href="/open-source/">
             <span className="aurora-glow" aria-hidden="true" />
