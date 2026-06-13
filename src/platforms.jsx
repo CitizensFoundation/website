@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HeroCanvas from "./HeroCanvas.jsx";
-import { VideoCard } from "./company.jsx";
+import { VideoCard, StartProject } from "./company.jsx";
 import {
   IconBulb, IconScales, IconBallot, IconChecklist, IconCoins, IconShield,
   IconTranslate, IconSparkles, IconImage, IconChart, IconBot, IconCode,
@@ -270,6 +270,8 @@ export function YourPrioritiesPage() {
           </p>
         </div>
       </section>
+
+      <StartProject sub="Create your own project right now on our hosted servers — free to start, with secure sign-in and AI translation, moderation and analytics built in. Choose the server cluster closest to you." />
 
       <section className="section">
         <div className="shell">
@@ -596,27 +598,69 @@ const REPOS = [
 const LEGACY_PROJECTS = [
   {
     name: "Open Active Voting",
+    period: "2010-present",
     status: "Legacy voting platform",
+    logo: "/uploads/2020/01/CF420x420trans-125x125.png",
+    logoClass: "legacy-logo-citizens",
     desc:
       "A secure electronic voting app for participatory budgeting, designed to let residents allocate a fixed public budget while seeing project costs and budget limits.",
-    repo: "https://github.com/CitizensFoundation/open-active-voting",
-    demo: "https://ktest2.betrireykjavik.is/?locale=en",
-    impact: "/impact/my-neighbourhood/",
-    archive: "https://betrireykjavik.is/community/6176",
     note:
       "Used with Your Priorities in Reykjavík's My Neighbourhood process. The 2022-2023 archive is still online, and the model may restart using Open Active Voting if the city brings the process back.",
+    links: [
+      { label: "Source", href: "https://github.com/CitizensFoundation/open-active-voting", github: true },
+      { label: "Live demo", href: "https://ktest2.betrireykjavik.is/?locale=en" },
+      { label: "Impact story", href: "/impact/my-neighbourhood/" },
+      { label: "Archive", href: "https://betrireykjavik.is/community/6176" },
+    ],
   },
   {
     name: "Open Active Policy",
+    period: "2018-2021",
     status: "Legacy policy game engine",
+    logo: "/uploads/2021/09/logoAdal3.png",
+    logoClass: "legacy-logo-policy",
     desc:
       "A deep policy-making gamification platform created for civic education and constitutional design experiments.",
-    repo: "https://github.com/CitizensFoundation/open-active-policy",
-    demo: "https://demo-make-your-constitution.yrpri.org/",
-    impact: "/impact/make-constitution-game/",
-    archive: "/blog/citizens-foundation-case-file-constitution-game/",
     note:
       "The engine powered Make Your Constitution, an educational game connected to Iceland's constitution crowdsourcing work and documented by Josh Lanthier-Welch.",
+    links: [
+      { label: "Source", href: "https://github.com/CitizensFoundation/open-active-policy", github: true },
+      { label: "Live demo", href: "https://demo-make-your-constitution.yrpri.org/" },
+      { label: "Impact story", href: "/impact/make-constitution-game/" },
+      { label: "Archive", href: "/blog/citizens-foundation-case-file-constitution-game/" },
+    ],
+  },
+  {
+    name: "PaCE Keyword Scanner",
+    period: "2018-2022",
+    status: "Legacy NLP research pipeline",
+    logo: "/uploads/2022/03/PaCE_logo-2.png",
+    logoClass: "legacy-logo-wide",
+    desc:
+      "A Common Crawl keyword scanner developed for the EU H2020 Populism and Civic Engagement project to identify political narratives at web scale.",
+    note:
+      "In 2019, the pipeline scanned thousands of keywords and search criteria, then used early transformer language models including BERT and RoBERTa for second-level filtering.",
+    links: [
+      { label: "Source", href: "https://github.com/CitizensFoundation/pace-keyword-scanner", github: true },
+      { label: "Impact story", href: "/impact/populism-civic-engagement/" },
+      { label: "Research programme", href: "https://popandce.eu/" },
+    ],
+  },
+  {
+    name: "Active Citizen Dashboard",
+    period: "2015-2017",
+    status: "Legacy AI dashboard",
+    logo: "/uploads/2017/11/ac-logo1.png",
+    logoClass: "legacy-logo-wide",
+    desc:
+      "An early open-source AI dashboard for social listening and civic participation, built to explore how machine learning could help people follow public issues that mattered to them.",
+    note:
+      "Created as part of the EU-funded DEEP-Linking Youth project, it explored deep-learning social media listening using a TensorFlow text-CNN classifier.",
+    links: [
+      { label: "Source", href: "https://github.com/CitizensFoundation/active-citizen-dashboard", github: true },
+      { label: "Impact story", href: "/impact/deep-linking-youth/" },
+      { label: "Active Citizen", href: "/impact/active-citizen/" },
+    ],
   },
 ];
 
@@ -729,15 +773,31 @@ export function OpenSourcePage() {
           <div className="legacy-grid">
             {LEGACY_PROJECTS.map((project) => (
               <article className="card legacy-card" key={project.name}>
+                <div className="legacy-logo">
+                  <img
+                    className={project.logoClass}
+                    src={project.logo}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
                 <span className="story-place">{project.status}</span>
-                <h3>{project.name}</h3>
+                <h3>
+                  {project.name}{" "}
+                  <span className="legacy-period">({project.period})</span>
+                </h3>
                 <p>{project.desc}</p>
                 <p>{project.note}</p>
                 <div className="legacy-actions">
-                  <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href={project.repo}>Source</a>
-                  <a className="aurora-link" href={project.demo}>Live demo</a>
-                  <a className="aurora-link" href={project.impact}>Impact story</a>
-                  <a className="aurora-link" href={project.archive}>Archive</a>
+                  {project.links.map((link) => (
+                    <a
+                      key={link.label}
+                      className={`aurora-link ${link.github ? plausibleClass(PLAUSIBLE_EVENTS.github) : ""}`}
+                      href={link.href}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
                 </div>
               </article>
             ))}
@@ -751,7 +811,7 @@ export function OpenSourcePage() {
         ctas={
           <>
             <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">Start on GitHub →</a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:robert@citizens.is">Talk to us</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">Talk to us</a>
           </>
         }
       />

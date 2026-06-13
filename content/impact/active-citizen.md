@@ -11,8 +11,10 @@ gallery: ["/uploads/2017/11/24008682_10156020883787048_648076919_n.png","/upload
 
 Citizens’ Foundation has been actively been developing open source tools built on artificial intelligence for civic engagement purposes. Active Citizen is an open source project that will simplify citizens participation by bringing AI algorithms to civic use. With Active Citizen we are confronting the trend of decreasing formal political participation with new communications tools that will empower citizens to work together towards their common goals and increase the quality of their cooperation and debate. We have already been awarded seed funding for parts of the project by Erasmus and the Chest FP7 project.
 
+The related Active Citizen Dashboard explored deep-learning social media listening for civic participation, using a TensorFlow text-CNN classifier for social-media and news classification.
+
 **Open Source code**
 
 Visit the main [Active Citizen github archive.](https://github.com/rbjarnason/active-citizen)
 
-Visit the [Active Citizen Dashboard github archive.](https://github.com/rbjarnason/active-citizen-dashboard)
+Visit the [Active Citizen Dashboard github archive.](https://github.com/CitizensFoundation/active-citizen-dashboard)

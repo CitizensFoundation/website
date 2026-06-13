@@ -54,7 +54,7 @@ export const ROUTES = ROUTE_IDS.map(pathFor);
 // Per-route <head> metadata.
 export const META = {
   home: {
-    title: "Citizens Foundation — citizen engagement platforms & AI",
+    title: "Citizens Foundation — better public decisions with collective intelligence & AI",
     description:
       "Citizens Foundation builds open-source platforms for better public decisions — combining collective intelligence and AI to turn public input into action.",
   },

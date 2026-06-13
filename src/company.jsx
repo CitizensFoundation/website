@@ -56,13 +56,19 @@ const TEAM = [
   },
   {
     name: "Gunnar Grímsson",
-    role: "CO-FOUNDER & AMBASSADOR",
+    role: "Co-founder & Ambassador",
     photo: "/uploads/2019/06/GunnarCF-Ambassador-sharper-1-1.jpg",
     bio: "Gunnar has been at the heart of Citizens Foundation since its start. He is an experienced process and interface designer with a strong background in multiple fields, and has worked on citizen engagement projects all over the world.",
   },
 ];
 
 const FORMER_TEAM = [
+  {
+    name: "Alexander Máni Gautason",
+    role: "Programmer & QA Manager",
+    photo: null,
+    bio: "Alexander started testing new versions of our open-source software at age 11. Over the years he tested most major releases, helped keep quality high, and later ported much of the new web app from JavaScript to TypeScript before the days of AI coding assistants. He has also supported the Citizens Foundation family in many other ways over the years.",
+  },
   {
     name: "Joshua Lanthier-Welch",
     role: "Executive Director, Citizens Foundation America",
@@ -107,13 +113,13 @@ const CLOUD_SERVICES = [
   },
   {
     tier: "Small",
-    description: "For small and medium sized organizations.",
-    price: "$425",
+    description: "For small organizations.",
+    price: "$390",
   },
   {
     tier: "Medium",
-    description: "For larger organizations.",
-    price: "$2,800",
+    description: "For medium sized organizations.",
+    price: "$3,300",
   },
 ];
 
@@ -187,7 +193,15 @@ export function AboutPage() {
           <div className="card-grid">
             {FORMER_TEAM.map((m) => (
               <article key={m.name} className="card team-card">
-                <img className="team-photo legacy-team-photo" src={m.photo} alt={m.name} />
+                {m.photo ? (
+                  <img className="team-photo legacy-team-photo" src={m.photo} alt={m.name} />
+                ) : (
+                  <div
+                    className="team-photo legacy-team-photo team-photo-placeholder"
+                    role="img"
+                    aria-label={`${m.name} photo placeholder`}
+                  />
+                )}
                 <h3>{m.name}</h3>
                 <p className="story-place">{m.role}</p>
                 <p>{m.bio}</p>
@@ -206,51 +220,6 @@ export function AboutPage() {
               <VideoCard key={f.src} {...f} />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell panel services-panel">
-          <p className="eyebrow">Cloud services</p>
-          <h2 className="section-title">Hosted platforms where you own the data</h2>
-          <p className="section-sub">
-            Our nonprofit partly funds itself operating cloud services. Here are
-            monthly prices for service level agreements where you and your
-            citizens own the data.
-          </p>
-          <div className="service-price-list" aria-label="Cloud services monthly prices">
-            {CLOUD_SERVICES.map((service) => (
-              <div className="service-price-row" key={service.tier}>
-                <div>
-                  <h3>{service.tier}</h3>
-                  <p>{service.description}</p>
-                </div>
-                <strong className="service-price">{service.price}</strong>
-              </div>
-            ))}
-          </div>
-          <p className="service-docs-note">
-            <em>
-              For more information, download PDFs about{" "}
-              <a
-                className="aurora-link"
-                href="https://docs.google.com/document/d/1T7oK_xoozsyCp_LZrspyjQviZsof0mIT0cmD17F80Ec/export?format=pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                Service Level Agreements
-              </a>{" "}
-              and{" "}
-              <a
-                className="aurora-link"
-                href="https://docs.google.com/document/d/1lJM_L57WB1gwjUzvHIuxn2HGN2pSoIb-cCZu3ZiAPv0/export?format=pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                Startup Packages
-              </a>.
-            </em>
-          </p>
         </div>
       </section>
 
@@ -416,6 +385,68 @@ export function NewsPage() {
   );
 }
 
+// ---------- Start a project (shared launch section) ----------
+
+// Your Priorities hosted server clusters — people create a project directly on
+// the one closest to them (see the old /getting-started/ "choose a server").
+const LAUNCH_REGIONS = [
+  {
+    region: "Europe",
+    domain: "yrpri.org",
+    href: "https://yrpri.org/",
+    hint: "Best for Europe, Africa and Asia. GDPR-ready hosting in the EU.",
+  },
+  {
+    region: "United States",
+    domain: "ypus.org",
+    href: "https://ypus.org/",
+    hint: "Best for the Americas — hosted in the US.",
+  },
+];
+
+// Reusable "create your own community" block — used on Work with us and Your
+// Priorities. Drops in between sections (renders its own <section>).
+export function StartProject({
+  eyebrow = "Get started",
+  title = "Create your own projects in minutes",
+  sub = "Spin up your own Your Priorities project right now on our hosted servers — free to start, with secure sign-in and AI translation, moderation and analytics built in. Choose the server cluster closest to you.",
+}) {
+  return (
+    <section className="section">
+      <div className="shell">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 className="section-title">{title}</h2>
+        <p className="section-sub launch-sub">{sub}</p>
+        <div className="launch-grid">
+          {LAUNCH_REGIONS.map((r) => (
+            <a
+              key={r.domain}
+              className={`card launch-card ${plausibleClass(PLAUSIBLE_EVENTS.startProject)}`}
+              href={r.href}
+              target="_blank"
+              rel="noopener"
+            >
+              <span className="launch-top">
+                <span className="icon-chip"><IconGlobe /></span>
+                <span className="launch-region">{r.region}</span>
+              </span>
+              <span className="launch-domain">{r.domain}</span>
+              <span className="launch-hint">{r.hint}</span>
+              <span className="launch-go aurora-link card-link">Create your project →</span>
+            </a>
+          ))}
+        </div>
+        <p className="launch-note">
+          Somewhere else, or want Your Priorities on your own custom domain?{" "}
+          <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">
+            We’ll set it up with you →
+          </a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 // ---------- Work with us ----------
 
 export function WorkWithUsPage() {
@@ -470,6 +501,54 @@ export function WorkWithUsPage() {
           </p>
         </div>
       </section>
+
+      <StartProject />
+
+      <section className="section">
+        <div className="shell panel services-panel">
+          <p className="eyebrow">Cloud services</p>
+          <h2 className="section-title">Hosted platforms where you own the data</h2>
+          <p className="section-sub">
+            Our nonprofit partly funds itself operating cloud services. Here are
+            monthly prices for service level agreements where you and your
+            citizens own the data.
+          </p>
+          <div className="service-price-list" aria-label="Cloud services monthly prices">
+            {CLOUD_SERVICES.map((service) => (
+              <div className="service-price-row" key={service.tier}>
+                <div>
+                  <h3>{service.tier}</h3>
+                  <p>{service.description}</p>
+                </div>
+                <strong className="service-price">{service.price}</strong>
+              </div>
+            ))}
+          </div>
+          <p className="service-docs-note">
+            <em>
+              For more information, download PDFs about{" "}
+              <a
+                className="aurora-link"
+                href="https://docs.google.com/document/d/1T7oK_xoozsyCp_LZrspyjQviZsof0mIT0cmD17F80Ec/export?format=pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Service Level Agreements
+              </a>{" "}
+              and{" "}
+              <a
+                className="aurora-link"
+                href="https://docs.google.com/document/d/1lJM_L57WB1gwjUzvHIuxn2HGN2pSoIb-cCZu3ZiAPv0/export?format=pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Startup Packages
+              </a>.
+            </em>
+          </p>
+        </div>
+      </section>
+
       <section className="section">
         <div className="shell cta-band">
           <h2 className="section-title">Tell us about your project</h2>

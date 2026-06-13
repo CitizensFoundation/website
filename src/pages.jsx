@@ -43,11 +43,20 @@ export function BlogIndex() {
         <ul className="post-list post-list-full">
           {posts.map((p) => (
             <li key={p.slug}>
-              <div>
-                <a className="aurora-link post-title" href={`/blog/${p.slug}/`}>{p.title}</a>
-                {p.excerpt && <p className="post-excerpt">{p.excerpt}</p>}
-              </div>
-              <span className="post-date">{formatDate(p.date)}</span>
+              <a className="post-row" href={`/blog/${p.slug}/`}>
+                {p.hero && (
+                  <span
+                    className="post-thumb"
+                    style={{ backgroundImage: `url(${p.hero})` }}
+                    aria-hidden="true"
+                  />
+                )}
+                <span className="post-row-main">
+                  <span className="post-title">{p.title}</span>
+                  {p.excerpt && <p className="post-excerpt">{p.excerpt}</p>}
+                </span>
+                <span className="post-date">{formatDate(p.date)}</span>
+              </a>
             </li>
           ))}
         </ul>
@@ -76,7 +85,7 @@ export function ImpactIndex() {
             <strong>2022 SDI Digital Democracy Impact Award</strong>
             <span>
               The Solonian Democracy Institute recognized Citizens Foundation for
-              pioneering bottom-up e-democracy projects across 45+ countries,
+              pioneering bottom-up e-democracy projects across over 50 countries,
               from ideation and deliberation to public consultation,
               decision-making and participatory budgeting.
             </span>
