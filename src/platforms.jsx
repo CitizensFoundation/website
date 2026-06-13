@@ -1,10 +1,30 @@
+import { useState } from "react";
 import HeroCanvas from "./HeroCanvas.jsx";
 import { VideoCard } from "./company.jsx";
 import {
   IconBulb, IconScales, IconBallot, IconChecklist, IconCoins, IconShield,
   IconTranslate, IconSparkles, IconImage, IconChart, IconBot, IconCode,
-  IconPackage, IconGlobe, IconPairwise, IconUsers,
+  IconPackage, IconGlobe, IconPairwise, IconUsers, IconGitHub,
 } from "./icons.jsx";
+
+// Click-to-copy install command, styled like a mini terminal line.
+function CopyInstall({ cmd }) {
+  const [copied, setCopied] = useState(false);
+  const onCopy = () => {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      });
+    }
+  };
+  return (
+    <button type="button" className="pkg-install" onClick={onCopy} title="Copy to clipboard">
+      <code><span className="tprompt">$</span> {cmd}</code>
+      <span className="copy-ico">{copied ? "copied ✓" : "copy"}</span>
+    </button>
+  );
+}
 
 // ---------- shared building blocks ----------
 
@@ -78,7 +98,7 @@ export function YourPrioritiesPage() {
         title="Your Priorities"
         lede="An open-source idea generation, deliberation and decision-making
           platform connecting governments and citizens — in thousands of
-          projects across 45 countries."
+          projects across over 50 countries."
         ctas={
           <>
             <a className="btn btn-primary" href="https://yrpri.org">Open Your Priorities →</a>
@@ -199,9 +219,9 @@ export function YourPrioritiesPage() {
             </CaseCard>
           </div>
           <p className="ribbon">
-            Rated <strong>#1</strong> in the People Powered Participation Platform
-            Ratings · Top-ranked in the 2022 Digital Democracy Report · Listed in
-            the OECD Guidelines for Citizen Participation Processes
+            Rated <strong>#1</strong> in the People Powered 2025 Participation
+            Platform Ratings · Top-ranked in the 2024 Digital Democracy Report ·
+            Listed in the OECD Guidelines for Citizen Participation Processes
           </p>
         </div>
       </section>
@@ -405,7 +425,7 @@ export function AllOurIdeasPage() {
         ctas={
           <>
             <a className="btn btn-primary" href="https://yrpri.org">Run a wiki survey →</a>
-            <a className="btn btn-ghost" href="https://github.com/CitizensFoundation">Source on GitHub</a>
+            <a className="btn btn-ghost" href="https://github.com/CitizensFoundation/allourideas.org">Source on GitHub</a>
           </>
         }
       >
@@ -518,8 +538,8 @@ const REPOS = [
     desc: "The Policy Synth agent framework: TypeScript classes for orchestrating collective and artificial intelligence.",
   },
   {
-    name: "all-our-ideas",
-    href: "https://github.com/CitizensFoundation",
+    name: "allourideas.org",
+    href: "https://github.com/CitizensFoundation/allourideas.org",
     desc: "The wiki-survey engine created at Princeton University, now maintained by Citizens Foundation.",
   },
 ];
@@ -539,7 +559,23 @@ export function OpenSourcePage() {
             <a className="btn btn-primary" href="https://github.com/CitizensFoundation">github.com/CitizensFoundation →</a>
           </>
         }
-      />
+      >
+        <div className="oss-hero-extra">
+          <div className="terminal" aria-hidden="true">
+            <div className="terminal-bar"><i /><i /><i /><span className="terminal-title">bash</span></div>
+            <div className="terminal-body">
+              <div><span className="tprompt">$</span> npm install <span className="tpkg">@policysynth/agents</span></div>
+              <div className="tdim">added @policysynth/agents · MIT licensed</div>
+              <div className="tgap" />
+              <div><span className="tprompt">$</span> npm install <span className="tpkg">@yrpri/api @yrpri/webapp</span></div>
+              <div className="tdim">✓ democracy infrastructure, ready to build</div>
+            </div>
+          </div>
+          <div className="tech-pills">
+            <span>TypeScript</span><span>Node 24</span><span>Docker</span><span>MIT licensed</span>
+          </div>
+        </div>
+      </PageHero>
 
       <section className="section">
         <div className="shell">
@@ -551,22 +587,30 @@ export function OpenSourcePage() {
           </p>
           <div className="pkg-grid">
             {PACKAGES.map((p) => (
-              <a key={p.name} className="card pkg-card" href={p.href}>
+              <div key={p.name} className="card pkg-card">
                 <span className="icon-chip"><IconPackage /></span>
-                <h3 className="pkg-name">{p.name}</h3>
+                <h3 className="pkg-name">
+                  <a className="aurora-link" href={p.href}>{p.name}</a>
+                </h3>
+                <p className="pkg-tags">
+                  <span className="pkg-tag tag-ts">TypeScript</span>
+                  <span className="pkg-tag tag-mit">MIT</span>
+                </p>
                 <p>{p.desc}</p>
-                <code className="pkg-install">$ {p.install}</code>
-              </a>
+                <CopyInstall cmd={p.install} />
+              </div>
             ))}
-            <article className="card pkg-card pkg-card-why">
-              <span className="icon-chip"><IconCode /></span>
+          </div>
+          <div className="why-band">
+            <span className="icon-chip"><IconCode /></span>
+            <div>
               <h3>Why it matters</h3>
               <p>
                 No black boxes, no vendor lock-in, no per-citizen license fees.
                 Cities and parliaments can audit every line that counts a vote —
                 and researchers can build on 17 years of civic-tech engineering.
               </p>
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -577,7 +621,8 @@ export function OpenSourcePage() {
           <h2 className="section-title">On GitHub</h2>
           <div className="card-grid">
             {REPOS.map((r) => (
-              <a key={r.name} className="card pkg-card" href={r.href}>
+              <a key={r.name} className="card pkg-card repo-card" href={r.href}>
+                <span className="icon-chip"><IconGitHub /></span>
                 <h3 className="pkg-name">
                   <span className="pkg-org">CitizensFoundation/</span>
                   {r.name}

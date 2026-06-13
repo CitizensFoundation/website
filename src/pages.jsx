@@ -48,7 +48,7 @@ export function ImpactIndex() {
   return (
     <section className="section">
       <div className="shell">
-        <p className="eyebrow">Citizen engagement in 45 countries since 2008</p>
+        <p className="eyebrow">Citizen engagement in over 50 countries since 2008</p>
         <h1 className="page-title">Impact</h1>
         <div className="card-grid">
           {stories.map((s) => (

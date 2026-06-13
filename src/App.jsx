@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeroCanvas from "./HeroCanvas.jsx";
 import { CONTENT_INDEX } from "virtual:content-index";
 import { BlogIndex, ImpactIndex, ArticlePage, formatDate, formatMonthYear } from "./pages.jsx";
@@ -16,6 +16,7 @@ const SOCIALS = [
 const NAV = [
   { label: "Platforms", href: "/#platforms" },
   { label: "Impact", href: "/impact/" },
+  { label: "Open Source", href: "/open-source/" },
   { label: "Blog", href: "/blog/" },
   { label: "About", href: "/about/" },
 ];
@@ -32,18 +33,21 @@ const PLATFORMS = [
   {
     name: "Your Priorities",
     href: "/your-priorities/",
+    icon: "/assets/yp-mark.png",
     blurb:
       "Our flagship engagement platform: idea generation, civil debate, voting, surveys and participatory budgeting — trusted by cities and parliaments since 2008.",
   },
   {
     name: "Policy Synth",
     href: "/policy-synth/",
+    icon: "/assets/ps-mark.png",
     blurb:
       "Teams of AI agents that research problems and evolve policy solutions — standalone or built right into Your Priorities, with human votes always in the loop.",
   },
   {
     name: "All Our Ideas",
     href: "/all-our-ideas/",
+    icon: "/assets/aoi-mark.png",
     blurb:
       "Wiki surveys: show people two ideas, let them pick one. Created at Princeton, now maintained by us and built into Your Priorities.",
   },
@@ -99,11 +103,12 @@ function HomePage() {
         <div className="shell hero-inner">
           <p className="eyebrow">Reykjavík, Iceland — since 2008</p>
           <h1>
-            Forging better communities with democratic innovation&nbsp;&amp;&nbsp;AI
+            Better public decisions with collective intelligence&nbsp;&amp;&nbsp;AI
           </h1>
           <p className="lede">
-            Open-source platforms and AI tools that connect citizens and
-            governments — in thousands of projects across 45 countries.
+            Open-source platforms that help people surface ideas, weigh
+            trade-offs, and turn public input into decisions governments can act
+            on — building trust across over 50 countries.
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href="/impact/">Explore our work</a>
@@ -123,7 +128,7 @@ function HomePage() {
       <section className="stats reveal">
         <div className="shell stats-row">
           <Stat value={2008} animate={false} label="founded in Reykjavík" />
-          <Stat value={45} label="countries" />
+          <Stat value={50} suffix="+" label="countries" />
           <Stat value={1000000} grouped suffix="+" label="citizen voices" />
           <Stat value={100} suffix="%" label="open source" />
         </div>
@@ -134,20 +139,14 @@ function HomePage() {
           <h2 className="section-title">Platforms</h2>
           <div className="card-grid">
             {PLATFORMS.map((p) => (
-              <article key={p.name} className="card">
+              <a key={p.name} className="card platform-card" href={p.href}>
+                <span className="platform-mark"><img src={p.icon} alt="" /></span>
                 <h3>{p.name}</h3>
                 <p>{p.blurb}</p>
-                <a className="aurora-link card-link" href={p.href}>Learn more →</a>
-              </article>
+                <span className="aurora-link card-link">Learn more →</span>
+              </a>
             ))}
           </div>
-          <a className="os-strip" href="/open-source/">
-            <span>
-              <strong>100% open source.</strong> Every platform above is free,
-              MIT-licensed and published on npm — inspect the code that counts the votes.
-            </span>
-            <span className="aurora-link">Explore the packages →</span>
-          </a>
         </div>
       </section>
 
@@ -189,11 +188,83 @@ function HomePage() {
           </ul>
         </div>
       </section>
+
+      <section className="section reveal">
+        <div className="shell">
+          <h2 className="section-title">100% open source</h2>
+          <a className="os-banner" href="/open-source/">
+            <span className="aurora-glow" aria-hidden="true" />
+            <div className="os-banner-text">
+              <h3 className="os-banner-title">Trust is earned<br />in the open</h3>
+              <p className="os-banner-sub">
+                So everything we build is open — free, MIT-licensed and published
+                on npm. The exact code running New Jersey, Iceland’s ministries
+                and ERIC, there for anyone to audit. No black boxes, no lock-in.
+              </p>
+              <span className="os-banner-cta">Explore the packages →</span>
+              <div className="os-pills">
+                <span>TypeScript</span><span>MIT</span><span>npm</span><span>GitHub</span>
+              </div>
+            </div>
+            <div className="os-banner-visual" aria-hidden="true">
+              <div className="terminal">
+                <div className="terminal-bar"><i /><i /><i /><span className="terminal-title">bash</span></div>
+                <div className="terminal-body">
+                  <div><span className="tprompt">$</span> npm install <span className="tpkg">@policysynth/agents</span></div>
+                  <div className="tdim">added @policysynth/agents · MIT licensed</div>
+                  <div className="tgap" />
+                  <div><span className="tprompt">$</span> git clone <span className="tpkg">CitizensFoundation/your-priorities-app</span></div>
+                  <div className="tdim">✓ 17 years of civic-tech, in the open</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section className="section reveal">
+        <div className="shell">
+          <div className="recognition">
+            <span className="aurora-glow" aria-hidden="true" />
+            <p className="eyebrow">Independently top-rated</p>
+            <h2 className="recognition-title">
+              The top-rated citizen<br />engagement platform
+            </h2>
+            <p className="recognition-score">
+              Your Priorities scored <strong>97<span className="of">/100</span></strong>
+              {" "}— the highest-rated platform in People Powered’s independent
+              2025 Digital Participation Tools ratings.
+            </p>
+            <div className="badges">
+              <a className="badge" href="https://www.peoplepowered.org/platform-ratings">
+                <span className="badge-rank">#1</span>
+                <span className="badge-label">People Powered<br />2025 Ratings</span>
+              </a>
+              <a className="badge" href="https://www.oecd.org/publications/oecd-guidelines-for-citizen-participation-processes-f765caf6-en.htm">
+                <span className="badge-rank">◆</span>
+                <span className="badge-label">OECD<br />Guidelines</span>
+              </a>
+              <a className="badge" href="https://www.solonian-institute.com/publications">
+                <span className="badge-rank">★</span>
+                <span className="badge-label">Digital Democracy<br />Report 2024</span>
+              </a>
+            </div>
+            <div className="cta-row recognition-cta">
+              <a className="btn btn-primary" href="/work-with-us/">Start a project →</a>
+              <a className="btn btn-ghost" href="/your-priorities/">Explore the platform</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
 
 export default function App({ initialRoute, initialDoc }) {
+  // Mobile nav drawer. Starts closed on both server and client, so there's no
+  // hydration mismatch; the toggle only exists on small screens (CSS).
+  const [menuOpen, setMenuOpen] = useState(false);
+
   // Scroll reveals: sections start hidden only once JS is running, then fade
   // in as they enter the viewport. SSR output stays fully visible.
   useEffect(() => {
@@ -245,7 +316,28 @@ export default function App({ initialRoute, initialDoc }) {
             ))}
             <a className="btn btn-primary btn-small" href="/work-with-us/">Work with us</a>
           </nav>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span /><span /><span />
+          </button>
         </div>
+        {menuOpen && (
+          <nav className="mobile-nav">
+            {NAV.map((item) => (
+              <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>
+                {item.label}
+              </a>
+            ))}
+            <a className="btn btn-primary" href="/work-with-us/" onClick={() => setMenuOpen(false)}>
+              Work with us
+            </a>
+          </nav>
+        )}
       </header>
 
       <main>{page}</main>

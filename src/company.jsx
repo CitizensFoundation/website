@@ -91,13 +91,13 @@ export function AboutPage() {
             <p>
               Citizens Foundation was founded in the aftermath of Iceland’s
               economic — and trust — collapse in 2008. Our mission has stayed the
-              same ever since: help citizens get their voices heard, and help
-              governments listen, by building open-source tools and methods for
-              real democratic participation.
+              same ever since: help citizens and governments make better
+              decisions together — building open-source tools and methods that
+              turn public participation into action.
             </p>
             <p>
               What began with Better Reykjavík has grown into platforms used in
-              thousands of projects across 45 countries — recognized with the
+              thousands of projects across over 50 countries — recognized with the
               European e-Democracy Award in 2011, the Nordic Best Practice award
               from the mayors of the Nordic capitals in 2015, and the #1 rating
               in the People Powered Participation Platform Ratings. Today we
@@ -326,7 +326,7 @@ export function WorkWithUsPage() {
               <p>
                 We help you plan and execute successful citizen engagement —
                 process design, question framing, outreach and evaluation, based
-                on what has actually worked across 45 countries.
+                on what has actually worked across over 50 countries.
               </p>
             </article>
             <article className="card feature-card">

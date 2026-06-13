@@ -40,7 +40,7 @@ export const META = {
   home: {
     title: "Citizens Foundation",
     description:
-      "Citizens Foundation builds open-source platforms for democratic innovation — connecting citizens and governments in 45 countries since 2008.",
+      "Citizens Foundation builds open-source platforms for better public decisions — combining collective intelligence and AI to turn public input into action.",
   },
   blog: {
     title: "Blog — Citizens Foundation",
@@ -55,7 +55,7 @@ export const META = {
   "your-priorities": {
     title: "Your Priorities — Citizens Foundation",
     description:
-      "An open-source idea generation, deliberation and decision-making platform connecting governments and citizens since 2008 — in thousands of projects across 45 countries.",
+      "An open-source idea generation, deliberation and decision-making platform connecting governments and citizens since 2008 — in thousands of projects across over 50 countries.",
   },
   "policy-synth": {
     title: "Policy Synth — Citizens Foundation",
