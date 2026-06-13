@@ -40,7 +40,7 @@ const TEAM = [
   },
   {
     name: "Maren Valsdóttir",
-    role: "Designer & board member",
+    role: "Creative Director",
     photo: "/uploads/2014/07/marenFinal.jpg",
     bio: "Maren is a multimedia artist and designer — a force of creative energy at Citizens Foundation. She has shaped the design of our apps and websites since 2012, contributes to overall strategy and sits on the board of directors.",
   },
@@ -49,6 +49,27 @@ const TEAM = [
     role: "CO-FOUNDER & AMBASSADOR",
     photo: "/uploads/2019/06/GunnarCF-Ambassador-sharper-1-1.jpg",
     bio: "Gunnar has been at the heart of Citizens Foundation since its start. He is an experienced process and interface designer with a strong background in multiple fields, and has worked on citizen engagement projects all over the world.",
+  },
+];
+
+const FORMER_TEAM = [
+  {
+    name: "Joshua Lanthier-Welch",
+    role: "Executive Director, Citizens Foundation America",
+    photo: "/uploads/2021/12/josh123.jpg",
+    bio: "Josh brought Citizens Foundation America a diverse background, with stints in academic development and philanthropy fundraising, work with Robert in writing, design and business development in the videogame industry, and socially responsible entrepreneurship promoting sustainable agriculture and improved food systems.",
+  },
+  {
+    name: "Katherine Breedlove",
+    role: "Director, Citizens Foundation America",
+    photo: "/uploads/2020/01/kat.jpg",
+    bio: "Katherine brought years of experience in logistics and operations. She worked closely with Josh in social, political and educational outreach in the agricultural sector, helping build a brand that promoted sustainable agriculture and best practices in the food industry.",
+  },
+  {
+    name: "Dave Parsons",
+    role: "Consultant",
+    photo: "/uploads/2020/01/dave.jpg",
+    bio: "David has been involved in the development of Internet applications since 1996, delivering enterprise-level applications for companies including PwC, UBS, Vodafone and BP. In 2004 he founded Decypher Media, developing advanced fintech applications and websites for global hedge funds.",
   },
 ];
 
@@ -137,6 +158,23 @@ export function AboutPage() {
             {TEAM.map((m) => (
               <article key={m.name} className="card team-card">
                 <img className="team-photo" src={m.photo} alt={m.name} />
+                <h3>{m.name}</h3>
+                <p className="story-place">{m.role}</p>
+                <p>{m.bio}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="shell">
+          <p className="eyebrow">Former team and supporters</p>
+          <h2 className="section-title">People who helped build the foundation</h2>
+          <div className="card-grid">
+            {FORMER_TEAM.map((m) => (
+              <article key={m.name} className="card team-card">
+                <img className="team-photo legacy-team-photo" src={m.photo} alt={m.name} />
                 <h3>{m.name}</h3>
                 <p className="story-place">{m.role}</p>
                 <p>{m.bio}</p>

@@ -116,7 +116,7 @@ function HomePage() {
   return (
     <>
       <section className="hero">
-        <HeroCanvas />
+        <HeroCanvas faces />
         <div className="shell hero-inner">
           <p className="eyebrow">Reykjavík, Iceland — since 2008</p>
           <h1>

@@ -1,7 +1,7 @@
 ---
 title: "My Neighbourhood"
 slug: "my-neighbourhood"
-date: "2025-04-02"
+date: "2024-08-21"
 hero: "/uploads/2017/11/bh23.png"
 excerpt: "My Neighbourhood was Reykjavik's participatory budgeting process from 2011 to 2023, where residents proposed and voted on neighborhood improvements."
 categories: ["Active Citizen","Open Active Voting","Participatory Budgeting","Your Priorities"]

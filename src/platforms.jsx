@@ -189,6 +189,48 @@ export function YourPrioritiesPage() {
 
       <section className="section">
         <div className="shell">
+          <p className="eyebrow">Public-sector workflows</p>
+          <h2 className="section-title">Built for real participation programs</h2>
+          <p className="section-sub">
+            Beyond the public-facing experience, Your Priorities includes the
+            operational tools teams need to run formal consultations,
+            participatory budgeting and long-running engagement programs.
+          </p>
+          <div className="card-grid">
+            <Feature icon={IconCode} title="Data export and API">
+              Export ideas, debate points, survey answers and user data to Excel
+              or Word, and connect projects to other systems through API keys.
+            </Feature>
+            <Feature icon={IconChecklist} title="Admin workflow tools">
+              Manage thousands of ideas with statuses, bulk updates, templates
+              and automated messages that keep participants informed as ideas
+              move through review.
+            </Feature>
+            <Feature icon={IconChart} title="Analytics and promotion">
+              Plausible-based usage analytics, AI clustering, word clouds,
+              process maps and promotion tools help teams understand and grow
+              participation.
+            </Feature>
+            <Feature icon={IconPackage} title="Cloud or self-hosted">
+              Use our hosted nonprofit cloud service, including free support when
+              budgets are not available, or self-host the open-source platform
+              with Docker.
+            </Feature>
+            <Feature icon={IconGlobe} title="Mobile-first PWA">
+              Communities work well on phones, tablets and desktops, can be
+              installed on home screens, and are designed for participation in
+              the field.
+            </Feature>
+            <Feature icon={IconSparkles} title="Custom projects">
+              Configure communities, groups, stages, help pages, registration
+              questions, themes and fonts to match the process and institution.
+            </Feature>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
           <p className="eyebrow">Trusted worldwide</p>
           <h2 className="section-title">Powering democracy around the world</h2>
           <p className="section-sub">

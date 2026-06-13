@@ -1,11 +1,26 @@
 import { useEffect, useRef } from "react";
 
 // HeroCanvas — a living "collective intelligence" constellation drifting over a
-// soft aurora wash. Points (citizens) link with hairlines when near, glow like
-// the lights on the share image, and reach toward the cursor. Everything runs
-// inside the effect, so SSR renders an empty <canvas> and hydration never
-// mismatches; prefers-reduced-motion gets a calm static frame.
-export default function HeroCanvas() {
+// soft aurora wash. Points (citizens) link with hairlines when near and reach
+// toward the cursor. With `faces`, a few nodes become circular portraits of
+// people participating — wiring real human moments into the same network.
+// Everything runs in the effect, so SSR renders an empty <canvas> and hydration
+// never mismatches; prefers-reduced-motion gets a calm static frame.
+const FACE_SRCS = [
+  "/uploads/2026/06/hero-face-1.jpg",
+  "/uploads/2026/06/hero-face-2.jpg",
+  "/uploads/2026/06/hero-face-3.jpg",
+  "/uploads/2026/06/hero-face-4.jpg",
+];
+// Peripheral anchors (fractions of W/H) — kept clear of the centered headline.
+const FACE_ANCHORS = [
+  [0.12, 0.30],
+  [0.16, 0.74],
+  [0.88, 0.26],
+  [0.84, 0.70],
+];
+
+export default function HeroCanvas({ faces = false }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -23,8 +38,14 @@ export default function HeroCanvas() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+    // Preload portraits only when this hero uses them.
+    const faceImgs = faces ? FACE_SRCS.map((src) => { const im = new Image(); im.src = src; return im; }) : [];
+    if (reduced) faceImgs.forEach((im) => { im.onload = () => frame(0); });
+
     let blobs = [];
     let pts = [];
+    let photos = [];
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
     const build = () => {
       const DPR = Math.min(window.devicePixelRatio || 1, 2);
       W = canvas.clientWidth;
@@ -33,7 +54,6 @@ export default function HeroCanvas() {
       canvas.height = H * DPR;
       ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 
-      // Soft aurora blobs for colour depth behind the network.
       blobs = Array.from({ length: 5 }, (_, i) => ({
         c: BRAND[i % BRAND.length],
         ax: 0.1 + Math.random() * 0.8, ay: Math.random() * 0.6,
@@ -44,7 +64,6 @@ export default function HeroCanvas() {
         alpha: 0.08 + Math.random() * 0.06,
       }));
 
-      // Constellation points — count scales with area, capped for performance.
       const count = Math.min(94, Math.max(26, Math.round((W * H) / 21000)));
       pts = Array.from({ length: count }, () => ({
         x: Math.random() * W, y: Math.random() * H,
@@ -52,6 +71,22 @@ export default function HeroCanvas() {
         c: BRAND[(Math.random() * BRAND.length) | 0],
         r: 1 + Math.random() * 1.6,
       }));
+
+      // Photo nodes: 4 on wide screens, 2 (top corners) on mid, none when
+      // narrow — so they never crowd the headline on small viewports.
+      photos = [];
+      if (faces) {
+        const which = W >= 1080 ? [0, 1, 2, 3] : W >= 820 ? [0, 2] : [];
+        const r = clamp(W * 0.032, 40, 60);
+        which.forEach((idx) => {
+          photos.push({
+            img: faceImgs[idx],
+            ax: FACE_ANCHORS[idx][0], ay: FACE_ANCHORS[idx][1],
+            r,
+            dx: 0.012, dy: 0.016, fx: 0.05, fy: 0.04, p: idx * 1.7,
+          });
+        });
+      }
     };
     build();
     window.addEventListener("resize", build);
@@ -70,8 +105,8 @@ export default function HeroCanvas() {
       host.addEventListener("mouseleave", onLeave);
     }
 
-    const LINK2 = 130 * 130;   // neighbour-link distance²
-    const CUR2 = 175 * 175;    // cursor-link / glow radius²
+    const LINK2 = 130 * 130;
+    const CUR2 = 175 * 175;
 
     const frame = (tms) => {
       const t = tms / 1000;
@@ -98,7 +133,13 @@ export default function HeroCanvas() {
         }
       }
 
-      // Hairline links — a soft navy web, with brighter cyan links to the cursor.
+      // Current photo-node positions (gentle bounded drift around their anchor).
+      for (const ph of photos) {
+        ph.x = (ph.ax + Math.sin(t * ph.fx + ph.p) * ph.dx) * W;
+        ph.y = (ph.ay + Math.cos(t * ph.fy + ph.p) * ph.dy) * H;
+      }
+
+      // Hairline links — soft navy web, brighter cyan to the cursor.
       ctx.lineWidth = 1;
       for (let i = 0; i < pts.length; i++) {
         const a = pts[i];
@@ -118,7 +159,18 @@ export default function HeroCanvas() {
         }
       }
 
-      // Glowing nodes (citizens) — swell and brighten near the cursor.
+      // Links weaving each portrait into the network (drawn under the photos).
+      const PLINK2 = 200 * 200;
+      for (const ph of photos) {
+        for (const a of pts) {
+          const dx = a.x - ph.x, dy = a.y - ph.y, d2 = dx * dx + dy * dy;
+          if (d2 > PLINK2) continue;
+          ctx.strokeStyle = `rgba(16, 59, 104, ${(1 - d2 / PLINK2) * 0.18})`;
+          ctx.beginPath(); ctx.moveTo(ph.x, ph.y); ctx.lineTo(a.x, a.y); ctx.stroke();
+        }
+      }
+
+      // Glowing dots.
       for (const a of pts) {
         let r = a.r, alpha = 0.5;
         if (pointer.on) {
@@ -134,6 +186,32 @@ export default function HeroCanvas() {
       }
       ctx.shadowBlur = 0;
 
+      // Portrait nodes: soft shadow disc → circular photo → white ring.
+      for (const ph of photos) {
+        const img = ph.img, r = ph.r;
+        if (!img || !img.complete || !img.naturalWidth) continue;
+        ctx.save();
+        ctx.shadowColor = "rgba(16, 41, 63, 0.22)";
+        ctx.shadowBlur = 20;
+        ctx.shadowOffsetY = 6;
+        ctx.fillStyle = "#fff";
+        ctx.beginPath(); ctx.arc(ph.x, ph.y, r, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+
+        ctx.save();
+        ctx.beginPath(); ctx.arc(ph.x, ph.y, r, 0, Math.PI * 2); ctx.clip();
+        ctx.drawImage(img, ph.x - r, ph.y - r, r * 2, r * 2);
+        // faint cool wash so portraits sit in the aurora palette
+        ctx.fillStyle = "rgba(41, 167, 208, 0.06)";
+        ctx.fillRect(ph.x - r, ph.y - r, r * 2, r * 2);
+        ctx.restore();
+
+        ctx.beginPath(); ctx.arc(ph.x, ph.y, r, 0, Math.PI * 2);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.92)";
+        ctx.stroke();
+      }
+
       if (!reduced) raf = requestAnimationFrame(frame);
     };
     raf = requestAnimationFrame(frame);
@@ -146,7 +224,7 @@ export default function HeroCanvas() {
         host.removeEventListener("mouseleave", onLeave);
       }
     };
-  }, []);
+  }, [faces]);
 
   return <canvas ref={canvasRef} className="hero-canvas" aria-hidden="true" />;
 }
