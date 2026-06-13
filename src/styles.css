@@ -20,6 +20,19 @@
 
 * { box-sizing: border-box; }
 
+/* Visually hidden but available to screen readers and search engines. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -1027,6 +1040,12 @@ button.pkg-install .tprompt { color: var(--brand); }
   line-height: 1.35;
 }
 .recognition-cta { justify-content: center; }
+
+/* 404 page */
+.notfound { text-align: center; padding: 60px 0 40px; }
+.notfound h1 { font-size: clamp(40px, 6vw, 64px); margin-bottom: 14px; }
+.notfound .lede { margin: 0 auto 30px; }
+.notfound .cta-row { justify-content: center; }
 
 /* Scroll reveals — applied by JS only, SSR output stays visible. */
 .reveal-init {

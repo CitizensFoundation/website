@@ -1,5 +1,6 @@
 import HeroCanvas from "./HeroCanvas.jsx";
 import { IconUsers, IconGlobe, IconCode, IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
+import { PLAUSIBLE_EVENTS, plausibleClass } from "./plausible.js";
 
 function PageHero({ eyebrow, title, lede, ctas }) {
   return (
@@ -102,7 +103,7 @@ export function AboutPage() {
               from the mayors of the Nordic capitals in 2015, and the #1 rating
               in the People Powered Participation Platform Ratings. Today we
               pair that experience with AI through{" "}
-              <a className="aurora-link" href="/policy-synth/">Policy Synth</a> —
+              <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.policySynth)}`} href="/policy-synth/">Policy Synth</a> —
               always with people in charge.
             </p>
           </div>
@@ -145,7 +146,7 @@ export function AboutPage() {
             From participation consultancy to hosted platforms — see what we offer.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="/work-with-us/">Work with us →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Work with us →</a>
             <a className="btn btn-ghost" href="/in-the-news/">In the news</a>
           </div>
         </div>
@@ -173,7 +174,7 @@ export function ContactPage() {
               <h3>General enquiries</h3>
               <p>
                 For projects, partnerships, press or anything else:{" "}
-                <a className="aurora-link" href="mailto:citizens@citizens.is">citizens@citizens.is</a>
+                <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">citizens@citizens.is</a>
               </p>
             </article>
             <article className="card feature-card">
@@ -181,7 +182,7 @@ export function ContactPage() {
               <h3>Technical & open source</h3>
               <p>
                 Bug reports, feature ideas and contributions are welcome on{" "}
-                <a className="aurora-link" href="https://github.com/CitizensFoundation">GitHub</a>.
+                <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">GitHub</a>.
               </p>
             </article>
             <article className="card feature-card">
@@ -312,7 +313,7 @@ export function WorkWithUsPage() {
           budgets to national assemblies — available for your project."
         ctas={
           <>
-            <a className="btn btn-primary" href="mailto:citizens@citizens.is">citizens@citizens.is →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">citizens@citizens.is →</a>
             <a className="btn btn-ghost" href="/impact/">See past projects</a>
           </>
         }
@@ -361,7 +362,7 @@ export function WorkWithUsPage() {
             We are happy to share what has worked elsewhere — no strings attached.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="mailto:citizens@citizens.is">Email us →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">Email us →</a>
           </div>
         </div>
       </section>

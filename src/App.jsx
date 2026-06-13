@@ -5,6 +5,7 @@ import { BlogIndex, ImpactIndex, ArticlePage, formatDate, formatMonthYear } from
 import { YourPrioritiesPage, PolicySynthPage, AllOurIdeasPage, OpenSourcePage } from "./platforms.jsx";
 import { AboutPage, ContactPage, NewsPage, WorkWithUsPage } from "./company.jsx";
 import { IconGitHub, IconLinkedIn, IconFacebook, IconX } from "./icons.jsx";
+import { PLAUSIBLE_EVENTS, plausibleClass, trackPlausible } from "./plausible.js";
 
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/CitizensFoundation", Icon: IconGitHub },
@@ -34,6 +35,7 @@ const PLATFORMS = [
     name: "Your Priorities",
     href: "/your-priorities/",
     icon: "/assets/yp-mark.png",
+    event: PLAUSIBLE_EVENTS.yourPriorities,
     blurb:
       "Our flagship engagement platform: idea generation, civil debate, voting, surveys and participatory budgeting — trusted by cities and parliaments since 2008.",
   },
@@ -41,6 +43,7 @@ const PLATFORMS = [
     name: "Policy Synth",
     href: "/policy-synth/",
     icon: "/assets/ps-mark.png",
+    event: PLAUSIBLE_EVENTS.policySynth,
     blurb:
       "Teams of AI agents that research problems and evolve policy solutions — standalone or built right into Your Priorities, with human votes always in the loop.",
   },
@@ -112,7 +115,7 @@ function HomePage() {
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href="/impact/">Explore our work</a>
-            <a className="btn btn-ghost" href="/your-priorities/">Your Priorities →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities →</a>
           </div>
         </div>
       </section>
@@ -139,7 +142,11 @@ function HomePage() {
           <h2 className="section-title">Platforms</h2>
           <div className="card-grid">
             {PLATFORMS.map((p) => (
-              <a key={p.name} className="card platform-card" href={p.href}>
+              <a
+                key={p.name}
+                className={`card platform-card ${p.event ? plausibleClass(p.event) : ""}`}
+                href={p.href}
+              >
                 <span className="platform-mark"><img src={p.icon} alt="" /></span>
                 <h3>{p.name}</h3>
                 <p>{p.blurb}</p>
@@ -250,13 +257,37 @@ function HomePage() {
               </a>
             </div>
             <div className="cta-row recognition-cta">
-              <a className="btn btn-primary" href="/work-with-us/">Start a project →</a>
-              <a className="btn btn-ghost" href="/your-priorities/">Explore the platform</a>
+              <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Start a project →</a>
+              <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Explore the platform</a>
             </div>
           </div>
         </div>
       </section>
     </>
+  );
+}
+
+function NotFound() {
+  useEffect(() => {
+    trackPlausible(PLAUSIBLE_EVENTS.notFound, {
+      props: { path: window.location.pathname },
+    });
+  }, []);
+
+  return (
+    <section className="section">
+      <div className="shell notfound">
+        <p className="eyebrow">Error 404</p>
+        <h1>Page not found</h1>
+        <p className="lede">
+          The page you’re looking for doesn’t exist or has moved.
+        </p>
+        <div className="cta-row">
+          <a className="btn btn-primary" href="/">Back to home</a>
+          <a className="btn btn-ghost" href="/impact/">Explore our work</a>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -289,7 +320,8 @@ export default function App({ initialRoute, initialDoc }) {
   }, []);
 
   let page;
-  if (initialRoute === "blog") page = <BlogIndex />;
+  if (initialRoute === "not-found") page = <NotFound />;
+  else if (initialRoute === "blog") page = <BlogIndex />;
   else if (initialRoute === "impact") page = <ImpactIndex />;
   else if (initialRoute === "your-priorities") page = <YourPrioritiesPage />;
   else if (initialRoute === "policy-synth") page = <PolicySynthPage />;
@@ -314,7 +346,7 @@ export default function App({ initialRoute, initialDoc }) {
             {NAV.map((item) => (
               <a key={item.label} className="aurora-link" href={item.href}>{item.label}</a>
             ))}
-            <a className="btn btn-primary btn-small" href="/work-with-us/">Work with us</a>
+            <a className={`btn btn-primary btn-small ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Work with us</a>
           </nav>
           <button
             type="button"
@@ -333,7 +365,7 @@ export default function App({ initialRoute, initialDoc }) {
                 {item.label}
               </a>
             ))}
-            <a className="btn btn-primary" href="/work-with-us/" onClick={() => setMenuOpen(false)}>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/" onClick={() => setMenuOpen(false)}>
               Work with us
             </a>
           </nav>
@@ -355,7 +387,13 @@ export default function App({ initialRoute, initialDoc }) {
           </span>
           <span className="footer-social">
             {SOCIALS.map(({ label, href, Icon }) => (
-              <a key={label} href={href} aria-label={label} title={label}>
+              <a
+                key={label}
+                className={label === "GitHub" ? plausibleClass(PLAUSIBLE_EVENTS.github) : undefined}
+                href={href}
+                aria-label={label}
+                title={label}
+              >
                 <Icon />
               </a>
             ))}

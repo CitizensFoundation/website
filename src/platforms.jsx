@@ -6,6 +6,7 @@ import {
   IconTranslate, IconSparkles, IconImage, IconChart, IconBot, IconCode,
   IconPackage, IconGlobe, IconPairwise, IconUsers, IconGitHub,
 } from "./icons.jsx";
+import { PLAUSIBLE_EVENTS, plausibleClass } from "./plausible.js";
 
 // Click-to-copy install command, styled like a mini terminal line.
 function CopyInstall({ cmd }) {
@@ -35,9 +36,11 @@ function PageHero({ eyebrow, title, lede, ctas, logo, logoHeight = 90, logoOnly 
       <div className="shell hero-inner">
         <p className="eyebrow">{eyebrow}</p>
         {logoOnly ? (
-          // The logo carries the page title; alt keeps the h1 accessible.
+          // The logo carries the title visually; a visually-hidden text node
+          // gives search engines and screen readers a real <h1> string.
           <h1 className="hero-logo-h1">
-            <img className="hero-logo" src={logo} alt={title} style={{ height: logoHeight }} />
+            <img className="hero-logo" src={logo} alt="" style={{ height: logoHeight }} />
+            <span className="sr-only">{title}</span>
           </h1>
         ) : (
           <>
@@ -101,8 +104,8 @@ export function YourPrioritiesPage() {
           projects across over 50 countries."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://yrpri.org">Open Your Priorities →</a>
-            <a className="btn btn-ghost" href="https://github.com/CitizensFoundation/your-priorities-app">View source on GitHub</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Open Your Priorities →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/your-priorities-app">View source on GitHub</a>
           </>
         }
       />
@@ -169,7 +172,7 @@ export function YourPrioritiesPage() {
             </Feature>
             <Feature icon={IconBot} title="Built-in agent workflow engine">
               Design, run and monitor teams of{" "}
-              <a className="aurora-link" href="/policy-synth/">Policy Synth</a> AI
+              <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.policySynth)}`} href="/policy-synth/">Policy Synth</a> AI
               agents right inside Your Priorities — research, drafting and
               evolving solutions, with human votes always in the loop.
             </Feature>
@@ -244,7 +247,7 @@ export function YourPrioritiesPage() {
         sub="Free and open source. Run it yourself, or let us host it for you."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://yrpri.org">Create a project →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create a project →</a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
         }
@@ -268,7 +271,7 @@ export function PolicySynthPage() {
           people stay in charge of every judgment that matters."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://github.com/CitizensFoundation/policy-synth">View on GitHub →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth">View on GitHub →</a>
             <a className="btn btn-ghost" href="https://arxiv.org/abs/2407.13960">Read the research paper</a>
           </>
         }
@@ -355,7 +358,7 @@ export function PolicySynthPage() {
             Use it two ways: <strong>standalone</strong> via the{" "}
             <code>@policysynth/agents</code> TypeScript library, or through the
             visual agent workflow engine <strong>built into{" "}
-            <a className="aurora-link" href="/your-priorities/">Your Priorities</a></strong>{" "}
+            <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities</a></strong>{" "}
             — the interface you see in our case studies.
           </p>
         </div>
@@ -400,7 +403,7 @@ export function PolicySynthPage() {
         ctas={
           <>
             <a className="btn btn-primary" href="/open-source/">Explore the packages →</a>
-            <a className="btn btn-ghost" href="https://github.com/CitizensFoundation/policy-synth">GitHub</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth">GitHub</a>
           </>
         }
       />
@@ -424,8 +427,8 @@ export function AllOurIdeasPage() {
           their own."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://yrpri.org">Run a wiki survey →</a>
-            <a className="btn btn-ghost" href="https://github.com/CitizensFoundation/allourideas.org">Source on GitHub</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Run a wiki survey →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/allourideas.org">Source on GitHub</a>
           </>
         }
       >
@@ -473,7 +476,7 @@ export function AllOurIdeasPage() {
               project in “wiki surveys”, and its pairwise method has powered
               public consultations around the world. Citizens Foundation has
               taken over its open-source maintenance — and rebuilt it as a group
-              type right inside <a className="aurora-link" href="/your-priorities/">Your Priorities</a>,
+              type right inside <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities</a>,
               so wiki surveys run alongside idea generation, debates and
               participatory budgeting, with the same AI translation, moderation
               and analytics underneath.
@@ -494,7 +497,7 @@ export function AllOurIdeasPage() {
         sub="Wiki surveys are built into Your Priorities — free and open source."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://yrpri.org">Get started →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Get started →</a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
         }
@@ -556,7 +559,7 @@ export function OpenSourcePage() {
           and ERIC, published on npm."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://github.com/CitizensFoundation">github.com/CitizensFoundation →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">github.com/CitizensFoundation →</a>
           </>
         }
       >
@@ -621,7 +624,7 @@ export function OpenSourcePage() {
           <h2 className="section-title">On GitHub</h2>
           <div className="card-grid">
             {REPOS.map((r) => (
-              <a key={r.name} className="card pkg-card repo-card" href={r.href}>
+              <a key={r.name} className={`card pkg-card repo-card ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href={r.href}>
                 <span className="icon-chip"><IconGitHub /></span>
                 <h3 className="pkg-name">
                   <span className="pkg-org">CitizensFoundation/</span>
@@ -645,8 +648,8 @@ export function OpenSourcePage() {
         sub="Questions about self-hosting or building on our stack? We're happy to help."
         ctas={
           <>
-            <a className="btn btn-primary" href="https://github.com/CitizensFoundation">Start on GitHub →</a>
-            <a className="btn btn-ghost" href="mailto:robert@citizens.is">Talk to us</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">Start on GitHub →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:robert@citizens.is">Talk to us</a>
           </>
         }
       />

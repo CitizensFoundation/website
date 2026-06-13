@@ -29,7 +29,19 @@ export function pathFor(id) {
 export function routeFromPath(pathname) {
   const clean = (pathname || "/").replace(/^\/+|\/+$/g, "");
   if (!clean) return "home";
-  return ROUTE_IDS.includes(clean) ? clean : "home";
+  // Unknown paths render the 404 page (and Cloudflare serves /404.html), so a
+  // direct hit to a stale URL hydrates as "not found" rather than the homepage.
+  return ROUTE_IDS.includes(clean) ? clean : "not-found";
+}
+
+// Trim a description to a search-snippet-friendly length (~160 chars) at a
+// word boundary. The full excerpt is still shown on listing cards.
+function clampDesc(s) {
+  s = (s || "").trim();
+  if (s.length <= 160) return s;
+  const cut = s.slice(0, 158);
+  const i = cut.lastIndexOf(" ");
+  return (i > 90 ? cut.slice(0, i) : cut).replace(/[\s.,;:—–-]+$/, "") + "…";
 }
 
 // Absolute paths to pre-render, in order.
@@ -38,7 +50,7 @@ export const ROUTES = ROUTE_IDS.map(pathFor);
 // Per-route <head> metadata.
 export const META = {
   home: {
-    title: "Citizens Foundation",
+    title: "Citizens Foundation — citizen engagement platforms & AI",
     description:
       "Citizens Foundation builds open-source platforms for better public decisions — combining collective intelligence and AI to turn public input into action.",
   },
@@ -95,7 +107,11 @@ export const META = {
   ...Object.fromEntries(
     CONTENT_INDEX.map((e) => [
       e.route,
-      { title: `${e.title} — Citizens Foundation`, description: e.excerpt || e.title },
+      { title: `${e.title} — Citizens Foundation`, description: clampDesc(e.excerpt) || e.title },
     ])
   ),
+  "not-found": {
+    title: "Page not found — Citizens Foundation",
+    description: "The page you’re looking for doesn’t exist or has moved.",
+  },
 };
