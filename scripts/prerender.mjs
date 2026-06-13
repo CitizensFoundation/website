@@ -56,7 +56,7 @@ function articleLd(entry, canonical) {
     headline: entry.title,
     description: entry.excerpt || entry.title,
     datePublished: entry.date,
-    image: entry.hero ? SITE + entry.hero : SITE + "/assets/og-image.png",
+    image: entry.hero ? SITE + entry.hero : SITE + "/assets/og-image.jpg",
     author: PUBLISHER,
     publisher: PUBLISHER,
     mainEntityOfPage: canonical,

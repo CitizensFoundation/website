@@ -1,9 +1,9 @@
 ---
-title: "DEEP-Linking Youth"
+title: "DEEP-Linking Youth: a European youth e-participation project"
 slug: "deep-linking-youth"
 date: "2016-12-02"
 hero: "/uploads/2017/11/depplink.png"
-excerpt: "DEEP-Linking Youth explored how e-participation tools can help young people influence democratic decisions across Europe."
+excerpt: "An EU Erasmus+ project led by ECAS, with Citizens Foundation as a partner — building a digital ecosystem to bring young people's voices into European policymaking."
 ---
 
 ## DEEP-Linking Youth

@@ -1,6 +1,19 @@
 import { marked } from "marked";
 import { CONTENT_INDEX } from "virtual:content-index";
 
+// The page title is the only <h1>; demote any stray <h1> in a markdown body to
+// <h2> (leaves existing h2/h3 section headings untouched, so no level skips).
+marked.use({
+  walkTokens(token) {
+    if (token.type === "heading" && token.depth === 1) token.depth = 2;
+  },
+});
+
+// Render an article body and lazy-load its images (the hero above stays eager).
+function renderArticleHtml(body) {
+  return marked.parse(body).replace(/<img /g, '<img loading="lazy" decoding="async" ');
+}
+
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
@@ -84,7 +97,7 @@ export function ArticlePage({ doc }) {
         </p>
         <h1 className="article-title">{doc.title}</h1>
         {doc.hero && <img className="article-hero" src={doc.hero} alt="" />}
-        <div className="article" dangerouslySetInnerHTML={{ __html: marked.parse(doc.body) }} />
+        <div className="article" dangerouslySetInnerHTML={{ __html: renderArticleHtml(doc.body) }} />
         {doc.videos?.map((v) => (
           <div className="video-embed" key={v}>
             <iframe src={v} title={doc.title} allowFullScreen loading="lazy" />
