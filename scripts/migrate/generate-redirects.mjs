@@ -130,12 +130,10 @@ export function generateRedirects({ blogSlugs, impactSlugs }) {
     if (post.status !== "publish") continue;
     const oldPath = new URL(post.link).pathname;
     addRedirect(oldPath, `/blog/${post.slug}/`);
-    addRedirect(`${oldPath}*`, `/blog/${post.slug}/`);
   }
 
   for (const slug of [...impactSlugs].sort()) {
     addRedirect(`/portfolio_page/${slug}/`, `/impact/${slug}/`);
-    addRedirect(`/portfolio_page/${slug}/*`, `/impact/${slug}/`);
   }
 
   lines.push("/portfolio_page/* /impact/ 301");
