@@ -96,6 +96,8 @@
 /portfolio_page/my-neighborhood/ /impact/my-neighbourhood/ 301
 /portfolio_page/junjes-wien /impact/junges-wien/ 301
 /portfolio_page/junjes-wien/ /impact/junges-wien/ 301
+/portfolio_page/rahvakogu /impact/rahvakogu/ 301
+/portfolio_page/rahvakogu/ /impact/rahvakogu/ 301
 /your-priorities-features-overview/* /your-priorities/ 301
 /your-priorities-features/* /your-priorities/ 301
 /contact-us/* /contact/ 301
@@ -114,9 +116,6 @@
 /portfolio/national-health-service-nhs/ /impact/nhs-citizen/ 301
 /portfolio/better-reykjavik-connects-citizens-and-administration-all-year-round /impact/better_reykjavik/ 301
 /portfolio/better-reykjavik-connects-citizens-and-administration-all-year-round/ /impact/better_reykjavik/ 301
-/wp-content/uploads/2014/07/Better-Neighbourhoods.pdf /impact/my-neighbourhood/ 301
-/wp-content/uploads/2014/07/%20Better-Neighbourhoods.pdf /impact/my-neighbourhood/ 301
-/wp-content/uploads/2014/07/* /impact/my-neighbourhood/ 301
 /wp-content/uploads/2016/04/Better-Reykjavik-Case-Study.pdf /impact/better_reykjavik/ 301
 /donate / 301
 /donate/ / 301
@@ -387,8 +386,6 @@
 /portfolio_page/populism-civic-engagement /impact/populism-civic-engagement/ 301
 /portfolio_page/populism-civic-engagement/ /impact/populism-civic-engagement/ 301
 /portfolio_page/populism-civic-engagement/* /impact/populism-civic-engagement/ 301
-/portfolio_page/rahvakogu /impact/rahvakogu/ 301
-/portfolio_page/rahvakogu/ /impact/rahvakogu/ 301
 /portfolio_page/rahvakogu/* /impact/rahvakogu/ 301
 /portfolio_page/serbia-crowdsourcing-ideas /impact/serbia-crowdsourcing-ideas/ 301
 /portfolio_page/serbia-crowdsourcing-ideas/ /impact/serbia-crowdsourcing-ideas/ 301
