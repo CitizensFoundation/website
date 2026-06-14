@@ -20,9 +20,15 @@ function CopyInstall({ cmd }) {
     }
   };
   return (
-    <button type="button" className="pkg-install" onClick={onCopy} title="Copy to clipboard">
-      <code><span className="tprompt">$</span> {cmd}</code>
-      <span className="copy-ico">{copied ? "copied ✓" : "copy"}</span>
+    <button
+      type="button"
+      className="pkg-install"
+      onClick={onCopy}
+      title="Copy to clipboard"
+      aria-label={copied ? `Copied to clipboard: ${cmd}` : `Copy install command: ${cmd}`}
+    >
+      <code><span className="tprompt" aria-hidden="true">$</span> {cmd}</code>
+      <span className="copy-ico" aria-hidden="true">{copied ? "copied ✓" : "copy"}</span>
     </button>
   );
 }
@@ -72,7 +78,7 @@ function CaseCard({ href, place, image, children }) {
       {image && <img className="case-card-image" src={image} alt="" loading="lazy" />}
       <h3>{place}</h3>
       <p>{children}</p>
-      <span className="aurora-link card-link">Read the story →</span>
+      <span className="aurora-link card-link">Read the story <span aria-hidden="true">→</span></span>
     </a>
   );
 }
@@ -168,8 +174,8 @@ export function YourPrioritiesPage() {
           projects across over 50 countries."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Open Your Priorities →</a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/your-priorities-app">View source on GitHub</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Open Your Priorities <span aria-hidden="true">→</span></a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/your-priorities-app" target="_blank" rel="noopener">View source on GitHub</a>
           </>
         }
       />
@@ -355,7 +361,7 @@ export function YourPrioritiesPage() {
         sub="Free and open source. Run it yourself, or let us host it for you."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create a project →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create a project <span aria-hidden="true">→</span></a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
         }
@@ -379,7 +385,7 @@ export function PolicySynthPage() {
           people stay in charge of every judgment that matters."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth">View on GitHub →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
             <a className="btn btn-ghost" href="https://arxiv.org/abs/2407.13960">Read the research paper</a>
           </>
         }
@@ -391,7 +397,7 @@ export function PolicySynthPage() {
           <h2 className="section-title">Humans set the question. Agents do the legwork.</h2>
           <ol className="step-list">
             <li>
-              <span className="step-num">1</span>
+              <span className="step-num" aria-hidden="true">1</span>
               <div>
                 <h3>Define the problem — with the community</h3>
                 <p>
@@ -402,7 +408,7 @@ export function PolicySynthPage() {
               </div>
             </li>
             <li>
-              <span className="step-num">2</span>
+              <span className="step-num" aria-hidden="true">2</span>
               <div>
                 <h3>Agents research, generate and evolve</h3>
                 <p>
@@ -414,7 +420,7 @@ export function PolicySynthPage() {
               </div>
             </li>
             <li>
-              <span className="step-num">3</span>
+              <span className="step-num" aria-hidden="true">3</span>
               <div>
                 <h3>People review, vote and decide</h3>
                 <p>
@@ -510,8 +516,8 @@ export function PolicySynthPage() {
         sub="MIT-licensed TypeScript, published on npm — the same packages we run in production."
         ctas={
           <>
-            <a className="btn btn-primary" href="/open-source/">Explore the packages →</a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth">GitHub</a>
+            <a className="btn btn-primary" href="/open-source/">Explore the packages <span aria-hidden="true">→</span></a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth" target="_blank" rel="noopener">GitHub</a>
           </>
         }
       />
@@ -535,9 +541,9 @@ export function AllOurIdeasPage() {
           their own."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey <span aria-hidden="true">→</span></a>
             <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create in Your Priorities</a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/allourideas.org">Source on GitHub</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/allourideas.org" target="_blank" rel="noopener">Source on GitHub</a>
           </>
         }
       >
@@ -611,14 +617,14 @@ export function AllOurIdeasPage() {
                 href="https://www.niemanlab.org/2010/08/all-our-ideas-facilitates-crowdsourcing-of-opinions/"
               >
                 <span>Origin story</span>
-                Read the Princeton story →
+                Read the Princeton story <span aria-hidden="true">→</span>
               </a>
               <a
                 className="aoi-resource-pill"
                 href="https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0123483&type=printable"
               >
                 <span>Paper PDF</span>
-                Download the wiki surveys paper →
+                Download the wiki surveys paper <span aria-hidden="true">→</span>
               </a>
             </div>
             <p>
@@ -708,7 +714,7 @@ export function AllOurIdeasPage() {
         sub="Use the standalone All Our Ideas setup, or create a wiki survey inside Your Priorities."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey <span aria-hidden="true">→</span></a>
             <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create in Your Priorities</a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
@@ -789,7 +795,7 @@ const LEGACY_PROJECTS = [
       "The engine powered Make Your Constitution, an educational game connected to Iceland's constitution crowdsourcing work and documented by Josh Lanthier-Welch.",
     links: [
       { label: "Source", href: "https://github.com/CitizensFoundation/open-active-policy", github: true },
-      { label: "Live demo", href: "https://demo-make-your-constitution.yrpri.org/" },
+      { label: "Live demo", href: "https://demo-make-your-constitution.yrpri.org/quiz?locale=en" },
       { label: "Impact story", href: "/impact/make-constitution-game/" },
       { label: "Archive", href: "/blog/citizens-foundation-case-file-constitution-game/" },
     ],
@@ -840,7 +846,7 @@ export function OpenSourcePage() {
           and ERIC, published on npm."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">github.com/CitizensFoundation →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation" target="_blank" rel="noopener">github.com/CitizensFoundation <span aria-hidden="true">→</span></a>
           </>
         }
       >
@@ -905,14 +911,14 @@ export function OpenSourcePage() {
           <h2 className="section-title">On GitHub</h2>
           <div className="card-grid">
             {REPOS.map((r) => (
-              <a key={r.name} className={`card pkg-card repo-card ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href={r.href}>
+              <a key={r.name} className={`card pkg-card repo-card ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href={r.href} target="_blank" rel="noopener">
                 <span className="icon-chip"><IconGitHub /></span>
                 <h3 className="pkg-name">
                   <span className="pkg-org">CitizensFoundation/</span>
                   {r.name}
                 </h3>
                 <p>{r.desc}</p>
-                <span className="aurora-link card-link">View repository →</span>
+                <span className="aurora-link card-link">View repository <span aria-hidden="true">→</span></span>
               </a>
             ))}
           </div>
@@ -958,6 +964,8 @@ export function OpenSourcePage() {
                       key={link.label}
                       className={`aurora-link ${link.github ? plausibleClass(PLAUSIBLE_EVENTS.github) : ""}`}
                       href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noopener" : undefined}
                     >
                       {link.label}
                     </a>
@@ -974,7 +982,7 @@ export function OpenSourcePage() {
         sub="Questions about self-hosting or building on our stack? We're happy to help."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">Start on GitHub →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation" target="_blank" rel="noopener">Start on GitHub <span aria-hidden="true">→</span></a>
             <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">Talk to us</a>
           </>
         }

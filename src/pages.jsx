@@ -9,9 +9,13 @@ marked.use({
   },
 });
 
-// Render an article body and lazy-load its images (the hero above stays eager).
+// Render an article body: lazy-load its images (the hero above stays eager) and
+// open external links in a new tab (internal "/..." links stay in the same tab).
 function renderArticleHtml(body) {
-  return marked.parse(body).replace(/<img /g, '<img loading="lazy" decoding="async" ');
+  return marked
+    .parse(body)
+    .replace(/<img /g, '<img loading="lazy" decoding="async" ')
+    .replace(/<a href="(https?:\/\/[^"]*)"/g, '<a href="$1" target="_blank" rel="noopener"');
 }
 
 const MONTHS = [
@@ -75,6 +79,8 @@ export function ImpactIndex() {
         <a
           className="impact-award"
           href="https://www.solonian-institute.com/post/2022-sdi-digital-democracy-awards"
+          target="_blank"
+          rel="noopener"
         >
           <img
             src="/uploads/2022/09/sdi-digital-democracy-impact-award-2022.jpg"
@@ -89,7 +95,7 @@ export function ImpactIndex() {
               from ideation and deliberation to public consultation,
               decision-making and participatory budgeting.
             </span>
-            <span className="aurora-link card-link">Read the award note →</span>
+            <span className="aurora-link card-link">Read the award note <span aria-hidden="true">→</span></span>
           </span>
         </a>
         <div className="card-grid">
@@ -133,15 +139,18 @@ export function ArticlePage({ doc }) {
           </div>
         ))}
         {gallery.length > 0 && (
-          <div className="article-gallery">
+          <figure
+            className="article-gallery"
+            aria-label={`Gallery — ${doc.title} (${gallery.length} ${gallery.length === 1 ? "image" : "images"})`}
+          >
             {gallery.map((g) => (
               <img key={g} src={g} alt="" loading="lazy" />
             ))}
-          </div>
+          </figure>
         )}
         {doc.link && (
           <p className="article-visit">
-            <a className="btn btn-primary" href={doc.link}>Visit project →</a>
+            <a className="btn btn-primary" href={doc.link}>Visit project <span aria-hidden="true">→</span></a>
           </p>
         )}
       </div>

@@ -23,17 +23,17 @@ Explore more below.
 
 ## Examples Analytics Features Screens
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-18-13-07.png)
+![The Your Priorities analytics dashboard](/uploads/2022/10/Screenshot-from-2022-10-15-18-13-07.png)
 
 ### **Key data accessible in a simple format**
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-17-43-39.png)
+![Analytics dashboard showing key engagement data in a simple format](/uploads/2022/10/Screenshot-from-2022-10-15-17-43-39.png)
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-17-43-51.png)
+![An analytics data panel in Your Priorities](/uploads/2022/10/Screenshot-from-2022-10-15-17-43-51.png)
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-17-44-19.png)
+![An analytics data panel in Your Priorities](/uploads/2022/10/Screenshot-from-2022-10-15-17-44-19.png)
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-17-44-27.png)
+![An analytics data panel in Your Priorities](/uploads/2022/10/Screenshot-from-2022-10-15-17-44-27.png)
 
 ## Integrating Plausible Analytics into Your Priorities
 
@@ -55,20 +55,20 @@ The promotional tool is the first iteration of our promotional automation soluti
 
 ### Create a promotion
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-18-15-19.png)
+![Creating a new promotion in the Your Priorities promotion tool](/uploads/2022/10/Screenshot-from-2022-10-15-18-15-19.png)
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-18-15-32cropped.png)
+![The promotion tool showing ready-to-paste content for social media channels](/uploads/2022/10/Screenshot-from-2022-10-15-18-15-32cropped.png)
 
 ### Activate a promotion
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-18-15-46.png)
+![Activating a promotion in Your Priorities](/uploads/2022/10/Screenshot-from-2022-10-15-18-15-46.png)
 
 ## Mass Promotion Emails (Coming soon)
 
 During a recent Democracy Lab hackathon, a small but excellent team of volunteers helped us prototype a new integrated mass promotion email solution for sending themed custom emails to citizens who have taken part in previous deliberations. This new feature will go live later this year for all our our projects.
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-18-32-58.png)
+![Prototype of the built-in mass promotion email tool](/uploads/2022/10/Screenshot-from-2022-10-15-18-32-58.png)
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-18-35-18.png)
+![The mass promotion email tool with a list of citizen recipients](/uploads/2022/10/Screenshot-from-2022-10-15-18-35-18.png)
 
 ## [Try Your Priorities Now](https://citizens.is/getting-started/)

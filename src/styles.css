@@ -33,6 +33,36 @@
   border: 0;
 }
 
+/* Skip link — hidden off-screen until a keyboard user focuses it. */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -64px;
+  z-index: 60;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 12px; }
+
+/* Visible keyboard focus ring. :focus-visible stays off for pointer clicks,
+   so mouse users never see it; keyboard/AT users always do. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+/* The skip-link target shouldn't draw a full-width box when focused. */
+#main:focus { outline: none; }
+
 html { scroll-behavior: smooth; }
 
 body {

@@ -10,4 +10,4 @@ Interview with Robert Bjarnason, Co-founder, and President of Citizens Foundatio
 
 [https://democracy-technologies.org/industry-news/artificial-intelligence-to-empower-citizens/](https://democracy-technologies.org/industry-news/artificial-intelligence-to-empower-citizens/)
 
-![](/uploads/2022/10/Screenshot-from-2022-10-15-16-59-10.png)
+![The Democracy Technologies interview with Róbert Bjarnason](/uploads/2022/10/Screenshot-from-2022-10-15-16-59-10.png)

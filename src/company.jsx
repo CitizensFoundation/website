@@ -155,7 +155,7 @@ export function AboutPage() {
           communities."
         ctas={
           <>
-            <a className="btn btn-primary" href="/impact/">See our impact →</a>
+            <a className="btn btn-primary" href="/impact/">See our impact <span aria-hidden="true">→</span></a>
             <a className="btn btn-ghost" href="/contact/">Contact us</a>
           </>
         }
@@ -256,7 +256,7 @@ export function AboutPage() {
             From participation consultancy to hosted platforms — see what we offer.
           </p>
           <div className="cta-row">
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Work with us →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Work with us <span aria-hidden="true">→</span></a>
             <a className="btn btn-ghost" href="/in-the-news/">In the news</a>
           </div>
         </div>
@@ -292,7 +292,7 @@ export function ContactPage() {
               <h3>Technical & open source</h3>
               <p>
                 Bug reports, feature ideas and contributions are welcome on{" "}
-                <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation">GitHub</a>.
+                <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation" target="_blank" rel="noopener">GitHub</a>.
               </p>
             </article>
             <article className="card feature-card">
@@ -458,14 +458,14 @@ export function StartProject({
               </span>
               <span className="launch-domain">{r.domain}</span>
               <span className="launch-hint">{r.hint}</span>
-              <span className="launch-go aurora-link card-link">Create your project →</span>
+              <span className="launch-go aurora-link card-link">Create your project <span aria-hidden="true">→</span></span>
             </a>
           ))}
         </div>
         <p className="launch-note">
           Somewhere else, or want Your Priorities on your own custom domain?{" "}
           <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">
-            We’ll set it up with you →
+            We’ll set it up with you <span aria-hidden="true">→</span>
           </a>
         </p>
       </div>
@@ -485,7 +485,7 @@ export function WorkWithUsPage() {
           budgets to national assemblies — available for your project."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">citizens@citizens.is →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">citizens@citizens.is <span aria-hidden="true">→</span></a>
             <a className="btn btn-ghost" href="/impact/">See past projects</a>
           </>
         }
@@ -521,10 +521,6 @@ export function WorkWithUsPage() {
               </p>
             </article>
           </div>
-          <p className="ribbon">
-            Everything is open source — you are never locked in. Start small,
-            scale when it works.
-          </p>
         </div>
       </section>
 
@@ -611,7 +607,7 @@ export function WorkWithUsPage() {
             </article>
           </div>
           <div className="cta-row deploy-actions">
-            <a className="btn btn-primary" href="/open-source/">Open source overview →</a>
+            <a className="btn btn-primary" href="/open-source/">Open source overview <span aria-hidden="true">→</span></a>
             <a
               className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`}
               href="https://github.com/CitizensFoundation/your-priorities-app"

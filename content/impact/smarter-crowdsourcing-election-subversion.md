@@ -25,7 +25,7 @@ We described the method and results in a peer-reviewed paper, [Using Artificial 
     <h3>Policy Synth and Smarter Crowdsourcing</h3>
     <p>Download the full 51-page ACM Collective Intelligence Conference paper documenting the method and real-world election subversion case study.</p>
   </div>
-  <a class="btn btn-primary" href="https://arxiv.org/pdf/2407.13960" target="_blank" rel="noopener">Download PDF →</a>
+  <a class="btn btn-primary" href="https://arxiv.org/pdf/2407.13960" target="_blank" rel="noopener">Download PDF <span aria-hidden="true">→</span></a>
 </div>
 
 Beth Simone Noveck also wrote about the project in Fast Company, drawing on an interview with Róbert Bjarnason: [How AI could restore our faith in democracy](https://www.fastcompany.com/91001497/ai-faith-in-democracy).

@@ -72,7 +72,7 @@ const PLATFORMS = [
 
 // Count-up stat. SSR renders the final value; on the client the number is
 // animated by writing textContent directly, so hydration never mismatches.
-function Stat({ value, suffix = "", grouped = false, animate = true, label }) {
+function Stat({ value, suffix = "", grouped = false, animate = true, label, srLabel }) {
   const ref = useRef(null);
   const fmt = (n) =>
     (grouped ? Math.round(n).toLocaleString("en-US") : String(Math.round(n))) + suffix;
@@ -103,8 +103,9 @@ function Stat({ value, suffix = "", grouped = false, animate = true, label }) {
 
   return (
     <div className="stat">
-      <span className="stat-value" ref={ref}>{fmt(value)}</span>
-      <span className="stat-label">{label}</span>
+      <span className="stat-value" ref={ref} aria-hidden="true">{fmt(value)}</span>
+      <span className="stat-label" aria-hidden="true">{label}</span>
+      <span className="sr-only">{srLabel || `${fmt(value)} ${label}`}</span>
     </div>
   );
 }
@@ -129,7 +130,7 @@ function HomePage() {
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href="/impact/">Explore our work</a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
@@ -144,7 +145,7 @@ function HomePage() {
 
       <section className="stats reveal">
         <div className="shell stats-row">
-          <Stat value={2008} animate={false} label="founded in Reykjavík" />
+          <Stat value={2008} animate={false} label="founded in Reykjavík" srLabel="Founded in 2008, Reykjavík" />
           <Stat value={50} suffix="+" label="countries" />
           <Stat value={1000000} grouped suffix="+" label="citizen voices" />
           <Stat value={100} suffix="%" label="open source" />
@@ -164,7 +165,7 @@ function HomePage() {
                 <span className="platform-mark"><img src={p.icon} alt="" /></span>
                 <h3>{p.name}</h3>
                 <p>{p.blurb}</p>
-                <span className="aurora-link card-link">Learn more →</span>
+                <span className="aurora-link card-link">Learn more <span aria-hidden="true">→</span></span>
               </a>
             ))}
           </div>
@@ -175,7 +176,7 @@ function HomePage() {
         <div className="shell">
           <div className="section-head">
             <h2 className="section-title">Impact</h2>
-            <a className="aurora-link" href="/impact/">View all stories →</a>
+            <a className="aurora-link" href="/impact/">View all stories <span aria-hidden="true">→</span></a>
           </div>
           <div className="card-grid">
             {stories.map((s) => (
@@ -197,7 +198,7 @@ function HomePage() {
         <div className="shell">
           <div className="section-head">
             <h2 className="section-title">From the blog</h2>
-            <a className="aurora-link" href="/blog/">All posts →</a>
+            <a className="aurora-link" href="/blog/">All posts <span aria-hidden="true">→</span></a>
           </div>
           <ul className="post-list">
             {posts.map((p) => (
@@ -232,7 +233,7 @@ function HomePage() {
                   study of Smarter Crowdsourcing accelerated by Policy Synth AI
                   agents, delivered ahead of the 2024 US elections.
                 </p>
-                <span className="aurora-link card-link">Read the case study →</span>
+                <span className="aurora-link card-link">Read the case study <span aria-hidden="true">→</span></span>
               </span>
             </a>
             <div className="spotlight-refs">
@@ -251,7 +252,7 @@ function HomePage() {
                   <span className="story-place">Research paper · ACM CI 2024</span>
                   <strong>Using Artificial Intelligence to Accelerate Collective Intelligence</strong>
                   <span className="spotlight-ref-meta">Róbert Bjarnason, Dane Gambrell &amp; Joshua Lanthier-Welch</span>
-                  <span className="aurora-link card-link">Read on arXiv ↗</span>
+                  <span className="aurora-link card-link">Read on arXiv <span aria-hidden="true">↗</span></span>
                 </span>
               </a>
               <a
@@ -269,7 +270,7 @@ function HomePage() {
                   <span className="story-place">Fast Company</span>
                   <strong>How AI could restore our faith in democracy</strong>
                   <span className="spotlight-ref-meta">By Beth Simone Noveck</span>
-                  <span className="aurora-link card-link">Read the article ↗</span>
+                  <span className="aurora-link card-link">Read the article <span aria-hidden="true">↗</span></span>
                 </span>
               </a>
             </div>
@@ -289,7 +290,7 @@ function HomePage() {
                 on npm. The exact code running New Jersey, Iceland’s ministries
                 and ERIC, there for anyone to audit. No black boxes, no lock-in.
               </p>
-              <span className="os-banner-cta">Explore the packages →</span>
+              <span className="os-banner-cta">Explore the packages <span aria-hidden="true">→</span></span>
               <div className="os-pills">
                 <span>TypeScript</span><span>MIT</span><span>npm</span><span>GitHub</span>
               </div>
@@ -329,16 +330,16 @@ function HomePage() {
                 <span className="badge-label">People Powered<br />2025 Ratings</span>
               </a>
               <a className="badge" href="https://www.oecd.org/publications/oecd-guidelines-for-citizen-participation-processes-f765caf6-en.htm">
-                <span className="badge-rank">◆</span>
+                <span className="badge-rank" aria-hidden="true">◆</span>
                 <span className="badge-label">OECD<br />Guidelines</span>
               </a>
               <a className="badge" href="https://www.solonian-institute.com/publications">
-                <span className="badge-rank">★</span>
+                <span className="badge-rank" aria-hidden="true">★</span>
                 <span className="badge-label">Digital Democracy<br />Report 2024</span>
               </a>
             </div>
             <div className="cta-row recognition-cta">
-              <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Start a project →</a>
+              <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.workWithUs)}`} href="/work-with-us/">Start a project <span aria-hidden="true">→</span></a>
               <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Explore the platform</a>
             </div>
           </div>
@@ -425,6 +426,7 @@ export default function App({ initialRoute, initialDoc }) {
 
   return (
     <>
+      <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <div className="shell header-row">
           <a className="wordmark" href="/">
@@ -477,7 +479,7 @@ export default function App({ initialRoute, initialDoc }) {
         )}
       </header>
 
-      <main>{page}</main>
+      <main id="main" tabIndex={-1}>{page}</main>
 
       {/* <PartnerNews /> — parked (see import note above) */}
 
@@ -506,6 +508,8 @@ export default function App({ initialRoute, initialDoc }) {
                 key={label}
                 className={label === "GitHub" ? plausibleClass(PLAUSIBLE_EVENTS.github) : undefined}
                 href={href}
+                target="_blank"
+                rel="noopener"
                 aria-label={label}
                 title={label}
               >
