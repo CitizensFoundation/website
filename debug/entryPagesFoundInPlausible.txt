@@ -1,0 +1,811 @@
+Entry page	Unique entrances↓	Total entrances↓	Bounce rate↓	Visit duration↓
+/
+47.6%
+13,612
+14,492	74%	1m 09s
+/your-priorities-features-overview/
+2.6k
+2.8k	61%	2m 27s
+/getting-started/
+2.4k
+2.5k	71%	1m 53s
+/portfolio_page/better_reykjavik/
+1.6k
+1.7k	78%	1m 29s
+/portfolio_page/make-constitution-game/
+1.5k
+1.7k	79%	1m 39s
+/2022/10/16/new-analytics-and-promotion-tool/
+825
+846	88%	37s
+/empower-citizens-with-ai/
+637
+654	73%	59s
+/portfolio/
+583
+624	67%	2m 08s
+/portfolio_page/icelandic-constitution-crowdsourcing/
+576
+612	82%	1m 19s
+/author/robert/
+558
+563	66%	1m 14s
+/press/
+477
+488	87%	21s
+/donate-open-source/
+323
+326	84%	31s
+/portfolio_page/rahvakogu/
+275
+287	78%	1m 20s
+/2021/12/07/citizens-foundation-case-file-constitution-game/
+193
+202	82%	55s
+/blog/
+192
+193	78%	1m 00s
+/portfolio_page/my-neighbourhood/
+188
+200	78%	1m 20s
+/getting-started
+107
+111	79%	37s
+/about-cf/
+101
+103	60%	2m 21s
+/author/josh/
+99
+99	32%	1m 35s
+/portfolio_page/world-bank-kyrgyz-aris/
+93
+96	90%	42s
+/connecting-governments-and-citizens/
+84
+84	73%	1m 14s
+/portfolio_page/true-stories-from-the-future-eve-online/
+83
+83	92%	21s
+/portfolio_page/girraween-public-school-class-controls-class/
+79
+79	81%	30s
+/your-priorities-features-overview
+76
+78	71%	3m 03s
+/idea-generation-policy-crowd-sourcing/
+73
+74	74%	48s
+/portfolio_page/your-priorities-yrpri/
+72
+75	57%	1m 29s
+/portfolio_page/junges-wien/
+71
+73	81%	1m 25s
+/portfolio_page/oakland-city-challenge/
+61
+62	76%	1m 21s
+/portfolio_page/better_reykjavik
+60
+63	89%	31s
+/portfolio_page/engage-scottish-parliament/
+59
+59	85%	27s
+/portfolio_page/better-bangkok/
+56
+60	82%	1m 30s
+/budget-voting-civic-education/
+55
+56	73%	1m 31s
+/donate/
+54
+56	73%	40s
+/portfolio_page/populism-civic-engagement/
+53
+53	85%	7s
+/portfolio_page/better-iceland/
+47
+51	76%	1m 06s
+/portfolio
+39
+39	85%	7s
+/digital-democracy-home/page/4/
+38
+39	49%	1m 15s
+/blog
+28
+28	96%	2s
+/contact-us/
+28
+28	79%	1m 17s
+/2023/10/01/the-power-of-citizen-engagement-why-your-priorities-is-the-worlds-leading-platform/
+25
+25	56%	8m 58s
+/press
+25
+25	100%	0s
+/2022/10/16/new-analytics-and-promotion-tool
+23
+23	87%	10s
+/portfolio_page/my-neighbourhood/gunnar-grimsson-300x199/
+22
+22	77%	43s
+/portfolio_page/active-citizen/
+21
+22	73%	1m 46s
+/portfolio_page/forbrukerradet-the-norwegian-consumer-council/
+21
+21	95%	1s
+/your-priorities-features/
+20
+22	36%	3m 08s
+/2021/09/18/interview-robert-bjarnason-co-founder-ceo/
+19
+20	70%	18s
+/portfolio_page/nhs-citizen/
+19
+19	79%	1m 23s
+/us
+19
+19	100%	0s
+/home
+18
+18	100%	0s
+/2012/02/03/better-reykjavik-wins-two-more-awards/
+17
+17	59%	2m 10s
+/2015/02/26/new-estonian-law-creates-a-new-law-through-citizens-petitions/
+17
+17	88%	2s
+/contact/
+17
+17	76%	28s
+/empower-citizens-with-ai
+17
+17	59%	6m 32s
+/portfolio_page/councils-in-scotland/
+14
+14	86%	28s
+/portfolio_page/education-policy/
+14
+14	71%	56s
+/2022/10/15/we-use-ai-to-empower-citizens/
+13
+13	77%	10s
+/author/robert/page/2/
+13
+14	29%	4m 04s
+/portfolio_page/our-kopavogur/kopavogur/
+13
+14	86%	2s
+/portfolio_page/our-moso/
+13
+13	85%	15s
+/2018/08/08/priorities-version-7-3-released/
+12
+12	92%	12s
+/2015/01/20/the-importance-of-youth-organisations-for-society-and-democracy/
+11
+11	91%	6s
+/about-cf
+11
+11	64%	4m 05s
+/digital-democracy-home/page/3/
+11
+11	82%	9s
+/portfolio-category/active-citizen/
+11
+11	73%	3m 15s
+/digital-democracy-home/
+10
+10	100%	0s
+/portfolio-category/open-active-voting/
+10
+10	50%	1m 56s
+/portfolio_page/code-europe-10-cities-in-europe-tackle-air-pollution-issues/
+10
+11	91%	3m 09s
+/portfolio_page/pb-pula-croatia/
+10
+10	100%	0s
+/2020/03/07/free-hosting-support-nonprofits/
+9
+9	44%	23s
+/2023/10/01/scotland-embraces-digital-democracy-at-parliamentary-level/
+9
+9	67%	1m 35s
+/portfolio_page/my-neighbourhood
+9
+9	67%	18s
+/2020/03/16/free-hosting-support-nonprofit-educational-health-organizations/
+8
+8	62%	1m 10s
+/blog/page/3/
+8
+8	62%	52s
+/portfolio_page/piratenpartij-amsterdam/
+8
+8	75%	1m 29s
+/wp-content/uploads/2014/07/Better-Neighbourhoods.pdf
+8
+8	75%	41s
+/2011/10/19/new-better-reykjavik-opens-in-collaboration-with-the-city-of-reykjavik/
+7
+7	71%	4m 08s
+/2013/09/30/citizens-foundation-at-seecom-conference/
+7
+7	100%	0s
+/2014/04/18/eve-online-true-stories-project-was-a-great-success/
+7
+7	100%	0s
+/2015/11/19/digital-commons-for-open-government/
+7
+7	100%	0s
+/contact
+7
+7	86%	1s
+/digital-democracy-home/gudjonidirbw/
+7
+8	50%	14s
+/portfolio_page/deep-linking-youth/
+7
+9	67%	3m 04s
+/portfolio_page/multi-city-challenge-africa/
+7
+7	86%	24s
+/portfolio_page/smarter-new-jersey/
+7
+7	71%	4m 03s
+/2011/11/16/better-iceland-opens-at-austurvollur/
+6
+6	100%	0s
+/2013/04/04/ccp-games-collect-true-stories-with-your-priorities/
+6
+6	100%	0s
+/blog/page/5/
+6
+6	100%	0s
+/blog/page/8/
+6
+6	100%	0s
+/portfolio_page/covid-19-sudan/
+6
+6	83%	10s
+/portfolio_page/dear-parliament/
+6
+6	67%	11s
+/portfolio_page/icelandic-constitution-crowdsourcing
+6
+6	100%	0s
+/portfolio_page/make-constitution-game
+6
+6	83%	51s
+/your-priorities-features-overview/screenshot-from-2022-02-04-18-05-52/
+6
+6	50%	4m 08s
+blank
+6
+6	100%	0s
+/2011/10/18/citizens-foundation-awarded-the-european-edemocracy-award/
+5
+5	80%	2m 27s
+/2019/01/08/priorities-version-8-2-released/
+5
+5	60%	35s
+/2021/09/18/thoughts-future-governance/
+5
+5	100%	0s
+/2022/03/20/pace-dashboard/
+5
+5	80%	42m 22s
+/2023/10/01/building-democracy-technology-as-a-non-profit-organisation/
+5
+6	83%	18s
+/category/uncategorized/
+5
+5	80%	7s
+/donate-eastern-europe/
+5
+5	100%	0s
+/getting-started-cfa-offer/
+5
+5	60%	2s
+/portfolio_page/election-dialogue/
+5
+5	80%	8s
+/portfolio_page/our-kopavogur/
+5
+5	80%	4s
+/pricing-tables/
+5
+6	100%	0s
+/your-priorities-features-overview/shutterstock_773579452/
+5
+5	40%	4m 58s
+/your-priorities-features/screenshot-from-2021-12-10-04-08-43/
+5
+5	80%	2s
+/2013/05/28/online-citizens-participation-in-iceland-and-worldwide-point-conference/
+4
+4	100%	0s
+/2014/04/08/citizens-foundation-main-projects/
+4
+4	75%	4m 59s
+/2015/02/25/23-increase-in-electronic-voting-in-better-neighborhoods-2015/
+4
+4	100%	0s
+/2015/06/25/our-better-neighbourhoods-wins-the-nordic-best-practice-challenge/
+4
+4	100%	0s
+/budget-voting-civic-education
+4
+4	100%	0s
+/contact-us
+4
+4	100%	0s
+/digital-democracy-home/betra-island-3/
+4
+4	50%	24s
+/digital-democracy-home/page/2/
+4
+4	75%	4m 26s
+/group/citizens/post
+4
+4	100%	0s
+/group/citizens/subscribe
+4
+4	100%	0s
+/our-services/
+4
+4	75%	2m 24s
+/portfolio_page/
+4
+4	100%	0s
+/portfolio_page/councils-in-scotland/ag7/
+4
+4	100%	0s
+/portfolio_page/deep-linking-youth/depplink/
+4
+4	100%	0s
+/portfolio_page/malta/
+4
+4	100%	0s
+/portfolio_page/our-moso/okkar-moso-2/
+4
+4	100%	0s
+/portfolio_page/your-ellp-ideas/
+4
+4	100%	0s
+/2011/09/26/citizens-well-received-at-digital-cities/
+3
+3	100%	0s
+/2014/12/30/seasons-greetings-2014/
+3
+3	100%	0s
+/2016/12/02/deep-linking-youth/
+3
+3	33%	7m 19s
+/2019/09/12/pilot-episode-citizens-foundation-tv/
+3
+3	100%	0s
+/2021/11/08/populism-civic-engagement-conference/
+3
+3	100%	0s
+/2021/12/07/citizens-foundation-case-file-constitution-game
+3
+3	67%	40s
+/apps/
+3
+3	33%	3s
+/blog/page/2/
+3
+3	100%	0s
+/blog/page/6/
+3
+3	100%	0s
+/blog/page/7/
+3
+3	100%	0s
+/category/democracy-games/
+3
+3	33%	3m 57s
+/category/digital-democracy/
+3
+3	67%	3m 09s
+/category/uncategorized/page/4/
+3
+3	100%	0s
+/digital-democracy-home/gaui2/
+3
+3	100%	0s
+/digital-democracy-home/page/5/
+3
+3	33%	4m 21s
+/digital-democracy-home/page/6/
+3
+3	100%	0s
+/portfolio-category/policy-crowdsourcing/
+3
+3	100%	0s
+/portfolio_page/better_reykjavik/&sa=D&ust=1552449968486000
+3
+3	33%	9m 55s
+/portfolio_page/kopavogur-transport-policy/
+3
+3	67%	1m 29s
+/portfolio_page/page/2/
+3
+3	100%	0s
+/portfolio_page/page/4/
+3
+3	100%	0s
+/portfolio_page/serbia-crowdsourcing-ideas/
+3
+3	100%	0s
+/portfolio_page/your-priorities-yrpri/ypri-scre/
+3
+3	33%	20s
+/portfolio_page/your-voice-at-the-city-council/
+3
+4	50%	6m 42s
+/2011/10/31/16-priorities-from-better-reykjavik-are-now-in-process-with-the-city-of-reykjavik/
+2
+2	100%	0s
+/2014/08/28/your-idea-our-priority-crowdfunding-campaign-launched/
+2
+2	50%	1m 36s
+/2014/11/26/better-neighborhoods-pb-for-the-4th-time/
+2
+2	50%	18s
+/2015/11/16/citizens-foundation-awarded-seed-financing-for-active-citizen-ai-notifications/ibuum_afhent_verdlaun-e1405354911819/
+2
+2	50%	15m 06s
+/2017/09/08/can-we-trust-privatised-democracy/
+2
+2	100%	0s
+/2018/08/29/open-source-platforms-recognized-one-worlds-best/
+2
+2	100%	0s
+/author/gudjonidir/
+2
+2	100%	0s
+/author/robert
+2
+2	100%	0s
+/bin/topic.py
+2
+2	100%	0s
+/blog/page/4/
+2
+2	100%	0s
+/call-to-action/
+2
+2	100%	0s
+/category/uncategorized/page/2/
+2
+2	100%	0s
+/compliance
+2
+2	100%	0s
+/contact-us/&amp;ved=2ahUKEwiAq-uZv7D8AhXExIsKHZj-Bp0QFnoECAAQAg&amp;usg=AOvVaw2ztSSJGvfl3lCmLhJxJOTE
+2
+2	100%	0s
+/digital-democracy-home/page/8/
+2
+2	50%	15s
+/donate
+2
+2	100%	0s
+/donate-thank-you/
+2
+2	0%	1m 51s
+/gunnar/
+2
+2	100%	0s
+/page/2/
+2
+2	100%	0s
+/portfolio-category/participatory-budgeting/
+2
+2	50%	11s
+/portfolio-category/your-priorities/page/4/
+2
+2	50%	1m 59s
+/portfolio_
+2
+2	100%	0s
+/portfolio_page/better-iceland
+2
+2	50%	6m 56s
+/portfolio_page/better-iceland/betra-island/
+2
+2	100%	0s
+/portfolio_page/better-reykjavik/
+2
+2	50%	2s
+/portfolio_page/forbrukerradet-the-norwegian-consumer-council/forbru-wide/
+2
+2	100%	0s
+/portfolio_page/junges-wien h 3
+2
+2	100%	0s
+/portfolio_page/make-your-constitution-game/
+2
+2	100%	0s
+/portfolio_page/our-moso/moso-kort/
+2
+2	100%	0s
+/portfolio_page/our-moso/moso3/
+2
+2	100%	0s
+/portfolio_page/pb-pula-croatia/pula4/
+2
+2	100%	0s
+/portfolio_page/piratenpartij-amsterdam
+2
+2	0%	7s
+/portfolio_page/rahvakogu/666-2/
+2
+2	50%	28s
+/portfolio_page/your-voice-at-the-city-council/hm2017-icon/
+2
+2	100%	0s
+/products
+2
+2	100%	0s
+/security
+2
+2	100%	0s
+/trust
+2
+2	100%	0s
+/your-priorities-features-overview/ https:/junges.wien/ https:/engage.parliament.scot/
+2
+2	100%	0s
+/your-priorities-features-overview/materialdesign/
+2
+2	100%	0s
+/your-priorities-features-overview/screenshot-from-2022-02-01-14-41-27/
+2
+2	50%	3s
+/ [https:/eur03.safelinks.protection.outlook.com/
+1
+1	0%	18m 02s
+/ help support guide
+1
+1	0%	32s
+/(Citizens Foundation
+1
+1	0%	19s
+/2011/09/18/citizens-foundation-participating-in-digital-cities-conference/
+1
+1	100%	0s
+/2012/01/24/robert-and-gunnar-are-geeks-of-the-year-2011-in-iceland/
+1
+1	0%	34s
+/2014/03/25/citizens-foundation-participated-in-level-up-conference-in-tunisia/
+1
+1	100%	0s
+/2014/05/13/international-conference-participation-of-young-citizens-in-new-era-istanbul/
+1
+1	100%	0s
+/2015/11/16/citizens-foundation-awarded-seed-financing-for-active-citizen-ai-notifications/
+1
+1	100%	0s
+/2020/
+1
+1	100%	0s
+/2021/09/18/
+1
+1	100%	0s
+/2021/09/18/interview-robert-bjarnason-co-founder-ceo
+1
+2	100%	0s
+/2022/10/16/new-analytics-and-promotion-tool/screenshot-from-2022-10-15-18-13-07/
+1
+1	100%	0s
+/2023/10/01/scotland-embraces-digital-democracy-at-parliamentary-level
+1
+1	100%	0s
+/3/
+1
+1	100%	0s
+/YourPriorities
+1
+1	0%	20s
+/all-our-ideas/
+1
+1	0%	4s
+/author/gudjonidir/page/2/
+1
+1	100%	0s
+/author/user/
+1
+1	100%	0s
+/better-decisions-collective-intelligence/linkedin_circle_color-512/
+1
+1	100%	0s
+/betterreykjavik
+1
+1	100%	0s
+/category/uncategorized/page/2
+1
+1	100%	0s
+/category/uncategorized/page/3/
+1
+1	100%	0s
+/category/uncategorized/page/5/
+1
+1	100%	0s
+/community/3544/
+1
+1	100%	0s
+/contact-us/&amp;ved=2ahUKEwjwo_e_w8z8AhWUvosKHf0CAY4QFnoECAQQAg&amp;usg=AOvVaw1B96xACXJU28mvigwKkn1I
+1
+1	100%	0s
+/digital-democracy-home/gaui/
+1
+1	100%	0s
+/digital-democracy-home/gauifinal/
+1
+1	100%	0s
+/digital-democracy-home/gudjonidirbw2/
+1
+1	100%	0s
+/digital-democracy-home/joshport/
+1
+1	100%	0s
+/digital-democracy-home/maren-2/
+1
+1	0%	32s
+/digital-democracy-home/marenfinal/
+1
+1	0%	3s
+/digital-democracy-home/page/7/
+1
+1	100%	0s
+/digital-democracy-home/robert/
+1
+1	0%	26s
+/domain/1
+1
+1	0%	2s
+/eW91ci1wcm
+1
+1	100%	0s
+/group/158
+1
+1	0%	42s
+/group/172
+1
+1	100%	0s
+/http:/daveandethan.life/exp.html
+1
+1	100%	0s
+/impact/better_reykjavik/
+1
+1	0%	3h 3m 31s
+/in-the-news/
+1
+1	100%	0s
+/meet-the-team
+1
+1	100%	0s
+/policysynth
+1
+1	100%	0s
+/portfolio-category/gamification/
+1
+1	100%	0s
+/portfolio-category/your-priorities/
+1
+1	0%	54s
+/portfolio/better-neighborhoods-helps-citizens-understand-the
+1
+1	100%	0s
+/portfolio/better-reykjavik-connects-citizens-and-administration-all-year-
+1
+1	100%	0s
+/portfolio_page/active-citizen
+1
+1	100%	0s
+/portfolio_page/anVuZ2VzLX
+1
+1	100%	0s
+/portfolio_page/bXktbmVpZ2
+1
+1	100%	0s
+/portfolio_page/better_reykjavik/&sa
+1
+1	0%	0s
+/portfolio_page/junges-wien
+1
+1	100%	0s
+/portfolio_page/junjes-wien/
+1
+1	100%	0s
+/portfolio_page/make-constitution-game/screenshot-from-2020-01-27-18-27-15/
+1
+2	100%	0s
+/portfolio_page/multi-city-challenge-africa
+1
+1	100%	0s
+/portfolio_page/my-neighborhood
+1
+1	0%	4s
+/portfolio_page/our-kopavogur/kop-7/
+1
+1	100%	0s
+/portfolio_page/our-kopavogur/mos/
+1
+1	100%	0s
+/portfolio_page/our-moso/moso2/
+1
+2	100%	0s
+/portfolio_page/our-moso/screen-shot-2017-11-23-at-13-27-19
+1
+1	100%	0s
+/portfolio_page/page/3/
+1
+1	100%	0s
+/portfolio_page/pb-pula-croatia/pula2/
+1
+1	0%	2s
+/portfolio_page/populism-civic-engagement
+1
+1	100%	0s
+/portfolio_page/populism-civic-engagement/pace_logo/
+1
+1	100%	0s
+/portfolio_page/rahvakogu/rahvakuku/
+1
+1	100%	0s
+/portfolio_page/your-priorities-yrpri/ypri-scre3/
+1
+1	0%	24s
+/sdfsdfsdfwe
+1
+1	100%	0s
+/the-book
+1
+1	100%	0s
+/typography/
+1
+1	100%	0s
+/wp-content/uploads/2014/07/ Better-Neighbourhoods.pdf
+1
+1	100%	0s
+/wp-content/uploads/2016/04/Better-Reykjavik-Case-Study.pdf
+1
+1	100%	0s
+/your-priorities
+1
+1	100%	0s
+/your-priorities-features-overview/screenshot-from-2022-02-01-12-13-12/
+1
+1	0%	26s
+/your-priorities-features-overview/screenshot-from-2022-02-01-14-42-30/
+1
+1	100%	0s
+/your-priorities-features-overview/screenshot-from-2022-02-01-23-37-40/
+1
+1	100%	0s
+/your-priorities-features-overview/screenshot-from-2022-02-03-14-41-59/
+1
+1	100%	0s
+/your-priorities-features-overview/screenshot-from-2022-02-03-14-42-58/
+1
+1	0%	2m 02s
+/your-priorities-features-overview/screenshot-from-2022-05-27-14-17-51/
+1
+1	100%	0s
+/your-priorities-features-overview/screenshot-from-2023-09-23-13-27-33/
+1
+1	100%	0s
+/your-priorities/
+1
+1	0%	1h 53m 30s
+/your-…
+1
+1	0%	36s
+/yourpriorities
+
