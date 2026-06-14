@@ -33,9 +33,10 @@ export function pathFor(id) {
 export function routeFromPath(pathname) {
   const clean = (pathname || "/").replace(/^\/+|\/+$/g, "");
   if (!clean) return "home";
+  if (ROUTE_IDS.includes(clean)) return clean;
   // Unknown paths render the 404 page (and Cloudflare serves /404.html), so a
   // direct hit to a stale URL hydrates as "not found" rather than the homepage.
-  return ROUTE_IDS.includes(clean) ? clean : "not-found";
+  return "not-found";
 }
 
 // Trim a description to a search-snippet-friendly length (~160 chars) at a
