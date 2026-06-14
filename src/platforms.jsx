@@ -77,6 +77,69 @@ function CaseCard({ href, place, image, children }) {
   );
 }
 
+const AOI_EXAMPLES = [
+  {
+    name: "United Nations",
+    href: "http://blog.allourideas.org/post/54853444073/un-global-sustainability-report-2013",
+    image: "/uploads/2026/06/aoi-example-un.png",
+  },
+  {
+    name: "Wikipedia",
+    href: "http://blog.allourideas.org/post/14520279310/wikipedia-banner-challenge",
+    image: "/uploads/2026/06/aoi-example-wikipedia.png",
+  },
+  {
+    name: "OECD",
+    href: "http://blog.allourideas.org/post/1121098355/oecd-and-allourideas",
+    image: "/uploads/2026/06/aoi-example-oecd.png",
+  },
+  {
+    name: "Governador Pergunta",
+    href: "http://blog.allourideas.org/post/14248022671/governor-genro-tops-president-obama-on-citizen",
+    image: "/uploads/2026/06/aoi-example-governador-pergunta.png",
+  },
+  {
+    name: "The Washington Post",
+    href: "http://blog.allourideas.org/post/1601483272/washingtonpost-com-using-allourideas-widget",
+    image: "/uploads/2026/06/aoi-example-washington-post.png",
+  },
+  {
+    name: "The City of Calgary",
+    href: "http://blog.allourideas.org/post/4526601799/calgary-all-our-ideas-and-civic-participation",
+    image: "/uploads/2026/06/aoi-example-calgary.png",
+  },
+  {
+    name: "Catholic Relief Services",
+    href: "http://blog.allourideas.org/post/7300721979/catholic-relief-services-and-allourideas",
+    image: "/uploads/2026/06/aoi-example-crs.png",
+  },
+  {
+    name: "Digital Democracy",
+    href: "http://blog.allourideas.org/post/3425270094/what-does-democracy-mean",
+    image: "/uploads/2026/06/aoi-example-digital-democracy.png",
+  },
+  {
+    name: "New York City Parks",
+    href: "http://blog.allourideas.org/post/49023446765/new-york-city-parks",
+    image: "/uploads/2026/06/aoi-example-canada.png",
+  },
+  {
+    name: "The Junior League",
+    href: "http://blog.allourideas.org/post/11281070104/the-junior-league-and-all-our-ideas",
+    image: "/uploads/2026/06/aoi-example-justice.png",
+  },
+  {
+    name: "Matter",
+    href: "http://blog.allourideas.org/post/30177243497/matter-tries-collaborative-commissioning",
+    image: "/uploads/2026/06/aoi-example-m.png",
+  },
+  {
+    name: "PlaNYC",
+    href: "http://blog.allourideas.org/post/6326304438/making-new-york-greener-and-greater",
+    image: "/uploads/2026/06/aoi-example-planyc.png",
+  },
+];
+
 function CtaBand({ title, sub, ctas }) {
   return (
     <section className="section">
@@ -523,7 +586,14 @@ export function AllOurIdeasPage() {
               as a way to collect public input without forcing people into a
               fixed list of survey options. Early Princeton projects tested the
               idea; All Our Ideas followed in 2010 as an open-source research
-              platform for “wiki surveys”.
+              platform for “wiki surveys”.{" "}
+              <a
+                className="aurora-link"
+                href="https://www.niemanlab.org/2010/08/all-our-ideas-facilitates-crowdsourcing-of-opinions/"
+              >
+                An early story from 2010
+              </a>{" "}
+              captured the Princeton origin and student-government use case.
             </p>
             <p>
               The method was later formalized by Salganik and Karen E. C. Levy
@@ -535,6 +605,22 @@ export function AllOurIdeasPage() {
               interviews and brainstorming with the scale, speed and statistical
               discipline of survey research.
             </p>
+            <div className="aoi-resource-row">
+              <a
+                className="aoi-resource-pill"
+                href="https://www.niemanlab.org/2010/08/all-our-ideas-facilitates-crowdsourcing-of-opinions/"
+              >
+                <span>Origin story</span>
+                Read the Princeton story →
+              </a>
+              <a
+                className="aoi-resource-pill"
+                href="https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0123483&type=printable"
+              >
+                <span>Paper PDF</span>
+                Download the wiki surveys paper →
+              </a>
+            </div>
             <p>
               Citizens Foundation now carries that lineage forward. We have
               taken over open-source maintenance, operate a standalone setup at{" "}
@@ -569,21 +655,51 @@ export function AllOurIdeasPage() {
       </section>
 
       <section className="section section-tight">
-        <div className="shell aoi-archive-banner">
-          <div>
-            <p className="eyebrow">Standalone archive</p>
-            <h2 className="section-title">3,300+ wiki surveys and counting</h2>
-            <p>
-              The standalone All Our Ideas setup is still online, carrying the
-              original wiki survey tool forward while selected projects move
-              into Your Priorities.
+        <div className="shell aoi-showcase">
+          <article className="aoi-tutorial-panel">
+            <div>
+              <p className="eyebrow">Tutorial</p>
+              <h2 className="section-title">All Our Ideas Tutorial</h2>
+              <p>
+                A short walkthrough of the standalone wiki survey flow: create
+                a question, collect pairwise choices, and discover the answers
+                that rise to the top.
+              </p>
+            </div>
+            <video
+              className="aoi-tutorial-video"
+              controls
+              preload="metadata"
+            >
+              <source
+                src="https://yrpri-eu-direct-assets.s3.eu-west-1.amazonaws.com/202403241906.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </article>
+
+          <article className="aoi-examples-panel">
+            <p className="aoi-stats-line">
+              <strong>30,957</strong> wiki surveys created with{" "}
+              <strong>1,746,697</strong> answers and{" "}
+              <strong>69,165,403</strong> votes since 2010
             </p>
-          </div>
-          <img
-            src="/uploads/2026/06/all-our-ideas-standalone-logo.png"
-            alt="All Our Ideas"
-            loading="lazy"
-          />
+            <h2 className="section-title">Example All Our Ideas Projects</h2>
+            <div className="aoi-example-grid">
+              {AOI_EXAMPLES.map((example) => (
+                <a
+                  key={example.image}
+                  className="aoi-example-logo"
+                  href={example.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={example.name}
+                >
+                  <img src={example.image} alt={example.name} loading="lazy" />
+                </a>
+              ))}
+            </div>
+          </article>
         </div>
       </section>
 
