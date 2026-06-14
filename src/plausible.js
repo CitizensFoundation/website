@@ -2,6 +2,7 @@ export const PLAUSIBLE_EVENTS = {
   workWithUs: "Work With Us Click",
   contactEmail: "Contact Email Click",
   yourPriorities: "Your Priorities Click",
+  allOurIdeas: "All Our Ideas Click",
   startProject: "Start Project Click",
   policySynth: "Policy Synth Click",
   github: "GitHub Click",

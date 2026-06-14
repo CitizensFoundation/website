@@ -66,9 +66,10 @@ function Feature({ icon: Icon, title, children }) {
   );
 }
 
-function CaseCard({ href, place, children }) {
+function CaseCard({ href, place, image, children }) {
   return (
     <a className="card case-card" href={href}>
+      {image && <img className="case-card-image" src={image} alt="" loading="lazy" />}
       <h3>{place}</h3>
       <p>{children}</p>
       <span className="aurora-link card-link">Read the story →</span>
@@ -471,7 +472,8 @@ export function AllOurIdeasPage() {
           their own."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Run a wiki survey →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create in Your Priorities</a>
             <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/allourideas.org">Source on GitHub</a>
           </>
         }
@@ -514,24 +516,50 @@ export function AllOurIdeasPage() {
         <div className="shell panel split">
           <div>
             <p className="eyebrow">From Princeton to Reykjavík</p>
-            <h2 className="section-title">Now part of Your Priorities</h2>
+            <h2 className="section-title">A standalone tool, also built into Your Priorities</h2>
             <p>
-              All Our Ideas was created at Princeton University as a research
-              project in “wiki surveys”, and its pairwise method has powered
-              public consultations around the world. Citizens Foundation has
-              taken over its open-source maintenance — and rebuilt it as a group
-              type right inside <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities</a>,
-              so wiki surveys run alongside idea generation, debates and
-              participatory budgeting, with the same AI translation, moderation
-              and analytics underneath.
+              All Our Ideas began at Princeton University, led by sociologist{" "}
+              <a className="aurora-link" href="https://www.bitbybitbook.com/">Matthew J. Salganik</a>,
+              as a way to collect public input without forcing people into a
+              fixed list of survey options. Early Princeton projects tested the
+              idea; All Our Ideas followed in 2010 as an open-source research
+              platform for “wiki surveys”.
+            </p>
+            <p>
+              The method was later formalized by Salganik and Karen E. C. Levy
+              in their PLOS ONE paper,{" "}
+              <a className="aurora-link" href="https://doi.org/10.1371/journal.pone.0123483">
+                Wiki surveys: Open and quantifiable social data collection
+              </a>
+              . It showed how pairwise voting can combine the openness of
+              interviews and brainstorming with the scale, speed and statistical
+              discipline of survey research.
+            </p>
+            <p>
+              Citizens Foundation now carries that lineage forward. We have
+              taken over open-source maintenance, operate a standalone setup at{" "}
+              <a className="aurora-link" href="https://all-our-ideas.citizens.is/">all-our-ideas.citizens.is</a>,
+              and rebuilt wiki surveys as a group type inside{" "}
+              <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities</a>,
+              so pairwise ranking can run alongside idea generation, debates
+              and participatory budgeting, with the same AI translation,
+              moderation and analytics underneath.
             </p>
           </div>
           <div className="case-stack">
-            <CaseCard href="/impact/ai-risk-prioritization-openai/" place="OpenAI Alignment Assembly">
+            <CaseCard
+              href="/impact/ai-risk-prioritization-openai/"
+              place="OpenAI Alignment Assembly"
+              image="/uploads/2023/06/ai-risk-prioritization-all-our-ideas.png"
+            >
               1,000 representative Americans used All Our Ideas to rank and
               submit concerns about making large language models safe for the public.
             </CaseCard>
-            <CaseCard href="/impact/new-jersey-ai-taskforce/" place="“AI and You” — New Jersey">
+            <CaseCard
+              href="/impact/new-jersey-ai-taskforce/"
+              place="“AI and You” — New Jersey"
+              image="/uploads/2026/06/new-jersey-ai-taskforce-cover-chatgpt.png"
+            >
               More than 2,200 workers voted on pairs of statements about
               generative AI, producing a rank-ordered list of 96 concerns that
               drove the AI Task Force’s recommendations to the Governor.
@@ -540,12 +568,32 @@ export function AllOurIdeasPage() {
         </div>
       </section>
 
+      <section className="section section-tight">
+        <div className="shell aoi-archive-banner">
+          <div>
+            <p className="eyebrow">Standalone archive</p>
+            <h2 className="section-title">3,300+ wiki surveys and counting</h2>
+            <p>
+              The standalone All Our Ideas setup is still online, carrying the
+              original wiki survey tool forward while selected projects move
+              into Your Priorities.
+            </p>
+          </div>
+          <img
+            src="/uploads/2026/06/all-our-ideas-standalone-logo.png"
+            alt="All Our Ideas"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       <CtaBand
         title="Ask your crowd what matters most"
-        sub="Wiki surveys are built into Your Priorities — free and open source."
+        sub="Use the standalone All Our Ideas setup, or create a wiki survey inside Your Priorities."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Get started →</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey →</a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create in Your Priorities</a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
         }

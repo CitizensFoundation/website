@@ -60,15 +60,27 @@ const TEAM = [
     photo: "/uploads/2019/06/GunnarCF-Ambassador-sharper-1-1.jpg",
     bio: "Gunnar has been at the heart of Citizens Foundation since its start. He is an experienced process and interface designer with a strong background in multiple fields, and has worked on citizen engagement projects all over the world.",
   },
-];
-
-const FORMER_TEAM = [
   {
     name: "Alexander Máni Gautason",
     role: "Programmer & QA Manager",
     photo: null,
     bio: "Alexander started testing new versions of our open-source software at age 11. Over the years he tested most major releases, helped keep quality high, and later ported much of the new web app from JavaScript to TypeScript before the days of AI coding assistants. He has also supported the Citizens Foundation family in many other ways over the years.",
   },
+  {
+    name: "Hanna Dóra Haraldsdóttir",
+    role: "Chair of the Board",
+    photo: "/uploads/2026/06/hanna-dora-haraldsdottir.png",
+    bio: "Hanna Dóra has been with Citizens Foundation from the start, supporting the foundation in many practical and strategic ways. A trained accountant, she became a technology entrepreneur in the 1980s, creating business software for Icelandic companies. She also chaired the board of Róbert's first ISP business in Iceland in 1993.",
+  },
+  {
+    name: "Bjarni Jón Agnarson",
+    role: "Board Director",
+    photo: "/uploads/2026/06/bjarni-jon-agnarson.png",
+    bio: "Bjarni has supported Citizens Foundation from the start through board work, technical judgment and steady advice. He is an electrical engineer and lifelong computer enthusiast who got his first computer in the early 1980s: a Micro-Professor MPF-I, the Z80-based training computer that helped introduce a generation to programming and electronics.",
+  },
+];
+
+const FORMER_TEAM = [
   {
     name: "Joshua Lanthier-Welch",
     role: "Executive Director, Citizens Foundation America",
@@ -178,11 +190,19 @@ export function AboutPage() {
       <section className="section">
         <div className="shell">
           <p className="eyebrow">The team</p>
-          <h2 className="section-title">Three people in Reykjavík</h2>
+          <h2 className="section-title">Team and board in Reykjavík</h2>
           <div className="card-grid">
             {TEAM.map((m) => (
               <article key={m.name} className="card team-card">
-                <img className="team-photo" src={m.photo} alt={m.name} />
+                {m.photo ? (
+                  <img className="team-photo" src={m.photo} alt={m.name} />
+                ) : (
+                  <div
+                    className="team-photo team-photo-placeholder"
+                    role="img"
+                    aria-label={`${m.name} photo placeholder`}
+                  />
+                )}
                 <h3>{m.name}</h3>
                 <p className="story-place">{m.role}</p>
                 <p>{m.bio}</p>
