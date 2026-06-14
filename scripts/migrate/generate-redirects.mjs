@@ -9,6 +9,7 @@ import { readMeta, ROOT } from "./lib/archive.mjs";
 const LEGACY = [
   ["/wp-sitemap.xml", "/sitemap.xml"],
   ["/sitemap_index.xml", "/sitemap.xml"],
+  ["/digital-democracy-home/page/*", "/blog/"],
   ["/digital-democracy-home/", "/"],
   ["/2014/12/30/seasons-greetings-2014/why_xmas/", "/blog/seasons-greetings-2014/"],
   ["/active/", "/blog/we-use-ai-to-empower-citizens/"],
@@ -20,10 +21,30 @@ const LEGACY = [
   ["/portfolio/true-stories-eve-online/", "/impact/true-stories-from-the-future-eve-online/"],
   ["/portfolio/national-health-service-nhs/", "/impact/nhs-citizen/"],
   ["/portfolio/better-reykjavik-connects-citizens-and-administration-all-year-round/", "/impact/better_reykjavik/"],
+  ["/donate/", "/"],
+  ["/donate-43/", "/"],
+  ["/donate-democracy/", "/"],
+  ["/donate-eastern-europe/", "/"],
+  ["/donate-open-source/", "/"],
+  ["/donate-thank-you/", "/"],
+  ["/support-cf/", "/"],
+  ["/about-cf/", "/about/"],
+  ["/contact-us/", "/contact/"],
+  ["/press/", "/in-the-news/"],
+  ["/portfolio/", "/impact/"],
+  ["/our-services/", "/work-with-us/"],
+  ["/pricing-tables/", "/work-with-us/"],
+  ["/connecting-governments-and-citizens/", "/about/"],
+  ["/getting-started/", "/your-priorities/"],
+  ["/getting-started-cfa-offer/", "/your-priorities/"],
+  ["/getting-started-with-your-priorities-world-bank-project-2020/", "/your-priorities/"],
+  ["/your-priorities-features/", "/your-priorities/"],
+  ["/your-priorities-features-overview/", "/your-priorities/"],
 ];
 
 export function generateRedirects({ blogSlugs, impactSlugs }) {
   const lines = [];
+  const seen = new Set();
 
   const validate = (target) => {
     let m = target.match(/^\/blog\/([^/]+)\/$/);
@@ -32,19 +53,31 @@ export function generateRedirects({ blogSlugs, impactSlugs }) {
     if (m && !impactSlugs.has(m[1])) throw new Error(`redirect target missing impact slug: ${m[1]}`);
   };
 
-  for (const [from, to] of LEGACY) {
+  const sourceVariants = (from) => {
+    if (from.includes("*") || /\.[^/]+$/.test(from)) return [from];
+    const bare = from.endsWith("/") ? from.slice(0, -1) : from;
+    return [bare, `${bare}/`].filter(Boolean);
+  };
+
+  const addRedirect = (from, to) => {
     validate(to);
-    lines.push(`${from} ${to} 301`);
-  }
+    for (const source of sourceVariants(from)) {
+      if (seen.has(source)) continue;
+      seen.add(source);
+      lines.push(`${source} ${to} 301`);
+    }
+  };
+
+  for (const [from, to] of LEGACY) addRedirect(from, to);
 
   for (const post of readMeta("rest-posts.json")) {
     if (post.status !== "publish") continue;
     const oldPath = new URL(post.link).pathname;
-    lines.push(`${oldPath} /blog/${post.slug}/ 301`);
+    addRedirect(oldPath, `/blog/${post.slug}/`);
   }
 
   for (const slug of [...impactSlugs].sort()) {
-    lines.push(`/portfolio_page/${slug}/ /impact/${slug}/ 301`);
+    addRedirect(`/portfolio_page/${slug}/`, `/impact/${slug}/`);
   }
 
   lines.push("/portfolio_page/* /impact/ 301");
