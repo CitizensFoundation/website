@@ -174,7 +174,7 @@ export function YourPrioritiesPage() {
           projects across over 50 countries."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Open Your Priorities <span aria-hidden="true">→</span></a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org" target="_blank" rel="noopener">Open Your Priorities <span aria-hidden="true">→</span></a>
             <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/your-priorities-app" target="_blank" rel="noopener">View source on GitHub</a>
           </>
         }
@@ -361,7 +361,7 @@ export function YourPrioritiesPage() {
         sub="Free and open source. Run it yourself, or let us host it for you."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create a project <span aria-hidden="true">→</span></a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org" target="_blank" rel="noopener">Create a project <span aria-hidden="true">→</span></a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
         }
@@ -386,7 +386,7 @@ export function PolicySynthPage() {
         ctas={
           <>
             <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/policy-synth" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
-            <a className="btn btn-ghost" href="https://arxiv.org/abs/2407.13960">Read the research paper</a>
+            <a className="btn btn-ghost" href="https://arxiv.org/abs/2407.13960" target="_blank" rel="noopener">Read the research paper</a>
           </>
         }
       />
@@ -541,8 +541,8 @@ export function AllOurIdeasPage() {
           their own."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey <span aria-hidden="true">→</span></a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create in Your Priorities</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/" target="_blank" rel="noopener">Run a wiki survey <span aria-hidden="true">→</span></a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org" target="_blank" rel="noopener">Create in Your Priorities</a>
             <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.github)}`} href="https://github.com/CitizensFoundation/allourideas.org" target="_blank" rel="noopener">Source on GitHub</a>
           </>
         }
@@ -588,7 +588,7 @@ export function AllOurIdeasPage() {
             <h2 className="section-title">A standalone tool, also built into Your Priorities</h2>
             <p>
               All Our Ideas began at Princeton University, led by sociologist{" "}
-              <a className="aurora-link" href="https://www.bitbybitbook.com/">Matthew J. Salganik</a>,
+              <a className="aurora-link" href="https://www.bitbybitbook.com/" target="_blank" rel="noopener">Matthew J. Salganik</a>,
               as a way to collect public input without forcing people into a
               fixed list of survey options. Early Princeton projects tested the
               idea; All Our Ideas followed in 2010 as an open-source research
@@ -596,6 +596,8 @@ export function AllOurIdeasPage() {
               <a
                 className="aurora-link"
                 href="https://www.niemanlab.org/2010/08/all-our-ideas-facilitates-crowdsourcing-of-opinions/"
+                target="_blank"
+                rel="noopener"
               >
                 An early story from 2010
               </a>{" "}
@@ -604,7 +606,7 @@ export function AllOurIdeasPage() {
             <p>
               The method was later formalized by Salganik and Karen E. C. Levy
               in their PLOS ONE paper,{" "}
-              <a className="aurora-link" href="https://doi.org/10.1371/journal.pone.0123483">
+              <a className="aurora-link" href="https://doi.org/10.1371/journal.pone.0123483" target="_blank" rel="noopener">
                 Wiki surveys: Open and quantifiable social data collection
               </a>
               . It showed how pairwise voting can combine the openness of
@@ -615,6 +617,8 @@ export function AllOurIdeasPage() {
               <a
                 className="aoi-resource-pill"
                 href="https://www.niemanlab.org/2010/08/all-our-ideas-facilitates-crowdsourcing-of-opinions/"
+                target="_blank"
+                rel="noopener"
               >
                 <span>Origin story</span>
                 Read the Princeton story <span aria-hidden="true">→</span>
@@ -622,6 +626,8 @@ export function AllOurIdeasPage() {
               <a
                 className="aoi-resource-pill"
                 href="https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0123483&type=printable"
+                target="_blank"
+                rel="noopener"
               >
                 <span>Paper PDF</span>
                 Download the wiki surveys paper <span aria-hidden="true">→</span>
@@ -630,7 +636,7 @@ export function AllOurIdeasPage() {
             <p>
               Citizens Foundation now carries that lineage forward. We have
               taken over open-source maintenance, operate a standalone setup at{" "}
-              <a className="aurora-link" href="https://all-our-ideas.citizens.is/">all-our-ideas.citizens.is</a>,
+              <a className="aurora-link" href="https://all-our-ideas.citizens.is/" target="_blank" rel="noopener">all-our-ideas.citizens.is</a>,
               and rebuilt wiki surveys as a group type inside{" "}
               <a className={`aurora-link ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="/your-priorities/">Your Priorities</a>,
               so pairwise ranking can run alongside idea generation, debates
@@ -714,8 +720,8 @@ export function AllOurIdeasPage() {
         sub="Use the standalone All Our Ideas setup, or create a wiki survey inside Your Priorities."
         ctas={
           <>
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/">Run a wiki survey <span aria-hidden="true">→</span></a>
-            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org">Create in Your Priorities</a>
+            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.allOurIdeas)}`} href="https://all-our-ideas.citizens.is/" target="_blank" rel="noopener">Run a wiki survey <span aria-hidden="true">→</span></a>
+            <a className={`btn btn-ghost ${plausibleClass(PLAUSIBLE_EVENTS.yourPriorities)}`} href="https://yrpri.org" target="_blank" rel="noopener">Create in Your Priorities</a>
             <a className="btn btn-ghost" href="/impact/">See the impact</a>
           </>
         }
@@ -880,7 +886,7 @@ export function OpenSourcePage() {
               <div key={p.name} className="card pkg-card">
                 <span className="icon-chip"><IconPackage /></span>
                 <h3 className="pkg-name">
-                  <a className="aurora-link" href={p.href}>{p.name}</a>
+                  <a className="aurora-link" href={p.href} target="_blank" rel="noopener">{p.name}</a>
                 </h3>
                 <p className="pkg-tags">
                   <span className="pkg-tag tag-ts">TypeScript</span>

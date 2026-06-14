@@ -325,15 +325,15 @@ function HomePage() {
               2025 Digital Participation Tools ratings.
             </p>
             <div className="badges">
-              <a className="badge" href="https://www.peoplepowered.org/platform-ratings">
+              <a className="badge" target="_blank" rel="noopener" href="https://www.peoplepowered.org/platform-ratings">
                 <span className="badge-rank">#1</span>
                 <span className="badge-label">People Powered<br />2025 Ratings</span>
               </a>
-              <a className="badge" href="https://www.oecd.org/publications/oecd-guidelines-for-citizen-participation-processes-f765caf6-en.htm">
+              <a className="badge" target="_blank" rel="noopener" href="https://www.oecd.org/publications/oecd-guidelines-for-citizen-participation-processes-f765caf6-en.htm">
                 <span className="badge-rank" aria-hidden="true">◆</span>
                 <span className="badge-label">OECD<br />Guidelines</span>
               </a>
-              <a className="badge" href="https://www.solonian-institute.com/publications">
+              <a className="badge" target="_blank" rel="noopener" href="https://www.solonian-institute.com/publications">
                 <span className="badge-rank" aria-hidden="true">★</span>
                 <span className="badge-label">Digital Democracy<br />Report 2024</span>
               </a>

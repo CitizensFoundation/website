@@ -300,9 +300,9 @@ export function ContactPage() {
               <h3>Find us</h3>
               <p>
                 Citizens Foundation, Reykjavík, Iceland — and on{" "}
-                <a className="aurora-link" href="https://www.linkedin.com/company/citizens-foundation-global/">LinkedIn</a>,{" "}
-                <a className="aurora-link" href="https://www.facebook.com/Citizens.is/">Facebook</a> and{" "}
-                <a className="aurora-link" href="https://twitter.com/CitizensFNDN">X</a>.
+                <a className="aurora-link" target="_blank" rel="noopener" href="https://www.linkedin.com/company/citizens-foundation-global/">LinkedIn</a>,{" "}
+                <a className="aurora-link" target="_blank" rel="noopener" href="https://www.facebook.com/Citizens.is/">Facebook</a> and{" "}
+                <a className="aurora-link" target="_blank" rel="noopener" href="https://twitter.com/CitizensFNDN">X</a>.
               </p>
             </article>
           </div>
@@ -399,7 +399,7 @@ export function NewsPage() {
               <li key={p.href}>
                 <div>
                   <span className="press-outlet">{p.outlet}</span>
-                  <a className="aurora-link post-title" href={p.href}>{p.title}</a>
+                  <a className="aurora-link post-title" href={p.href} target="_blank" rel="noopener">{p.title}</a>
                 </div>
                 <span className="post-date">{p.year}</span>
               </li>

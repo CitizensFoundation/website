@@ -150,7 +150,7 @@ export function ArticlePage({ doc }) {
         )}
         {doc.link && (
           <p className="article-visit">
-            <a className="btn btn-primary" href={doc.link}>Visit project <span aria-hidden="true">→</span></a>
+            <a className="btn btn-primary" href={doc.link} target="_blank" rel="noopener">Visit project <span aria-hidden="true">→</span></a>
           </p>
         )}
       </div>
