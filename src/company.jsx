@@ -82,6 +82,12 @@ const FORMER_TEAM = [
     bio: "Katherine brought years of experience in logistics and operations. She worked closely with Josh in social, political and educational outreach in the agricultural sector, helping build a brand that promoted sustainable agriculture and best practices in the food industry.",
   },
   {
+    name: "Sophia Dyvik Henke",
+    role: "Analyst",
+    photo: "/uploads/2020/03/SophiaCitizens.jpeg",
+    bio: "Sophia studied Human, Social and Political Sciences at Cambridge. She coordinated Rory Stewart's central London field campaign, produced film and lobbied government with the UK Student Climate Network, and served as a Youth Climate Ambassador for the Centre for UN Constitutional Research.",
+  },
+  {
     name: "Dave Parsons",
     role: "Consultant",
     photo: "/uploads/2020/01/dave.jpg",
@@ -594,18 +600,6 @@ export function WorkWithUsPage() {
             >
               View on GitHub
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell cta-band">
-          <h2 className="section-title">Tell us about your project</h2>
-          <p className="cta-band-sub">
-            We are happy to share what has worked elsewhere — no strings attached.
-          </p>
-          <div className="cta-row">
-            <a className={`btn btn-primary ${plausibleClass(PLAUSIBLE_EVENTS.contactEmail)}`} href="mailto:citizens@citizens.is">Email us →</a>
           </div>
         </div>
       </section>

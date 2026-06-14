@@ -13,4 +13,6 @@ The aim of the Digital Ecosystem for E-Participation Linking Youth (DEEP-Linking
 
 DEEP-linking Youth is co-funded by the Erasmus+ Programme of the European Union and implemented by a consortium of seven European organisations.
 
+[Download the policy recommendations PDF](/uploads/2017/11/Recommendations-to-policy-makers-on-learning-mobility.pdf): Recommendations to policy makers on learning mobility.
+
 [Visit site](https://deep-y.yrpri.org/).
