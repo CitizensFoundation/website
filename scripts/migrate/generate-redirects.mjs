@@ -23,8 +23,8 @@ const LEGACY_BEFORE_DATED_BLOGS = [
 ];
 
 const LEGACY_AFTER_DATED_BLOGS = [
-  ["/active/", "/blog/we-use-ai-to-empower-citizens/"],
-  ["/empower-citizens-with-ai*", "/blog/we-use-ai-to-empower-citizens/"],
+  ["/active/", "/impact/active-citizen/"],
+  ["/empower-citizens-with-ai*", "/impact/active-citizen/"],
   ["/better-neighborhoods-pb-for-the-4th-time*", "/blog/better-neighborhoods-pb-for-the-4th-time/"],
   ["/new-estonian-law-creates-a-new-law*", "/blog/new-estonian-law-creates-a-new-law-through-citizens-petitions/"],
   ["/idea-generation-policy-crowd-sourcing*", "/your-priorities/"],

@@ -36,9 +36,9 @@
 /2022/:month/:day/:slug/ /blog/:slug/ 301
 /2023/:month/:day/:slug /blog/:slug/ 301
 /2023/:month/:day/:slug/ /blog/:slug/ 301
-/active /blog/we-use-ai-to-empower-citizens/ 301
-/active/ /blog/we-use-ai-to-empower-citizens/ 301
-/empower-citizens-with-ai* /blog/we-use-ai-to-empower-citizens/ 301
+/active /impact/active-citizen/ 301
+/active/ /impact/active-citizen/ 301
+/empower-citizens-with-ai* /impact/active-citizen/ 301
 /better-neighborhoods-pb-for-the-4th-time* /blog/better-neighborhoods-pb-for-the-4th-time/ 301
 /new-estonian-law-creates-a-new-law* /blog/new-estonian-law-creates-a-new-law-through-citizens-petitions/ 301
 /idea-generation-policy-crowd-sourcing* /your-priorities/ 301
