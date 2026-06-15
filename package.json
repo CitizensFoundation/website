@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs && node scripts/generate-seo.mjs",
+    "check:entry-urls": "node scripts/check-entry-urls.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
