@@ -782,6 +782,8 @@ const LEGACY_PROJECTS = [
       "A secure electronic voting app for participatory budgeting, designed to let residents allocate a fixed public budget while seeing project costs and budget limits.",
     note:
       "Used with Your Priorities in Reykjavík's My Neighbourhood process. The 2022-2023 archive is still online, and the model may restart using Open Active Voting if the city brings the process back.",
+    extra:
+      "The platform separated budgeting from ordinary idea voting: residents could compare project costs, fill a fixed budget, and see immediately how trade-offs changed the final package.",
     links: [
       { label: "Source", href: "https://github.com/CitizensFoundation/open-active-voting", github: true },
       { label: "Live demo", href: "https://ktest2.betrireykjavik.is/?locale=en" },
@@ -799,6 +801,8 @@ const LEGACY_PROJECTS = [
       "A deep policy-making gamification platform created for civic education and constitutional design experiments.",
     note:
       "The engine powered Make Your Constitution, an educational game connected to Iceland's constitution crowdsourcing work and documented by Josh Lanthier-Welch.",
+    extra:
+      "It tested a more playful path into serious public questions: people learned the structure of constitutional choices by making trade-offs, not just reading explanatory text.",
     links: [
       { label: "Source", href: "https://github.com/CitizensFoundation/open-active-policy", github: true },
       { label: "Live demo", href: "https://demo-make-your-constitution.yrpri.org/quiz?locale=en" },
@@ -816,6 +820,8 @@ const LEGACY_PROJECTS = [
       "A Common Crawl keyword scanner developed for the EU H2020 Populism and Civic Engagement project to identify political narratives at web scale.",
     note:
       "In 2019, the pipeline scanned thousands of keywords and search criteria, then used early transformer language models including BERT and RoBERTa for second-level filtering.",
+    extra:
+      "The work helped connect Citizens Foundation's participation practice with large-scale text analysis: not to automate political judgment, but to make broad public narratives easier to study.",
     links: [
       { label: "Source", href: "https://github.com/CitizensFoundation/pace-keyword-scanner", github: true },
       { label: "Impact story", href: "/impact/populism-civic-engagement/" },
@@ -823,17 +829,19 @@ const LEGACY_PROJECTS = [
     ],
   },
   {
-    name: "Active Citizen Dashboard",
-    period: "2015-2017",
-    status: "Legacy AI dashboard",
+    name: "Active Citizen",
+    period: "2013-2023",
+    status: "Legacy civic AI platform",
     logo: "/uploads/2017/11/ac-logo1.png",
     logoClass: "legacy-logo-wide",
     desc:
-      "An early open-source AI dashboard for social listening and civic participation, built to explore how machine learning could help people follow public issues that mattered to them.",
+      "An early open-source civic AI programme for recommendations, notifications, social listening and public-interest dashboards.",
     note:
-      "Created as part of the EU-funded DEEP-Linking Youth project, it explored deep-learning social media listening using a TensorFlow text-CNN classifier.",
+      "The Active Citizen Dashboard was one part of it: created through the EU-funded DEEP-Linking Youth project, it explored deep-learning social media listening with a TensorFlow text-CNN classifier.",
+    extra:
+      "The broader Active Citizen line asked how AI could help citizens find relevant issues and help institutions understand public input. That work later evolved into Policy Synth's human-in-the-loop agent workflows.",
     links: [
-      { label: "Source", href: "https://github.com/CitizensFoundation/active-citizen-dashboard", github: true },
+      { label: "Source", href: "https://github.com/rbjarnason/active-citizen", github: true },
       { label: "Impact story", href: "/impact/deep-linking-youth/" },
       { label: "Active Citizen", href: "/impact/active-citizen/" },
     ],
@@ -964,6 +972,7 @@ export function OpenSourcePage() {
                 </h3>
                 <p>{project.desc}</p>
                 <p>{project.note}</p>
+                <p>{project.extra}</p>
                 <div className="legacy-actions">
                   {project.links.map((link) => (
                     <a

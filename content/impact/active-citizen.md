@@ -5,7 +5,7 @@ date: "2013-04-01"
 hero: "/uploads/2017/11/Active-Citizen.png"
 excerpt: "Active Citizen was Citizens Foundation's first civic AI architecture. It grew from recommendation engines and social listening into Policy Synth, our human-in-the-loop AI agent framework for public decisions."
 categories: ["Active Citizen","Policy Synth","Artificial Intelligence","Policy Crowdsourcing"]
-link: "/uploads/2017/11/Active-Citizen-Short-Description.pdf"
+link: "/uploads/2017/11/Active-Citizen-AI-VR-2020.pdf"
 gallery: ["/uploads/2017/11/deep1-1.png","/uploads/2026/06/nj-ai-taskforce-agents.png","/uploads/2026/06/skills-first-agent-config.png","/uploads/2026/06/gold-plating-agents.png","/uploads/2026/06/nj-ai-taskforce-results.png"]
 ---
 
@@ -14,6 +14,29 @@ Long before generative AI became a public policy issue, Citizens Foundation was 
 Active Citizen was our first full answer to that question. Started in 2013, it explored how open-source AI could support democratic participation by recommending relevant issues, notifying people about opportunities to take part, analyzing public discussion, and helping decision-makers see the signals inside large volumes of public input.
 
 The idea was simple but ambitious. Civic AI should be informative, not intrusive. It should help people find issues that match their interests, help communities work through large volumes of ideas, and help institutions understand what citizens are saying. It should not manipulate the feed, replace public judgment, or turn participation into a black box.
+
+<div class="paper-download">
+  <div>
+    <p class="paper-download-label">Original concept note · 2013</p>
+    <h3>Active Citizen: AI, VR and better participation</h3>
+    <p>Download the Active Citizen concept note, first drafted in 2013 and lightly updated in 2020, describing personal AI assistants, virtual-reality interfaces, online and offline assemblies, and civic dashboards as a next step for democratic participation.</p>
+  </div>
+  <a class="btn btn-primary" href="/uploads/2017/11/Active-Citizen-AI-VR-2020.pdf" target="_blank" rel="noopener">Download PDF <span aria-hidden="true">→</span></a>
+</div>
+
+> **A glimpse into our future**
+>
+> Alex has her breakfast while her AI Assistant (AIA) tells her about an open meeting in City Hall concerning cycling regulations and local planning. Alex confirms she'll be there and her AIA creates an info pack about the issue to help her plan a proposal for the meeting.
+>
+> Alex uses her time on the train to review AIA's ideas for her proposal. Some require a few minutes as Alex adds some details from her own experience but mostly it's a matter of reviewing quickly and confirming. She actually has time for a short nap before her train arrives.
+>
+> Meanwhile AIA creates a plan that uses an AI-managed group to brainstorm and prioritize the best ideas and debates them in combined online and offline assemblies. The result will be a plan for the neighborhood to be presented formally to City Hall with the signatures of supporting participants. The first task is to formulate a plan that will have wide approval from citizens.
+>
+> A few days later AIA reminds Alex that an assembly is starting in her group. Alex grabs her tablet and enters a virtual world mirroring her neighborhood. At a visualization of her idea she checks the debate once more before transporting to the assembly hall where both online and offline participants have equal status and communication possibilities.
+>
+> The meeting starts and due to their preplanning Alex and AIA manage to get her planning proposal for the neighborhood approved by a big majority of voting citizens. It will be submitted to the municipal council with the support of almost 30% of the voting population of the neighborhood behind it.
+>
+> From Citizens Foundation's 2013 Active Citizen concept note.
 
 ## The first civic AI architecture
 
