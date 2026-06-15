@@ -1,7 +1,7 @@
 ---
-title: "Active Citizen: Empowering Citizens with AI, from Recommendations to Policy Synth"
+title: "Active Citizen: Empowering Citizens with AI"
 slug: "active-citizen"
-date: "2013-04-01"
+date: "2024-06-04"
 hero: "/uploads/2017/11/Active-Citizen.png"
 excerpt: "Active Citizen was Citizens Foundation's first civic AI architecture. It grew from recommendation engines and social listening into Policy Synth, our human-in-the-loop AI agent framework for public decisions."
 categories: ["Active Citizen","Policy Synth","Artificial Intelligence","Policy Crowdsourcing"]
