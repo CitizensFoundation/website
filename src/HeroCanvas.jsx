@@ -8,6 +8,14 @@ import { useEffect, useRef } from "react";
 // aurora ring, and emit signal pulses along their links.
 // All client-side, so SSR renders an empty <canvas> (no hydration mismatch);
 // prefers-reduced-motion gets a calm static frame.
+//
+// Performance: the look is identical to a naive draw, but the two costly bits
+// are precomputed instead of redone every frame — crucial for software-rendered
+// canvases (e.g. Firefox on Linux):
+//   • the aurora wash renders once per frame into a low-res offscreen layer with
+//     cached gradients, then upscales (soft blobs are imperceptible upscaled);
+//   • each point's glow is a baked shadow sprite drawn with drawImage instead of
+//     a per-point ctx.shadowBlur (which Firefox evaluates per draw).
 const FACE_SRCS = [
   "/uploads/2026/06/hero-face-1.jpg",
   "/uploads/2026/06/hero-face-2.jpg",
@@ -35,6 +43,36 @@ export default function HeroCanvas({ faces = false }) {
     const faceImgs = faces ? FACE_SRCS.map((src) => { const im = new Image(); im.src = src; return im; }) : [];
     if (reduced) faceImgs.forEach((im) => { im.onload = () => frame(0); });
 
+    // Baked point-glow sprites — one per brand colour. Each holds ONLY the soft
+    // halo of a small disc (the disc is drawn off-canvas via a large shadow
+    // offset, so just its blurred shadow lands centred). Drawing this with
+    // drawImage reproduces ctx.shadowBlur without paying for a gaussian per
+    // point per frame. The crisp core dot is still drawn as a normal arc, so the
+    // dot itself stays pixel-exact.
+    const GLOW_SS = 2;                 // supersample for crispness at DPR 2
+    const GLOW_R0 = 2;                 // reference disc radius the halo is baked for
+    const GLOW_BLUR = 7;               // matches the previous ctx.shadowBlur
+    const GLOW_SPR = 64;               // sprite size (px); fits disc + ~3σ tail
+    const GLOW_LOGICAL = GLOW_SPR / GLOW_SS; // on-canvas size for a 1:1 draw
+    const glowSprites = BRAND.map((c) => {
+      const cv = document.createElement("canvas");
+      cv.width = cv.height = GLOW_SPR;
+      const g = cv.getContext("2d");
+      const mid = GLOW_SPR / 2;
+      g.fillStyle = `rgba(${c}, 1)`;
+      g.shadowColor = `rgba(${c}, 0.9)`;   // same halo colour/alpha as before
+      g.shadowBlur = GLOW_BLUR * GLOW_SS;
+      g.shadowOffsetX = 1000;              // push the disc off-canvas, keep its shadow
+      g.beginPath();
+      g.arc(mid - 1000, mid, GLOW_R0 * GLOW_SS, 0, Math.PI * 2);
+      g.fill();
+      return cv;
+    });
+
+    // Low-res offscreen for the aurora wash (soft, so upscaling is invisible).
+    let aur = null, aurCtx = null;
+    const AS = 0.5; // aurora render scale
+
     let blobs = [], pts = [], photos = [];
     const build = () => {
       const DPR = Math.min(window.devicePixelRatio || 1, 2);
@@ -42,21 +80,38 @@ export default function HeroCanvas({ faces = false }) {
       canvas.width = W * DPR; canvas.height = H * DPR;
       ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 
-      blobs = Array.from({ length: 5 }, (_, i) => ({
-        c: BRAND[i % BRAND.length],
-        ax: 0.1 + Math.random() * 0.8, ay: Math.random() * 0.6,
-        dx: 0.08 + Math.random() * 0.1, dy: 0.05 + Math.random() * 0.07,
-        fx: 0.04 + Math.random() * 0.05, fy: 0.03 + Math.random() * 0.05,
-        p: Math.random() * Math.PI * 2, r: 0.5 + Math.random() * 0.35,
-        alpha: 0.08 + Math.random() * 0.06,
-      }));
+      // (Re)size the aurora offscreen and cache one radial gradient per blob at
+      // local origin — reused each frame via translate, never recreated.
+      const AW = Math.max(1, Math.ceil(W * AS)), AH = Math.max(1, Math.ceil(H * AS));
+      if (!aur) { aur = document.createElement("canvas"); aurCtx = aur.getContext("2d"); }
+      aur.width = AW; aur.height = AH;
+
+      blobs = Array.from({ length: 5 }, (_, i) => {
+        const c = BRAND[i % BRAND.length];
+        const r = 0.5 + Math.random() * 0.35;
+        const alpha = 0.08 + Math.random() * 0.06;
+        const rrA = Math.max(1, r * Math.min(W, H) * AS);
+        const grad = aurCtx.createRadialGradient(0, 0, 0, 0, 0, rrA);
+        grad.addColorStop(0, `rgba(${c}, ${alpha})`);
+        grad.addColorStop(1, `rgba(${c}, 0)`);
+        return {
+          c, grad, rrA,
+          ax: 0.1 + Math.random() * 0.8, ay: Math.random() * 0.6,
+          dx: 0.08 + Math.random() * 0.1, dy: 0.05 + Math.random() * 0.07,
+          fx: 0.04 + Math.random() * 0.05, fy: 0.03 + Math.random() * 0.05,
+          p: Math.random() * Math.PI * 2, r, alpha,
+        };
+      });
 
       const count = Math.min(94, Math.max(26, Math.round((W * H) / 21000)));
-      pts = Array.from({ length: count }, () => ({
-        x: Math.random() * W, y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.16, vy: (Math.random() - 0.5) * 0.16,
-        c: BRAND[(Math.random() * BRAND.length) | 0], r: 1 + Math.random() * 1.6,
-      }));
+      pts = Array.from({ length: count }, () => {
+        const ci = (Math.random() * BRAND.length) | 0;
+        return {
+          x: Math.random() * W, y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.16, vy: (Math.random() - 0.5) * 0.16,
+          c: BRAND[ci], ci, r: 1 + Math.random() * 1.6,
+        };
+      });
 
       // Portraits live in margin REGIONS outside the centered text box, so they
       // can drift/bounce freely yet never reach the words. A region is dropped
@@ -115,17 +170,19 @@ export default function HeroCanvas({ faces = false }) {
       lastT = t;
       ctx.clearRect(0, 0, W, H);
 
-      // Aurora wash.
+      // Aurora wash — drawn into the low-res offscreen with cached gradients,
+      // then upscaled in one blit. Same soft result, a fraction of the fill.
+      aurCtx.clearRect(0, 0, aur.width, aur.height);
       for (const b of blobs) {
         const x = (b.ax + Math.sin(t * b.fx + b.p) * b.dx) * W;
         const y = (b.ay + Math.cos(t * b.fy + b.p) * b.dy) * H;
-        const rr = b.r * Math.min(W, H);
-        const g = ctx.createRadialGradient(x, y, 0, x, y, rr);
-        g.addColorStop(0, `rgba(${b.c}, ${b.alpha})`);
-        g.addColorStop(1, `rgba(${b.c}, 0)`);
-        ctx.fillStyle = g;
-        ctx.fillRect(x - rr, y - rr, rr * 2, rr * 2);
+        aurCtx.save();
+        aurCtx.translate(x * AS, y * AS);
+        aurCtx.fillStyle = b.grad;
+        aurCtx.fillRect(-b.rrA, -b.rrA, b.rrA * 2, b.rrA * 2);
+        aurCtx.restore();
       }
+      ctx.drawImage(aur, 0, 0, W, H);
 
       // Drift points.
       if (!reduced) {
@@ -217,19 +274,19 @@ export default function HeroCanvas({ faces = false }) {
         if (near.length) pulses.push({ ph, a: near[(Math.random() * near.length) | 0], prog: 0, dur: 0.95 });
       }
 
-      // Glowing points.
+      // Glowing points — baked halo sprite (cheap) + crisp core dot (exact).
       for (const a of pts) {
         let r = a.r, alpha = 0.5;
         if (pointer.on) {
           const dx = a.x - pointer.x, dy = a.y - pointer.y, d2 = dx * dx + dy * dy;
           if (d2 < CUR2) { const k = 1 - d2 / CUR2; r += k * 1.4; alpha += k * 0.4; }
         }
+        const ds = GLOW_LOGICAL * (0.75 + 0.125 * r); // halo size tracks the dot
+        ctx.drawImage(glowSprites[a.ci], a.x - ds / 2, a.y - ds / 2, ds, ds);
         ctx.beginPath();
-        ctx.shadowColor = `rgba(${a.c}, 0.9)`; ctx.shadowBlur = 7;
         ctx.fillStyle = `rgba(${a.c}, ${alpha})`;
         ctx.arc(a.x, a.y, r, 0, Math.PI * 2); ctx.fill();
       }
-      ctx.shadowBlur = 0;
 
       // Travel + draw pulses (recompute endpoints each frame as nodes move).
       for (let i = pulses.length - 1; i >= 0; i--) {
