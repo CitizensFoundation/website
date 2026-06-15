@@ -1,7 +1,7 @@
 # citizens.is
 
 Static website for citizens.is. Vite + React, pre-rendered to plain HTML at
-build time (same setup as eidosoma-website).
+build time.
 
 ## Develop
 
