@@ -1,6 +1,6 @@
 ---
 title: "We use AI to empower citizens"
-slug: "we-use-ai-to-empower-citizens"
+slug: "we-use-ai-to-empower-citizens-interview"
 date: "2022-10-15"
 hero: "/uploads/2022/10/Screenshot-from-2022-10-15-16-53-48.png"
 excerpt: "Robert Bjarnason discussed how artificial intelligence can support citizen participation and help governments make better public decisions."

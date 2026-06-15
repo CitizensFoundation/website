@@ -10,6 +10,8 @@
 /author/user* /blog/ 301
 /2014/12/30/seasons-greetings-2014/why_xmas /blog/seasons-greetings-2014/ 301
 /2014/12/30/seasons-greetings-2014/why_xmas/ /blog/seasons-greetings-2014/ 301
+/blog/we-use-ai-to-empower-citizens /impact/active-citizen/ 301
+/blog/we-use-ai-to-empower-citizens/ /impact/active-citizen/ 301
 /2011/:month/:day/:slug /blog/:slug/ 301
 /2011/:month/:day/:slug/ /blog/:slug/ 301
 /2012/:month/:day/:slug /blog/:slug/ 301
@@ -61,8 +63,6 @@
 /typography* / 301
 /bin/* / 301
 /%20* / 301
-/%28Citizens%20Foundation* / 301
-/sdfsdfsdfwe* / 301
 /eW91ci1wcm* /your-priorities/ 301
 /your-%E2%80%A6* /your-priorities/ 301
 /YourPriorities* /your-priorities/ 301

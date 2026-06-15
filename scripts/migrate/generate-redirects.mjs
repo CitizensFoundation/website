@@ -20,6 +20,7 @@ const LEGACY_BEFORE_DATED_BLOGS = [
   ["/author/gudjonidir*", "/about/"],
   ["/author/user*", "/blog/"],
   ["/2014/12/30/seasons-greetings-2014/why_xmas", "/blog/seasons-greetings-2014/"],
+  ["/blog/we-use-ai-to-empower-citizens/", "/impact/active-citizen/"],
 ];
 
 const LEGACY_AFTER_DATED_BLOGS = [
@@ -46,8 +47,6 @@ const LEGACY_AFTER_DATED_BLOGS = [
   ["/typography*", "/"],
   ["/bin/*", "/"],
   ["/%20*", "/"],
-  ["/%28Citizens%20Foundation*", "/"],
-  ["/sdfsdfsdfwe*", "/"],
   ["/eW91ci1wcm*", "/your-priorities/"],
   ["/your-%E2%80%A6*", "/your-priorities/"],
   ["/YourPriorities*", "/your-priorities/"],
