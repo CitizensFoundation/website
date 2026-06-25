@@ -8,8 +8,8 @@
 /author/robert* /blog/interview-robert-bjarnason-co-founder-ceo/ 301
 /author/gudjonidir* /about/ 301
 /author/user* /blog/ 301
-/2014/12/30/seasons-greetings-2014/why_xmas /blog/seasons-greetings-2014/ 301
-/2014/12/30/seasons-greetings-2014/why_xmas/ /blog/seasons-greetings-2014/ 301
+/2014/12/30/seasons-greetings-2014/why_xmas* /blog/seasons-greetings-2014/ 301
+/impact/dear-parliament* /impact/shadow-parliament/ 301
 /blog/we-use-ai-to-empower-citizens /impact/active-citizen/ 301
 /blog/we-use-ai-to-empower-citizens/ /impact/active-citizen/ 301
 /2011/:month/:day/:slug /blog/:slug/ 301

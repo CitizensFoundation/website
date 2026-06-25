@@ -31,12 +31,14 @@ export default function contentIndexPlugin() {
       }
       for (const name of files) {
         const { meta } = parseFrontmatter(readFileSync(join(root, "content", type, name), "utf8"));
+        const date = meta.date || "1970-01-01";
         entries.push({
           type,
           slug: meta.slug,
           route: `${type}/${meta.slug}`,
           title: meta.title || meta.slug,
-          date: meta.date || "1970-01-01",
+          date,
+          sortDate: meta.sortDate || date,
           hero: meta.hero || null,
           excerpt: truncate(meta.excerpt || "", 240),
           categories: meta.categories || [],
@@ -45,7 +47,10 @@ export default function contentIndexPlugin() {
         });
       }
     }
-    entries.sort((a, b) => (a.date < b.date ? 1 : -1));
+    entries.sort((a, b) => {
+      if (a.sortDate !== b.sortDate) return a.sortDate < b.sortDate ? 1 : -1;
+      return a.route.localeCompare(b.route);
+    });
     return entries;
   };
 

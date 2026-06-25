@@ -13,6 +13,6 @@ Better Iceland is an online participatory social network where citizens can pres
 
 Before the snap elections in Iceland in 2017, Citizens Foundation reached out to all political parties running for the elections to encourage them to use the platform to deepen public dialogue and informed decision making. 10 out of 11 political parties took to the platform, in a project called the Election Dialogue.
 
-Every parliamentary item proposed, a parliamentary bill or resolution, is automatically presented on the platform for citizens to discuss and debate, in a project called Dear Parliament.
+Every parliamentary item proposed, a parliamentary bill or resolution, was automatically presented for citizens to discuss and debate in Shadow Parliament, later continued as Dear Parliament. That parliamentary feed has now concluded.
 
 Various Icelandic municipalities use the platform in a similar to manner to the City of Reykjavík and the Better Reykjavík platform. Projects such as Our Kópavogur, Our Mosó, Better Hafnarfjörður, Betra Fljótsdalshérað are ongoing, and the municipality of Kópavogur has now sought to crowdsource ideas on its transport policy.

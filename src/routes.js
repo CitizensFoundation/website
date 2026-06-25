@@ -23,6 +23,10 @@ export const ROUTE_IDS = [
   ...CONTENT_INDEX.map((e) => e.route),
 ];
 
+const LEGACY_ROUTE_ALIASES = {
+  "impact/dear-parliament": "impact/shadow-parliament",
+};
+
 export function pathFor(id) {
   // Trailing slash matches how Cloudflare Pages serves directory index files
   // (/blog issues a 308 to /blog/), so canonical tags, the sitemap, and nav
@@ -33,6 +37,7 @@ export function pathFor(id) {
 export function routeFromPath(pathname) {
   const clean = (pathname || "/").replace(/^\/+|\/+$/g, "");
   if (!clean) return "home";
+  if (LEGACY_ROUTE_ALIASES[clean]) return LEGACY_ROUTE_ALIASES[clean];
   if (ROUTE_IDS.includes(clean)) return clean;
   // Unknown paths render the 404 page (and Cloudflare serves /404.html), so a
   // direct hit to a stale URL hydrates as "not found" rather than the homepage.
