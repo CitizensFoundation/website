@@ -550,7 +550,7 @@ export function WorkWithUsPage() {
             <em>
               For more information, download PDFs about{" "}
               <a
-                className="aurora-link"
+                className="aurora-link service-doc-link"
                 href="https://docs.google.com/document/d/1T7oK_xoozsyCp_LZrspyjQviZsof0mIT0cmD17F80Ec/export?format=pdf"
                 target="_blank"
                 rel="noopener"
@@ -559,7 +559,7 @@ export function WorkWithUsPage() {
               </a>{" "}
               and{" "}
               <a
-                className="aurora-link"
+                className="aurora-link service-doc-link"
                 href="https://docs.google.com/document/d/1lJM_L57WB1gwjUzvHIuxn2HGN2pSoIb-cCZu3ZiAPv0/export?format=pdf"
                 target="_blank"
                 rel="noopener"
